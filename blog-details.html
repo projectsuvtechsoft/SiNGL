@@ -1,0 +1,1970 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta http-equiv="refresh" content="0; url=index.html#blogs" /> -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details - SiNGL</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=system-ui:wght@400;500;600;700;800&family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+        <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+
+    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#8B5CF6",
+            },
+            borderRadius: {
+              button: "8px",
+            },
+            fontFamily: {
+              sans: ["system-ui", "Inter", "sans-serif"],
+              manrope: ["system-ui", "sans-serif"],
+              pacifico: ["Pacifico", "serif"],
+            },
+          },
+        },
+        darkMode: "class",
+      };
+    </script>
+    <style>
+            @font-face {
+  font-family: 'UxumGrotesque';
+  src: url('/fonts/uxumregular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+      html {
+        font-size: 18px;
+        line-height: 1.7;
+      }
+      body {
+        font-size: 1rem;
+        line-height: 1.7;
+        letter-spacing: 0.01em;
+        font-family: "system-ui", "Inter", sans-serif;
+      }
+      .logo-imgfotter {
+   width: 100px;
+        height: auto;
+        object-fit: contain;
+        background-color: transparent;
+        /* default */
+        border-radius: 4px;
+        padding: 4px;
+        transition: background-color 0.3s ease;
+}
+      .logo-img {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+        background-color: transparent;
+        border-radius: 4px;
+        padding: 4px;
+        transition: background-color 0.3s ease;
+      }
+      .logo-img1 {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+        background-color: transparent;
+        border-radius: 4px;
+        padding: 4px;
+        transition: background-color 0.3s ease;
+      }
+      body.light-mode .logo-img {
+        background-color: #000;
+      }
+   
+      html.dark,
+      body.dark-mode {
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e293b 100%
+        ) !important;
+        color: #f8fafc !important;
+      }
+      html.dark .bg-white,
+      body.dark-mode .bg-white {
+        background-color: #23263a !important;
+      }
+      html.dark .text-gray-800,
+      body.dark-mode .text-gray-800 {
+        color: #f8fafc !important;
+      }
+      html.dark .text-gray-700,
+      body.dark-mode .text-gray-700 {
+        color: #f3f4f6 !important;
+      }
+      html.dark .text-gray-600,
+      body.dark-mode .text-gray-600 {
+        color: #f8fafc !important;
+      }
+      html.dark .text-black,
+      body.dark-mode .text-black {
+        color: #fff !important;
+      }
+      html.dark input,
+      body.dark-mode input,
+      html.dark textarea,
+      body.dark-mode textarea {
+        background-color: #23263a !important;
+        border-color: #374151 !important;
+        color: #f8fafc !important;
+      }
+      html.dark input::placeholder,
+      body.dark-mode input::placeholder,
+      html.dark textarea::placeholder,
+      body.dark-mode textarea::placeholder {
+        color: #d1d5db !important;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .blog-content img {
+        border-radius: 1rem;
+        margin: 2rem 0;
+        max-width: 100%;
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+      }
+      .blog-content h1,
+      .blog-content h2,
+      .blog-content h3 {
+       font-family: UxumGrotesque,sans-serif;
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+        
+      }
+      .blog-content p {
+        margin-bottom: 1.2rem;
+        text-align: justify;
+      }
+      .blog-meta {
+        color: #6b7280;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .dark .blog-meta {
+        color: #d1d5db;
+      }
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+       background: linear-gradient(100deg, #f1e7fa, #f1e7fa, #f7f0f8, #f6e7fa, #f8d0ff, #edc7f5, #f6e7fa, #f6e7fa, #f6e7fa);
+    color: #000000ab;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 600;
+      
+   
+    font-family:  Golos Text,sans-serif;
+    font-size: 16px;
+
+        margin-bottom: 2rem;
+        transition: background 0.2s;
+        text-decoration: none;
+      }
+      /* .back-btn:hover {
+        background: linear-gradient(to right, #8b5cf6, #6366f1);
+      } */
+      .sndbtn{
+        background: linear-gradient(90deg, #f3d5f7 0%, #e8d5f4 30%, #e2e3f9 100%);
+    color: black;
+    font-family: Golos Text, sans-serif;
+    font-weight: 500;
+      }
+    </style>
+  </head>
+  <body
+    class="light-mode font-sans transition-all duration-500 dark:bg-[#181a20] dark:text-gray-100"
+    style="
+      background-color: #f6f7fb;
+      color: #23262f;
+      font-weight: 500;
+    font-family:  Golos Text,sans-serif;
+    font-size: 16px;
+    "
+  >
+    <!-- <div id="lines-bg">
+      <svg class="lines" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6366f1" />
+            <stop offset="100%" stop-color="#06b6d4" />
+          </linearGradient>
+        </defs>
+
+        <path
+          d="M0 20 Q 25 40 50 20 T 100 20"
+          stroke="url(#grad)"
+          stroke-width="1"
+          fill="none"
+        >
+          <animate
+            attributeName="d"
+            dur="25s"
+            repeatCount="indefinite"
+            values="
+      M0 20 Q 25 40 50 20 T 100 20;
+      M0 25 Q 25 15 50 25 T 100 25;
+      M0 20 Q 25 40 50 20 T 100 20
+    "
+          />
+        </path>
+        <path
+          d="M0 50 Q 25 70 50 50 T 100 50"
+          stroke="url(#grad)"
+          stroke-width="1"
+          fill="none"
+        >
+          <animate
+            attributeName="d"
+            dur="25s"
+            repeatCount="indefinite"
+            values="
+      M0 50 Q 25 70 50 50 T 100 50;
+      M0 55 Q 25 35 50 55 T 100 55;
+      M0 50 Q 25 70 50 50 T 100 50
+    "
+          />
+        </path>
+        <path
+          d="M0 80 Q 25 100 50 80 T 100 80"
+          stroke="url(#grad)"
+          stroke-width="1"
+          fill="none"
+        >
+          <animate
+            attributeName="d"
+            dur="24s"
+            repeatCount="indefinite"
+            values="
+      M0 80 Q 25 100 50 80 T 100 80;
+      M0 85 Q 25 65 50 85 T 100 85;
+      M0 80 Q 25 100 50 80 T 100 80
+    "
+          />
+        </path>
+      </svg>
+    </div> -->
+ <div id="blobs-bg">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+    </div>
+    <style>
+      #blobs-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+ .blob {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8);
+  filter: blur(40px) brightness(1.4);
+  opacity: 0.7;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+  transition: width 0.4s, height 0.4s, left 0.4s, top 0.4s, filter 0.4s, opacity 0.4s;
+}
+
+html.dark #blobs-bg .blob {
+  filter: blur(90px);
+  opacity: 0.9;
+}
+
+
+.footer #blobs-bg {
+  display: none;
+}
+
+     .blob1 {
+  width: 230px;
+  height: 340px;
+  top: 6%;
+  left: 1%;
+  animation: blobFloat1 13s cubic-bezier(0.77, 0, 0.18, 1) infinite alternate,
+             blobFade 5s ease-in-out infinite;
+}
+
+.blob2 {
+  width: 300px;
+  height: 300px;
+  top: 80%;
+  left: 90%;
+  animation: blobFloat2 11s cubic-bezier(0.77, 0, 0.18, 1) infinite alternate,
+             blobFade 4s ease-in-out infinite;
+}
+
+.blob3 {
+  width: 220px;
+  height: 220px;
+  top: 30%;
+  left: 85%;
+  animation: blobFloat3 15s cubic-bezier(0.77, 0, 0.18, 1) infinite alternate,
+             blobFade 6s ease-in-out infinite;
+}
+
+
+      @keyframes blobFloat1 {
+        0% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+
+        20% {
+          transform: translate(20px, 10px) scale(1.05) rotate(6deg);
+        }
+
+        40% {
+          transform: translate(-10px, 30px) scale(0.98) rotate(-4deg);
+        }
+
+        60% {
+          transform: translate(15px, 20px) scale(1.08) rotate(8deg);
+        }
+
+        80% {
+          transform: translate(-15px, 35px) scale(0.95) rotate(-7deg);
+        }
+
+        100% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+      }
+
+      @keyframes blobFloat2 {
+        0% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+
+        25% {
+          transform: translate(-18px, 18px) scale(1.07) rotate(-5deg);
+        }
+
+        50% {
+          transform: translate(12px, -10px) scale(0.97) rotate(7deg);
+        }
+
+        75% {
+          transform: translate(-10px, 25px) scale(1.03) rotate(-6deg);
+        }
+
+        100% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+      }
+
+      @keyframes blobFloat3 {
+        0% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+
+        30% {
+          transform: translate(10px, 15px) scale(1.04) rotate(4deg);
+        }
+
+        60% {
+          transform: translate(-12px, 25px) scale(0.96) rotate(-8deg);
+        }
+
+        85% {
+          transform: translate(8px, 10px) scale(1.06) rotate(5deg);
+        }
+
+        100% {
+          transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .blob1 {
+          width: 260px;
+          height: 260px;
+          left: 2%;
+          top: 8%;
+        }
+
+        .blob2 {
+          width: 180px;
+          height: 180px;
+          left: 60%;
+          top: 70%;
+        }
+
+        .blob3 {
+          display: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .blob1 {
+          width: 140px;
+          height: 140px;
+          left: 0;
+          top: 10%;
+        }
+
+        .blob2 {
+          width: 100px;
+          height: 100px;
+          left: 60%;
+          top: 80%;
+        }
+
+        .blob3 {
+          display: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .blob {
+          animation: none !important;
+        }
+      }
+
+      @keyframes blobFloat {
+        0% {
+          transform: translate(0px, 0px) scale(1) rotate(0deg);
+        }
+
+        25% {
+          transform: translate(30px, 20px) scale(1.08) rotate(8deg);
+        }
+
+        50% {
+          transform: translate(-20px, 40px) scale(0.96) rotate(-6deg);
+        }
+
+        75% {
+          transform: translate(20px, 10px) scale(1.04) rotate(4deg);
+        }
+
+        100% {
+          transform: translate(0px, 0px) scale(1) rotate(0deg);
+        }
+      }
+
+      @keyframes blobFade {
+        0%,
+        100% {
+          opacity: 0.18;
+        }
+
+        50% {
+          opacity: 0.32;
+        }
+      }
+
+      html.dark #blobs-bg .blob1 {
+        background: radial-gradient(
+          circle at 60% 40%,
+          #2563eb 0%,
+          #06b6d4 100%
+        );
+      }
+
+      html.dark #blobs-bg .blob2 {
+        background: radial-gradient(
+          circle at 30% 70%,
+          #a21caf 0%,
+          #f472b6 100%
+        );
+      }
+
+      html.dark #blobs-bg .blob3 {
+        background: radial-gradient(
+          circle at 80% 20%,
+          #3730a3 0%,
+          #a78bfa 100%
+        );
+      }
+    </style>
+     <script>
+      // Parallax effect for blobs (desktop only)
+      document.addEventListener("DOMContentLoaded", function () {
+        const blobs = document.querySelectorAll("#blobs-bg .blob");
+        if (window.matchMedia("(pointer: fine)").matches) {
+          document.addEventListener("mousemove", function (e) {
+            const x = e.clientX / window.innerWidth - 0.5;
+            const y = e.clientY / window.innerHeight - 0.5;
+            blobs.forEach((blob, i) => {
+              const factor = (i + 1) * 10;
+              blob.style.transform = `translateY(0px) translate(${
+                x * factor
+              }px, ${y * factor}px)`;
+            });
+          });
+        }
+      });
+    </script>
+    <!-- <style>
+      .no-animation {
+        position: relative;
+        z-index: 1;
+      }
+
+      #lines-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+        opacity: 0.2;
+      }
+
+      .lines {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        transform: scale(1) rotate(10deg);
+      }
+
+      @media (max-width: 600px) {
+        .lines {
+          transform: scale(1.5) rotate(5deg);
+        }
+      }
+
+      html.dark #lines-bg svg stop:first-child {
+        stop-color: #2563eb;
+      }
+
+      html.dark #lines-bg svg stop:last-child {
+        stop-color: #a78bfa;
+      }
+    </style> -->
+
+    <!-- Header -->
+
+ <header class="fixed top-0 left-0 right-0 z-50 flex flex-col items-center bg-transparent transition-all duration-300"
+    id="header">
+    <div
+      class="max-w-7xl w-full mx-auto  flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent"
+      style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding:5px 15px 5px;">
+      <div class="flex items-center py-1 rounded-lg ">
+        <div class="logo-wrapper">
+          <img src="./image (3).png" alt="Logo" class="logo-img  hidden dark:block" />
+ 
+          <img src="logoo1.png" alt="Logo" class=" logo-img1 block dark:hidden" />
+        </div>
+      </div>
+ 
+      <nav class="hidden md:flex justify-center relative">
+        <div
+          class="flex items-center min-w-fit bg-white/40 dark:bg-blue-950/40 border border-gray-200/50 dark:border-blue-800/50 rounded-full px-2 py-1 shadow-sm"
+          style="backdrop-filter: blur(8px); font-family: Golos Text, sans-serif; font-size: 11px;">
+ 
+          <!-- active -->
+          <!-- class="nav-link active px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
+ 
+          <!-- other  -->
+          <!-- class="nav-link px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
+          <!-- <a href="#"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none "
+            style="cursor: pointer;font-size: 12px;font-weight: 600;padding: 4px 15px 4px 15px; color:#969696;">
+            Home
+          </a> -->
+ 
+          <a href="/"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+            style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Home</a>
+ 
+ 
+ 
+ 
+          <a href="index.html#features"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Features</a>
+          <a href="index.html#use-cases"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Industry</a>
+          <!-- <a href="#blogs"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+            style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Blog</a> -->
+ 
+          <a href="#blogs"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none "
+            style="cursor: pointer;font-size: 11px;font-weight: 600;padding: 4px 15px 4px 15px; color:#969696;">
+            Blog
+          </a>
+ 
+          <a id="openContactModal"
+            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Contact
+            Us</a>
+        </div>
+      </nav>
+ 
+      <style>
+        body {
+          font-family: "Roboto Mono", monospace;
+        }
+ 
+ 
+ 
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+ 
+ 
+        .nav-link.active {
+          /* background: linear-gradient(90deg, #c463f1 0%, #9839dc 100%);  */
+          background: #F0F2F8;
+          /* color: #fff !important; */
+          /* padding: 13px 16px 8px 18px; */
+        }
+ 
+        .dark .nav-link.active {
+          /* background: linear-gradient(90deg, #9839dc 0%, #d98fff 100%); */
+          background: #F0F2F8;
+ 
+          /* color: #fff !important; */
+        }
+ 
+        .nav-link {
+          margin-left: 0.3rem;
+          margin-right: 0.3rem;
+        }
+ 
+ 
+        button,
+        a {
+          min-height: auto;
+          min-width: 44px;
+        }
+ 
+        header a {
+          letter-spacing: 0.06rem !important;
+          font-family: "Roboto Mono", Sans-serif !important;
+        }
+ 
+ 
+        #btn-toggle {
+          /* ... other styles ... */
+          background: linear-gradient(100deg, #f1e7fa, #f1e7fa, #f7f0f8, #f6e7fa, #f8d0ff, #edc7f5, #f6e7fa, #f6e7fa, #f6e7fa);
+          background-size: 400% 100%;
+          animation: slider 8s infinite linear;
+        }
+ 
+        @keyframes slider {
+          from {
+            background-position: 0% 50%;
+          }
+ 
+          to {
+            background-position: 100% 50%;
+          }
+        }
+      </style>
+      <script>
+        // Navigation active tab logic
+        document.addEventListener("DOMContentLoaded", function () {
+          const navLinks = document.querySelectorAll(".nav-link");
+          navLinks.forEach((l) => l.classList.remove("active"));
+          if (navLinks.length > 0) navLinks[3].classList.add("active");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", function (e) {
+              navLinks.forEach((l) => l.classList.remove("active"));
+              link.classList.add("active");
+            });
+          });
+        });
+      </script>
+ 
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <!-- <button id="theme-toggle"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-4xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <i class="ri-sun-line dark:ri-moon-line text-lg"></i>
+        </button> -->
+ 
+        <button id="theme-toggle" class="btntoggle w-9 h-9 sm:w-10 sm:h-10 rounded-3xl  flex items-center justify-center transition-colors
+                 hover:bg-gray-700
+                 dark:bg-gray-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-800">
+          <i class="ri-sun-line text-lg dark:ri-moon-line"></i>
+        </button>
+ 
+        <button id="btn-toggle" class="w-30 rounded-3xl flex items-center justify-center dark:text-black">
+          <a style="padding:8px 20px;font-size: 13px;
+    font-weight: 500;">Book Demo </a>
+        </button>
+ 
+        <button id="mobile-menu-toggle"
+          class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <svg id="hamburger-icon" class="w-6 h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+ 
+    <div id="mobile-menu"
+      class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
+      style="backdrop-filter: blur(4px)">
+      <a href="/"
+        class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link">Home</a>
+      <a href="index.html#features"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Features</a>
+      <a href="index.html#use-cases"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Industry</a>
+      <a href="#blogs"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Blog</a>
+      <a id="openContactModal"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Contact
+        Us</a>
+    </div>
+    <div id="mobile-menu-overlay"
+      class="fixed inset-0 z-[99] bg-black bg-opacity-30 hidden transition-opacity duration-300"></div>
+  </header>
+    <style>
+    
+      .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #67686a;
+    margin: 0;
+    padding: 0;
+}
+  html.dark .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #fdfeff;
+    margin: 0;
+    padding: 0;
+}  
+  </style>
+
+     <script>
+      const mobileToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileOverlay = document.getElementById("mobile-menu-overlay");
+      const hamburgerIcon = document.getElementById("hamburger-icon");
+      const menuLinks = document.querySelectorAll(".mobile-menu-link");
+      let menuOpen = false;
+
+      function openMobileMenu() {
+        mobileMenu.classList.remove("hidden");
+        setTimeout(() => {
+          mobileMenu.classList.add("!opacity-100");
+          mobileMenu.classList.remove("-translate-y-8", "opacity-0");
+        }, 10);
+        mobileOverlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        // Animate hamburger to X
+        hamburgerIcon.innerHTML = `<svg class='w-6 h-6 text-gray-800 dark:text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'/></svg>`;
+        menuOpen = true;
+      }
+      function closeMobileMenu() {
+        mobileMenu.classList.add("-translate-y-8", "opacity-0");
+        mobileMenu.classList.remove("!opacity-100");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+        }, 250);
+        mobileOverlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        // Animate X to hamburger
+        hamburgerIcon.innerHTML = `<svg class='w-6 h-6 text-gray-800 dark:text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/></svg>`;
+        menuOpen = false;
+      }
+      mobileToggle.addEventListener("click", () => {
+        if (!menuOpen) {
+          openMobileMenu();
+        } else {
+          closeMobileMenu();
+        }
+      });
+      mobileOverlay.addEventListener("click", closeMobileMenu);
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+          // Active state for mobile menu
+          menuLinks.forEach((l) => l.classList.remove("active"));
+          // Only set active for anchor links, not Contact Us (which is a modal)
+          if (!link.hasAttribute("id")) {
+            link.classList.add("active");
+          }
+          closeMobileMenu();
+        });
+      });
+      // Contact Us modal for mobile menu
+      const mobileContact = document.querySelector(
+        "#mobile-menu #openContactModal"
+      );
+      if (mobileContact) {
+        mobileContact.addEventListener("click", function (e) {
+          e.preventDefault();
+          closeMobileMenu();
+          setTimeout(() => {
+            document.getElementById("contactModal").classList.add("active");
+          }, 300);
+        });
+      }
+      // Close on resize to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768 && menuOpen) {
+          closeMobileMenu();
+        }
+      });
+    </script>
+     <style>
+      #mobile-menu {
+        transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1),
+          opacity 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+      }
+
+      /* #mobile-menu. !opacity-100 {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      } */
+
+      #mobile-menu .active {
+           background: linear-gradient(90deg, #b763f1 0%, #a35cf6 100%);
+        color: #fff !important;
+        border-radius: 0.75rem;
+      }
+    </style>
+     <style>
+      /* Remove blue outline for FAQ triggers */
+      .faq-trigger:focus,
+      .faq-trigger:active {
+        outline: none !important;
+        box-shadow: none !important;
+      }
+
+      html {
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      body {
+        font-size: 1rem;
+        line-height: 1.7;
+        letter-spacing: 0.01em;
+      }
+
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+
+      @keyframes newsScroll {
+        from {
+          transform: translateX(0);
+        }
+
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      .news-scroll {
+        display: inline-block;
+        animation: newsScroll 20s linear infinite;
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      @keyframes spin-reverse {
+        from {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+        to {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+      }
+
+      .faq-answer {
+        transition: max-height 0.3s ease-out;
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .faq-answer.active {
+        max-height: 1000px;
+      }
+
+      .faq-button i {
+        transition: transform 0.3s ease;
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 100;
+      }
+
+      .modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-content {
+        background: #1e293b;
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 90%;
+        max-width: 600px;
+        transform: scale(0.7);
+        transition: all 0.3s ease;
+      }
+
+      .modal.active .modal-content {
+        transform: scale(1);
+      }
+
+      .close-modal {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+      .testimonial-card:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+
+      .testimonial-card:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+
+      .testimonial-card:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      @keyframes slideInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .star {
+        color: #fbbf24;
+        animation: twinkle 2s infinite;
+      }
+
+      .star:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      .star:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .star:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      .star:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+
+      .star:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 0.7;
+          transform: scale(1.1);
+        }
+      }
+
+      .header-content {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeInDown 1s ease-out 0.3s forwards;
+      }
+
+      @keyframes fadeInDown {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        z-index: 50;
+      }
+
+      .scroll-to-top.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .avatar-pulse {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      .testimonial-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #cbd5e1 #f1f5f9;
+        -ms-overflow-style: none;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar {
+        height: 8px;
+        background: #f1f5f9;
+      }
+
+      .testimonial-scroll::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+
+      .testimonial-card {
+        min-width: 20rem;
+        max-width: 24rem;
+      }
+
+      @media (max-width: 640px) {
+        html {
+          font-size: 16px;
+        }
+
+        .testimonial-card {
+          min-width: 16rem;
+          max-width: 18rem;
+        }
+
+        body {
+          padding: 0 0.5rem;
+        }
+
+        section,
+        .header-content,
+        .scroll-reveal {
+          padding-left: 0.5rem !important;
+          padding-right: 0.5rem !important;
+        }
+      }
+
+      .dark-mode {
+        background: transparent !important;
+        color: #f8fafc;
+      }
+
+      .light-mode {
+        background: transparent !important;
+        color: #1e293b;
+      }
+
+      .glass-morphism {
+        backdrop-filter: blur(18px) saturate(1.2);
+        background: rgba(255, 255, 255, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .dark .glass-morphism {
+        background: rgba(24, 26, 50, 0.55);
+        border: 1px solid rgba(59, 130, 246, 0.12);
+        color: #f8fafc;
+        box-shadow: 0 8px 32px rgba(24, 26, 50, 0.18);
+      }
+
+      .dark {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+
+      .bg-white {
+        background-color: #fff !important;
+      }
+
+      .bg-gray-50 {
+        background-color: #f8fafc !important;
+      }
+
+      .bg-gray-100 {
+        background-color: #f3f4f6 !important;
+      }
+
+      .bg-gray-200 {
+        background-color: #e5e7eb !important;
+      }
+
+      .dark .bg-white {
+        background-color: rgba(30, 41, 59, 0.85) !important;
+      }
+
+      .dark .bg-gray-50 {
+        background-color: rgba(17, 24, 39, 0.7) !important;
+      }
+
+      .dark .bg-gray-100 {
+        background-color: rgba(31, 41, 55, 0.7) !important;
+      }
+
+      .dark .bg-gray-200 {
+        background-color: rgba(55, 65, 81, 0.7) !important;
+      }
+
+      .dark .text-gray-600 {
+        color: #f3f4f6 !important;
+        /* much lighter for dark mode */
+      }
+
+      .dark .text-gray-500 {
+        color: #e5e7eb !important;
+      }
+
+       html.dark .text-gray-500,
+      body.dark-mode .text-gray-500 {
+        color: #f8fafc !important;
+      }
+      .dark .text-gray-400 {
+        color: #d1d5db !important;
+      }
+
+      .dark .text-gray-300 {
+        color: #f8fafc !important;
+      }
+
+      .dark .text-gray-200 {
+        color: #fff !important;
+      }
+
+      .dark .border-gray-200 {
+        border-color: #374151 !important;
+      }
+
+      .dark .bg-gray-800 {
+        background-color: #23263a !important;
+      }
+
+      .dark .bg-gray-900 {
+        background-color: #181a20 !important;
+      }
+
+      .dark .bg-white {
+        background-color: #23263a !important;
+      }
+
+      .dark .hover\:bg-gray-50:hover {
+        background-color: #23263a !important;
+      }
+
+      .dark .hover\:bg-gray-100:hover {
+        background-color: #374151 !important;
+      }
+
+      .dark input,
+      .dark textarea {
+        background-color: #23263a;
+        border-color: #374151;
+        color: #f8fafc;
+      }
+
+      .dark input::placeholder,
+      .dark textarea::placeholder {
+        color: #d1d5db;
+      }
+
+      .dark .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7),
+          0 4px 6px -2px rgba(0, 0, 0, 0.6);
+      }
+
+      .dark .hover-rise:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      }
+
+      .glow-effect {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      }
+
+      .dark .glow-effect {
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 50%;
+        opacity: 0.6;
+      }
+
+      .dark .particle {
+        background: #8b5cf6;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        50% {
+          box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+        }
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .animate-pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+      }
+
+      .typing-animation {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #3b82f6;
+        animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+
+        50% {
+          border-color: #3b82f6;
+        }
+      }
+
+      .hover-rise {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hover-rise:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .dark .hover-rise:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .data-flow-line {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .data-flow-line::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        animation: flow 2s linear infinite;
+      }
+
+      @keyframes flow {
+        0% {
+          left: -100%;
+        }
+
+        100% {
+          left: 100%;
+        }
+      }
+
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease-out;
+      }
+
+      .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Accessibility: Focus states for buttons and links */
+      /* button:focus,
+    a:focus {
+      outline: 2px solid #3b82f6;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 2px #a5b4fc;
+    } */
+
+      /* Improve touch targets for mobile */
+
+    </style>
+    <main class="pt-32 pb-20 min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 no-animation" style="font-weight: 500;font-family: Golos Text, sans-serif;font-size: 18px;">
+        <a href="index.html#blogs" class="back-btn"
+          ><i class="ri-arrow-left-line"></i>Back to Blogs</a
+        >
+        <article
+          id="blog-article"
+          class="blog-content bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-h-[300px] flex flex-col items-center justify-center"
+        >
+          <div
+            id="blog-loading"
+            class="text-lg text-gray-500 dark:text-gray-300"
+          >
+            Loading blog...
+          </div>
+        </article>
+      </div>
+    </main>
+     <div id="contactModal" class="modal">
+      <div
+        class="modal-content relative bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-lg shadow-lg"
+      >
+        <span style="
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+"
+          id="closeContactModal"
+          class="close-modal text-xl absolute top-4 right-6 cursor-pointer text-gray-500 dark:text-gray-300"
+          >&times;</span
+        >
+        <h2 class="text-2xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+          Contact Us
+        </h2>
+        <form id="contactForm" class="space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            class="w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your message"
+            class="w-full px-4 py-2 border rounded-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white"
+            rows="4"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="sndbtn px-6 py-2 rounded-md hover:bg-blue-700 transition"
+          >
+            Send
+          </button>
+        </form>
+        <p
+          id="formStatus"
+          class="mt-4 text-sm text-green-600 dark:text-green-400 hidden"
+        >
+          Email client opened! If it didn’t open, copy your info manually.
+        </p>
+      </div>
+    </div>
+    <!-- <footer class="bg-gray-900 text-white py-16 mt-20 no-animation">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+              <img src="./logo.jpeg" alt="Logo" class="w-15 h-10 object-cover" />
+            </div>
+            <p class="text-gray-400">
+              AI-powered Master Data Management platform that transforms how enterprises manage and utilize their data.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="ri-twitter-line text-lg"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="ri-linkedin-line text-lg"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="ri-github-line text-lg"></i></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Product</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Company</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" id="footerOpenContactModal" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <p class="text-gray-400 text-sm">© 2024 SiNGL. All rights reserved.</p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <!-- Footer -->
+    
+    <div
+      id="toast"
+      class="fixed bottom-6 right-6 bg-green-600 text-white px-4 py-2 rounded-md shadow-lg hidden z-[9999] transition-all duration-300"
+    >
+      Message sent successfully!
+    </div>
+    <footer id="footer" class="bg-gray-900 text-white py-16 no-animation">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8 mb-12" style="
+    font-weight: 500;
+    font-family:  Golos Text,sans-serif;
+    font-size: 16px;
+">
+          <div class="space-y-4">
+            <div class="flex items-center space-x-2">
+             <img src="./image (3).png" alt="Logo" class="logo-imgfotter  " />
+            </div>
+            <p class="text-gray-400">
+              AI-powered Master Data Management platform that transforms how
+              enterprises manage and utilize their data.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="javascript:void(0)"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-twitter-line text-lg"></i>
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-linkedin-line text-lg"></i>
+              </a>
+              <a
+                href="javascript:void(0)"
+                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              >
+                <i class="ri-github-line text-lg"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Product</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="index.html#features"
+                  class="hover:text-white transition-colors"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#use-cases"
+                  class="hover:text-white transition-colors"
+                  >Industry</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="index.html#features-tab4"
+                  class="hover:text-white transition-colors"
+                >
+                  API Integrations
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-4">Company</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a
+                  href="index.html#home"
+                  class="hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <!-- <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Careers</a
+                >
+              </li> -->
+              <li>
+                <a
+                  href="index.html#blogs"
+                  class="hover:text-white transition-colors"
+                  >Blogs</a
+                >
+              </li>
+              <li>
+                <!-- id="footerOpenContactModal" -->
+                <a
+                  id="footerOpenContactModal"
+                  class="hover:text-white transition-colors"
+                  style="cursor: pointer;"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- <div>
+            <h3 class="font-semibold mb-4">Resources</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>
+                <a  href="javascript:void(0)" class="hover:text-white transition-colors"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a  href="javascript:void(0)" class="hover:text-white transition-colors"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a  href="javascript:void(0)" class="hover:text-white transition-colors"
+                  >Community</a
+                >
+              </li>
+              <li>
+                <a  href="javascript:void(0)" class="hover:text-white transition-colors"
+                  >Status</a
+                >
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        <div style="
+    font-weight: 500;
+    font-family:  Golos Text,sans-serif;
+    font-size: 16px;
+"
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between"
+        >
+          <p class="text-gray-400 text-sm">
+            © 2024 SiNGL. All rights reserved.
+          </p>
+
+          <!-- <h6 class="font-semibold mb-4">Address</h6> -->
+          <div class="text-gray-400 text-sm">
+            <p>Address : UK | Singapore | USA</p>
+            <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a> -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const footer = document.querySelector('footer');
+const blobs1 = document.querySelector('#blobs-bg');
+
+window.addEventListener('scroll', () => {
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+  
+  if (footerTop < windowHeight) {
+    blobs1.style.opacity = '0';
+  } else {
+    blobs1.style.opacity = '1';
+  }
+});
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+        const html = document.documentElement;
+        const themeIcon = themeToggle.querySelector("i");
+        function setTheme(isDark) {
+          if (isDark) {
+            html.classList.add("dark");
+            body.classList.add("dark-mode");
+            body.classList.remove("light-mode");
+            themeIcon.classList.remove("ri-sun-line");
+            themeIcon.classList.add("ri-moon-line");
+          } else {
+            html.classList.remove("dark");
+            body.classList.remove("dark-mode");
+            body.classList.add("light-mode");
+            themeIcon.classList.add("ri-sun-line");
+            themeIcon.classList.remove("ri-moon-line");
+          }
+        }
+        const savedTheme = localStorage.getItem("theme");
+        let prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        if (savedTheme === "dark") prefersDark = true;
+        if (savedTheme === "light") prefersDark = false;
+        setTheme(prefersDark);
+        themeToggle.addEventListener("click", function () {
+          const isDark = !html.classList.contains("dark");
+          setTheme(isDark);
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+      });
+    </script>
+    <script>
+      // Blog details static loader
+      document.addEventListener("DOMContentLoaded", function () {
+        const blogMap = {
+          1: `<h1 style=" font-family: UxumGrotesque,sans-serif;font-size: 33px;"" >Exploring the Basics of SiNGL: Key Concepts</h1>
+<img src="blog1contentimage.jpg" alt="SiNGL Blog" />
+
+<h2 style=" font-family: UxumGrotesque,sans-serif; text-align: left;"><span >Introduction</span></h2>
+<p style="text-align: justify;font-size: medium;">In the dynamic landscape of data management, organizations are continuously seeking solutions that simplify processes while enhancing data quality and accessibility. SiNGL, a streamlined customer data management platform, addresses these needs by offering essential features without the complexity of full-fledged Master Data Management (MDM) systems. This blog explores the basic concepts of SiNGL, shedding light on how it can transform your data management practices.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">What is SiNGL?</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL is a data management solution designed to deliver critical capabilities of MDM, such as deduplication, golden record generation, and data stewardship, without the need for extensive resources or investment. SiNGL collates, cleanses, and consolidates customer data from disparate sources, creating a single, accurate view of each customer. This approach ensures that businesses can manage their data effectively, improve customer insights, and enhance decision-making processes.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;font-size:19px;">Key Concepts of SiNGL</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">1. Deduplication</h3>
+<p style="text-align: justify;font-size: medium;">One of the core features of SiNGL is its advanced deduplication capability. Deduplication involves identifying and removing duplicate records within a dataset, ensuring that only unique data is retained. SiNGL uses sophisticated algorithms and AI to compare records, assess similarities, and determine which records are duplicates. By eliminating redundant data, organizations can reduce storage costs, improve data accuracy, and streamline data management processes.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">2. Golden Record Generation</h3>
+<p style="text-align: justify;font-size: medium;">The golden record is a comprehensive, unified view of a customer created by merging data from multiple sources. SiNGL excels at generating golden records by consolidating and reconciling information from different systems, such as CRM, ERP, and marketing databases. This single source of truth provides a complete and accurate profile of each customer, enabling businesses to deliver personalized experiences, improve customer service, and enhance marketing efforts.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">3. Data Stewardship</h3>
+<p style="text-align: justify;font-size: medium;">Effective data stewardship is essential for maintaining high data quality and integrity. SiNGL simplifies data stewardship by categorizing data into unique, duplicate, and suspect records. Data stewards can use the intuitive interface to review and validate records, ensuring that only accurate and relevant data is retained. This automated and user-friendly approach reduces the burden on data management teams and improves overall data governance.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">4. Real-Time Data Integration</h3>
+<p style="text-align: justify;font-size: medium;">In today’s fast-paced business environment, having access to real-time data is crucial. SiNGL supports real-time data integration through robust APIs, allowing businesses to seamlessly connect their systems and applications. This ensures that customer data is always up-to-date, enabling timely and informed decision-making. Real-time integration also helps prevent data silos, promoting a more cohesive and efficient data management strategy.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Benefits of SiNGL</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">1. Improved Data Quality</h3>
+<p style="text-align: justify;"font-size: medium;>By consolidating data from multiple sources and eliminating duplicates, SiNGL significantly improves data quality. High-quality data is crucial for accurate analytics, effective decision-making, and personalized customer interactions. With SiNGL, businesses can trust that their data is reliable and up-to-date.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">2. Cost Efficiency</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL offers a cost-effective solution for data management by reducing the need for extensive hardware and manual data cleansing processes. The platform’s deduplication and automated stewardship features minimize storage costs and operational expenses, delivering significant cost savings.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">3. Enhanced Customer Insights</h3>
+<p style="text-align: justify;font-size: medium;">The golden records generated by SiNGL provide a comprehensive view of each customer, enabling businesses to gain deeper insights into customer behavior, preferences, and needs. These insights can be leveraged to create targeted marketing campaigns, improve customer service, and identify opportunities for up-selling and cross-selling.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">4. Scalability and Flexibility</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL is designed to scale with your business, accommodating growing data volumes and evolving data management needs. Whether you are a small business or a large enterprise, SiNGL’s flexible architecture ensures that it can adapt to your specific requirements and support your growth.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Conclusion</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL represents a powerful yet simplified approach to customer data management. By focusing on essential features such as deduplication, golden record generation, data stewardship, and real-time integration, SiNGL provides businesses with a reliable and cost-effective solution for managing their data. As data continues to play a pivotal role in business success, adopting a solution like SiNGL can help organizations enhance their data management strategies, improve customer insights, and drive better business outcomes.</p>`,
+          2: `<h1 style=" font-family: UxumGrotesque,sans-serif;font-size: 33px;">SiNGL vs. Traditional MDM: Finding the Right Fit</h1>
+<img src="blog1contentimage.jpg" alt="SiNGL Blog" />
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Introduction</h2>
+<p style="text-align: justify;font-size: medium;">Choosing the right data management solution is crucial for organizations aiming to enhance data quality, improve operational efficiency, and deliver superior customer experiences. When evaluating options, businesses often consider SiNGL, a streamlined customer data management platform, and traditional Master Data Management (MDM) systems. This blog explores the differences between SiNGL and traditional MDM, helping businesses determine which solution aligns best with their needs and objectives.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Understanding SiNGL</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL is a modern approach to customer data management that focuses on essential capabilities such as deduplication, creating golden records, and providing a 360-degree view of customers. It offers a simplified yet effective solution for organizations looking to consolidate and manage customer data without the complexity and extensive resources required by traditional MDM systems.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Understanding Traditional MDM</h2>
+<p style="text-align: justify;font-size: medium;">Traditional MDM systems are comprehensive solutions designed to manage all types of master data across an organization. They involve complex data integration, governance processes, data modeling, and often require significant investment in infrastructure and resources. Traditional MDM aims to create a single, authoritative source of truth for all master data domains, including customer data, product data, and more.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Differences Between SiNGL and Traditional MDM</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">1. Scope and Complexity</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL focuses specifically on customer data management, offering functionalities such as deduplication, golden record creation, and customer 360-degree views. It is designed to be more agile and cost-effective, suitable for organizations that prioritize quick implementation and targeted data management solutions.</p>
+<p style="text-align: justify;font-size: medium;">Traditional MDM systems have a broader scope, encompassing multiple master data domains such as customer, product, supplier, and more. They involve complex data integration across various systems, extensive data governance processes, and comprehensive data modeling.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">2. Implementation and Time to Value</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL typically offers faster implementation and quicker time to value compared to traditional MDM systems. Its focus on specific data management functionalities allows organizations to deploy and start deriving benefits from improved data quality and customer insights more rapidly.</p>
+<p style="text-align: justify;font-size: medium;">Traditional MDM implementations are often more time-consuming due to their comprehensive scope and complexity. They require careful planning, significant upfront investment in infrastructure and resources, and longer implementation cycles to establish a centralized master data repository.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">3. Flexibility and Scalability</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL provides flexibility and scalability tailored to customer data management needs. Organizations can scale SiNGL based on their specific requirements, adding functionalities as needed without the extensive customization often required in traditional MDM implementations.</p>
+<p style="text-align: justify;font-size: medium;">Traditional MDM systems offer scalability across multiple master data domains, accommodating complex data integration scenarios and large-scale enterprise deployments. However, achieving scalability may involve higher costs and longer development cycles.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">4. Cost Considerations</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL is generally more cost-effective to implement and maintain compared to traditional MDM systems. Its streamlined approach focuses on essential data management functionalities, reducing upfront costs and ongoing operational expenses.</p>
+<p style="text-align: justify;font-size: medium;">Traditional MDM systems require significant investment in infrastructure, resources, and ongoing maintenance to support comprehensive data governance, integration, and scalability across multiple domains.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Why SiNGL is Preferred to Traditional MDM</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL retains the critical capabilities of traditional MDM that are essential for customer data management, such as deduplication and golden record generation, but at a fraction of the cost. It focuses on providing a simple yet powerful solution without overwhelming complexity, making it accessible and effective for a wide range of organizations. With SiNGL, businesses don't have to 'crack a nut with a sledgehammer'; instead, they get precisely what they need for streamlined customer data management, enhancing operational efficiency and delivering superior customer experiences.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Choosing the Right Solution</h2>
+<p style="text-align: justify;font-size: medium;">When deciding between SiNGL and traditional MDM, organizations should consider their specific data management requirements, budget constraints, and strategic objectives:</p>
+<ul>
+<li><b>SiNGL</b> may be suitable for organizations looking to improve customer data management quickly, with a focus on specific functionalities like deduplication and golden record creation.</li>
+<li><b>Traditional MDM</b> is ideal for enterprises requiring comprehensive data management across multiple domains, with robust governance, integration capabilities, and scalability.</li>
+</ul>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Conclusion</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL and traditional MDM systems represent different approaches to data management, each offering unique advantages depending on organizational needs and priorities. By understanding the differences and evaluating their specific requirements, businesses can make informed decisions to implement the right data management solution that aligns with their goals for data quality, operational efficiency, and customer experience.</p>`,
+          3: `<h1 style="
+    font-family: UxumGrotesque,sans-serif;
+    font-size: 33px;
+">Quantifying ROI with SiNGL: A Deep Dive</h1>
+<img src="blog1contentimage.jpg" alt="SiNGL Blog" />
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Introduction</h2>
+<p style="text-align: justify;font-size: medium;">In today's data-driven world, businesses across industries are investing heavily in data management solutions to improve efficiency, enhance customer experiences, and drive growth. SiNGL, a streamlined customer data management platform, offers significant benefits that contribute to a high return on investment (ROI). This blog takes a deep dive into how SiNGL helps organizations quantify their ROI through improved data accuracy, operational efficiency, and strategic insights.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Understanding ROI in Data Management</h2>
+<p style="text-align: justify;font-size: medium;">Return on investment (ROI) in data management is measured by the financial benefits gained from implementing a data management solution relative to its cost. Key factors influencing ROI include cost savings, revenue enhancement, and risk mitigation. SiNGL addresses these factors by offering advanced data management capabilities tailored to meet the specific needs of businesses.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Cost Savings with SiNGL</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Reducing Operational Expenses</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL significantly reduces operational expenses by automating data management tasks and improving data quality. By eliminating duplicate records and consolidating data into a single source of truth, SiNGL minimizes manual data entry and validation efforts. This automation leads to reduced labor costs and increased staff productivity, as employees spend less time on data-related issues.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Lowering Data Storage Costs</h3>
+<p style="text-align: justify;font-size: medium;">With SiNGL’s data deduplication capabilities, organizations can drastically reduce the amount of storage space required for their data. By storing only unique instances of data, companies can cut down on physical storage needs and associated costs. This reduction in storage requirements also leads to lower maintenance and hardware expenses.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Improving Marketing Efficiency</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL enhances marketing campaign effectiveness by providing accurate and comprehensive customer profiles. With a 360-degree view of customers, businesses can create more targeted and personalized marketing campaigns, leading to higher response rates and conversion rates. This improved targeting reduces marketing spend and increases campaign ROI.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Revenue Enhancement with SiNGL</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Upselling and Cross-selling Opportunities</h3>
+<p style="text-align: justify;font-size: medium;">By providing a complete and accurate view of customers, SiNGL enables businesses to identify potential upselling and cross-selling opportunities. Understanding customer needs and preferences allows for more effective sales strategies, increasing average deal sizes and overall revenue.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Enhancing Customer Experience</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL’s accurate and up-to-date customer data helps improve customer experiences by ensuring that interactions are personalized and relevant. Enhanced customer satisfaction leads to increased loyalty and repeat business, driving revenue growth over time. Satisfied customers are also more likely to recommend the business to others, contributing to new customer acquisition.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Risk Mitigation with SiNGL</h2>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Regulatory Compliance</h3>
+<p style="text-align: justify;font-size: medium;">Compliance with data protection regulations such as GDPR and CCPA is critical for avoiding fines and legal issues. SiNGL ensures that customer data is managed in compliance with regulatory requirements, reducing the risk of data breaches and associated penalties. This proactive approach to compliance helps protect the organization’s reputation and financial stability.</p>
+<h3 style=" font-family: UxumGrotesque,sans-serif;">Fraud Detection and Prevention</h3>
+<p style="text-align: justify;font-size: medium;">SiNGL’s comprehensive data management capabilities enable better detection and prevention of fraudulent activities. By capturing accurate customer relationships and transaction patterns, SiNGL helps identify anomalies and potential fraud, reducing financial losses and safeguarding assets.</p>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Quantifying ROI: Real-world Examples</h2>
+<p style="text-align: justify;font-size: medium;">Several organizations have realized substantial ROI from implementing SiNGL. Here are a few examples:</p>
+<ul>
+<li><b>Company A:</b> By using SiNGL to eliminate duplicate customer records, Company A reduced its data storage costs by 30% and improved marketing campaign ROI by 20% through better targeting.</li>
+<li><b>Company B:</b> SiNGL’s real-time data validation capabilities helped Company B reduce compliance-related fines by 50%, enhancing overall financial stability.</li>
+<li><b>Company C:</b> Leveraging SiNGL’s customer 360-view, Company C increased upsell and cross-sell revenue by 25%, significantly boosting its top line.</li>
+</ul>
+<h2 style=" font-family: UxumGrotesque,sans-serif;">Conclusion</h2>
+<p style="text-align: justify;font-size: medium;">SiNGL offers a powerful solution for businesses looking to maximize their ROI through improved data management. By reducing operational and storage costs, enhancing revenue through targeted marketing and upselling opportunities, and mitigating risks associated with regulatory compliance and fraud, SiNGL delivers substantial financial benefits. As businesses continue to navigate the complexities of the digital age, investing in robust data management solutions like SiNGL is essential for achieving sustainable growth and competitive advantage.</p>`,
+        };
+        function getQueryParam(name) {
+          const url = new URL(window.location.href);
+          return url.searchParams.get(name);
+        }
+        const id = getQueryParam("id");
+        const article = document.getElementById("blog-article");
+        const loading = document.getElementById("blog-loading");
+        if (!blogMap[id]) {
+          loading.textContent = "Blog not found.";
+          return;
+        }
+        article.innerHTML = blogMap[id];
+      });
+    </script>
+    <script>
+      document
+        .getElementById("footerOpenContactModal")
+        ?.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.getElementById("contactModal")?.classList.add("active");
+        });
+      document
+        .getElementById("openContactModal")
+        ?.addEventListener("click", () => {
+          document.getElementById("contactModal")?.classList.add("active");
+        });
+    </script>
+
+     <script>
+  
+
+      
+
+      // Get all modal and button elements
+
+const contactModal = document.getElementById("contactModal");
+const closeContactModal = document.getElementById("closeContactModal");
+const contactForm = document.getElementById("contactForm");
+
+// Get elements for global status and toast messages
+const testimonialFormStatus = document.getElementById("formStatus");
+const toast = document.getElementById("toast");
+
+
+
+// --- Helper Functions ---
+
+// Function to show a toast notification
+function showToast(message, isSuccess = true) {
+  if (!toast) return; // Exit if toast element doesn't exist
+  toast.textContent = message;
+  toast.className = `fixed bottom-6 right-6 px-4 py-2 rounded-md shadow-lg z-[9999] transition-all duration-300 ${
+    isSuccess ? "bg-green-600 text-white" : "bg-red-600 text-white"
+  }`;
+  toast.classList.remove("hidden");
+  setTimeout(() => toast.classList.add("hidden"), 3000);
+}
+
+
+// Function to create star icons HTML
+
+
+// Function to create a new testimonial card element
+
+
+
+// --- Event Listeners for Modals ---
+
+// Open Contact Modal
+// if (openContactModal) {
+//   openContactModal.addEventListener("click", () => {
+//     if (!testimonialModal.classList.contains("active")) {
+//       contactModal.classList.add("active");
+//     }
+//   });
+// }
+// if (footerOpenContactModal) {
+//   footerOpenContactModal.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (!testimonialModal.classList.contains("active")) {
+//       contactModal.classList.add("active");
+//     }
+//   });
+// }
+
+// Close Contact Modal
+if (closeContactModal) {
+  closeContactModal.addEventListener("click", () => {
+    contactModal.classList.remove("active");
+  });
+}
+if (contactModal) {
+  contactModal.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.remove("active");
+    }
+  });
+}
+
+// Open Testimonial Modal
+
+
+// Close Testimonial Modal
+
+
+
+// --- Form Submission Handlers ---
+
+// Contact Form
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    
+    // In a real application, you would send this data to a server here using fetch().
+    // For this example, we'll simulate success and show a toast.
+
+    contactModal.classList.remove("active");
+    showToast("Message sent successfully!", true);
+    contactForm.reset();
+  });
+}
+
+
+// Testimonial Form
+
+    </script>
+    
+
+  </body>
+
+</html>
