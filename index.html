@@ -1584,7 +1584,7 @@ html.dark #blobs-bg .blob {
     <div
       class="max-w-7xl w-full mx-auto  flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent"
       style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding:5px 15px 5px">
-      <div class="flex items-center py-1 rounded-lg ">
+      <div class="flex items-center py-1 rounded-lg logo-left">
         <div class="logo-wrapper">
           <img src="./image (3).png" alt="Logo" class="logo-img  hidden dark:block" />
 
@@ -1616,7 +1616,7 @@ html.dark #blobs-bg .blob {
           <a href="#blogs"
             class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
             style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Blog</a>
-          <a id="openContactModal"
+          <a href="./contact-us.html"
             class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
             style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Contact
             Us</a>
@@ -1733,7 +1733,7 @@ html.dark #blobs-bg .blob {
         class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Industry</a>
       <a href="#blogs"
         class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Blog</a>
-      <a id="openContactModal"
+      <a href="./contact-us.html"
         class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Contact
         Us</a>
     </div>
@@ -1866,6 +1866,87 @@ html.dark #blobs-bg .blob {
         opacity: 1 !important;
         transform: translateY(0) !important;
       }
+  
+
+.fade-logo img {
+  animation: fadeInOut 4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.blogwidth{
+      max-width: 80rem;
+      margin: 0px 100px;
+}
+.margin-lr{
+        margin: 0px 109px;
+        border-radius: 20px;
+      }
+      @media (max-width: 768px) {
+        .margin-lr{
+          margin: 0px 15px;
+        }
+         .heroheight{
+        min-height: 100vh;
+      }
+        .blogwidth{
+      /* max-width: 80rem; */
+      margin: 0px;
+}
+      }
+      .heroheight{
+        min-height: 85vh;
+      }
+
+      @media(min-width: 1400px){
+         .blogwidth{
+          max-width: 68rem ;
+          /* margin:0 */
+        }
+
+      }
+      @media (min-width: 1517px){
+        .margin-lr{
+          margin: 0px 132px;
+        }
+        .blogwidth{
+          max-width: 68rem;
+          /* margin:0 */
+        }
+      }
+      @media (min-width: 1600px) {
+    .margin-lr {
+        margin: 0px 180px;
+    }
+    .blogwidth{
+          max-width: 80rem ;
+          /* margin:0 */
+      margin: 0px 167px;
+
+        }
+}
+@media (min-width: 1700px) {
+    .margin-lr {
+        margin: 0px 230px;
+    }
+    .blogwidth{
+          max-width: 80rem ;
+          /* margin:0 */
+        }
+}   
+      @media (max-width: 991px) {
+        .blogwidth{
+          margin: 0;
+        }
+      }
     </style>
 
     <!-- Announcement Strip -->
@@ -1881,7 +1962,7 @@ html.dark #blobs-bg .blob {
     </div> -->
     <!-- Hero Section -->
     <section
-      class="relative min-h-screen flex items-center justify-center overflow-hidden mt-20 bg-white dark:bg-gray-900"
+      class="relative heroheight flex items-center justify-center overflow-hidden mt-20 bg-white dark:bg-gray-900"
     >
       <!-- Section-specific Animated SVG Lines Background -->
       <!-- Adaptive transparent background -->
@@ -1984,10 +2065,22 @@ html.dark #blobs-bg .blob {
 >
   Deliver
 
-  <div class="mt-1">
-    <img src="./image (3).png" alt="Logo" class="logobanner-img hidden dark:block w-13 h-7" />
-    <img src="logoo1.png" alt="Logo" class="logobanner-img1 block dark:hidden w-13 h-7" />
-  </div>
+<span class="relative inline-flex items-center fade-logo">
+  <!-- Light mode only -->
+  <img
+    src="./textimage2.png"
+    alt="Logo Light"
+    class="logobanner-img block dark:!hidden"
+  />
+  <!-- Dark mode only -->
+  <img
+    src="./textimage1.png"
+    alt="Logo Dark"
+    class="logobanner-img !hidden dark:!block"
+  />
+</span>
+
+
 
   in less than
   <span
@@ -2001,6 +2094,7 @@ html.dark #blobs-bg .blob {
     >90 days</span
   >
 </div>
+
 
           </div>
  
@@ -2163,9 +2257,9 @@ html.dark #blobs-bg .blob {
  
 
     <!-- News Scroll Section -->
-     <div class="bg-[url('/Newss.jpg')] py-1  px-0 " >
+     <div class="bg-[url('/Newss.jpg')] py-1  px-4 margin-lr" >
     <div
-      class="relative py-0  px-0 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 shadow-sm rounded-4xl"
+      class="relative py-0 px-0 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 shadow-sm rounded-4xl"
     >
       <div style="    font-weight: 500;
     font-family: Golos Text, sans-serif;
@@ -2307,9 +2401,15 @@ html.dark #blobs-bg .blob {
         transform: translateY(0);
         animation: fadeInUp 0.6s ease-out forwards;
       }
+      #features, #use-cases {
+  scroll-margin-top: 120px; /* or more if you want content visible too */
+}
+#blogs{
+  scroll-margin-top: 20px; /* or more if you want content visible too */
+}
     </style>
 
-    <h2 style="
+   <h2 style="
     font-family: UxumGrotesque,sans-serif;
     font-size: 45px;
 "
@@ -2343,23 +2443,20 @@ html.dark #blobs-bg .blob {
 
       /* Tab button default state */
       .tab-btn {
-     flex: 1 1 auto;
-    min-width: 150px;
-    max-width: 174px;
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 8px 5px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 11px;
-    font-weight: 600;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
+      flex: 1; /* Key Change: Allows buttons to grow equally */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 8px 5px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background-color: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
         /* color: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8); */
       }
 
@@ -2394,7 +2491,7 @@ html.dark #blobs-bg .blob {
 
       /* Active tab style with #1B1AFF gradient range */
       .tab-btn.active {
-    background: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8);
+    background: #3B82F6;;
         /* background: linear-gradient(90deg, #1b1aff, #4c4bff); */
         color: white;
       }
@@ -2433,7 +2530,7 @@ html.dark #blobs-bg .blob {
 
         /* Ensure buttons fit side-by-side */
         .btns .tab-btn {
-          flex: 0 0 auto;
+          flex: 1 1 auto;
         }
 
         .tab-btn .tab-icon {
@@ -2446,98 +2543,80 @@ html.dark #blobs-bg .blob {
 }
 
       }
+      .btn-margin{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .logo-left{
+        margin-left: 0px;
+      }
+      @media(min-width:1200px){
+        .btn-margin{
+          margin-left: 50px !important;
+          margin-right: 50px !important;
+        }
+      }
+      @media(min-width:1400px){
+        .btn-margin{
+          margin-left: 50px !important;
+          margin-right: 50px !important;
+        }
+      }
+       @media(min-width:1500px){
+        .btn-margin{
+          margin-left: 91px !important;
+          margin-right: 91px !important;
+        }
+      }
+         @media(min-width:1600px){
+        .btn-margin{
+          margin-left: 130px !important;
+          margin-right: 130px !important;
+        }
+      }
+         @media(min-width:1700px){
+        .btn-margin{
+          margin-left: 170px !important;
+          margin-right: 170px !important;
+        }
+           .logo-left{
+        margin-left: -50px;
+      }
+      }
     </style>
-    <!-- <div class="btns">
-      <button onclick="showTab(0)" id="tab-0" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img
-            src="Icons for singl uvtech/deduplicate using ai.png"
-            alt="Deduplicate"
-          />
-          <p class="tab-text">Deduplicate Using AI</p>
-        </div>
-      </button>
-
-      <button onclick="showTab(1)" id="tab-1" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img
-            src="Icons for singl uvtech/advance data stewership.png"
-            alt="Advanced Data Stewardship"
-          />
-          <p class="tab-text">Advanced Data Stewardship</p>
-        </div>
-      </button>
-
-      <button onclick="showTab(2)" id="tab-2" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img src="Icons for singl uvtech/bulk match.png" alt="Bulk Match" />
-          <p class="tab-text">Bulk Match</p>
-        </div>
-      </button>
-
-      <button onclick="showTab(3)" id="tab-3" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img
-            src="Icons for singl uvtech/customer 360.png"
-            alt="Customer 360"
-          />
-          <p class="tab-text">Customer 360</p>
-        </div>
-      </button>
-
-      <button onclick="showTab(4)" id="tab-4" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img
-            src="Icons for singl uvtech/consume data via api.png"
-            alt="Consume Data Via API"
-          />
-          <p class="tab-text">Consume Data Via API</p>
-        </div>
-      </button>
-
-      <button onclick="showTab(5)" id="tab-5" class="tab-btn">
-        <div class="flex items-center gap-2">
-          <img
-            src="Icons for singl uvtech/Gen ai powered data stewardship.png"
-            alt="GenAI Powered Data Stewardship"
-          />
-          <p class="tab-text">GenAI Powered Data Stewardship</p>
-        </div>
-      </button>
-    </div> -->
-
-    <div class="btns" >
-  <button onclick="showTab(0)" id="tab-0" class="tab-btn tabgrp hover:text-blue-500">
-    <div class="flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
-        <path d="M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6" />
-        <path d="M21 15a4 4 0 1 1-7.9 1.9" />
-        <path d="M15 15a4 4 0 1 1 6 3" />
-        <path d="m15 15-2 2-2-2" />
-      </svg>
-      <p class="tab-text">Deduplicate Using AI</p>
-    </div>
-  </button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 btn-margin">
+      <div class="btns" >
+    <button onclick="showTab(0)" id="tab-0" class="tab-btn tabgrp hover:text-blue-500">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
+          <path d="M11 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6" />
+          <path d="M21 15a4 4 0 1 1-7.9 1.9" />
+          <path d="M15 15a4 4 0 1 1 6 3" />
+          <path d="m15 15-2 2-2-2" />
+        </svg>
+        <p class="tab-text">Deduplicate Using AI</p>
+      </div>
+    </button>
 
 <button onclick="showTab(1)" id="tab-1" 
-  class="tab-btn tabgrp hover:text-blue-500">
-  <div class="flex items-center gap-1 ">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-      viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      class="w-11 tab-icon">
-      <path d="M4 12V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6" />
-      <path d="M16 16v-4" />
-      <path d="M8 16v-4" />
-      <path d="M12 16V4" />
-      <path d="M18 16v-4" />
-      <path d="M6 16v-4" />
-      <path d="M2 12h20" />
-      <path d="M12 16v6" />
-      <path d="M10 20h4" />
-    </svg>
-    <p class="tab-text">Advanced Data Stewardship</p>
-  </div>
+    class="tab-btn tabgrp hover:text-blue-500">
+    <div class="flex items-center gap-1 ">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="w-11 tab-icon">
+        <path d="M4 12V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6" />
+        <path d="M16 16v-4" />
+        <path d="M8 16v-4" />
+        <path d="M12 16V4" />
+        <path d="M18 16v-4" />
+        <path d="M6 16v-4" />
+        <path d="M2 12h20" />
+        <path d="M12 16v6" />
+        <path d="M10 20h4" />
+      </svg>
+      <p class="tab-text">Advanced Data Stewardship</p>
+    </div>
 </button>
 
 
@@ -2545,54 +2624,55 @@ html.dark #blobs-bg .blob {
 
 
 
-  <button onclick="showTab(2)" id="tab-2" class="tab-btn tabgrp hover:text-blue-500">
-    <div class="flex items-center gap-3 ">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="8" y1="13" x2="16" y2="13" />
-        <line x1="8" y1="17" x2="16" y2="17" />
-        <line x1="8" y1="9" x2="12" y2="9" />
-      </svg>
-      <p class="tab-text">Bulk Match</p>
-    </div>
-  </button>
+    <button onclick="showTab(2)" id="tab-2" class="tab-btn tabgrp hover:text-blue-500">
+      <div class="flex items-center gap-3 ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="8" y1="13" x2="16" y2="13" />
+          <line x1="8" y1="17" x2="16" y2="17" />
+          <line x1="8" y1="9" x2="12" y2="9" />
+        </svg>
+        <p class="tab-text">Bulk Match</p>
+      </div>
+    </button>
 
-  <button onclick="showTab(3)" id="tab-3" class="tab-btn tabgrp hover:text-blue-500">
+    <button onclick="showTab(3)" id="tab-3" class="tab-btn tabgrp hover:text-blue-500">
+      <div class="flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
+          <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-6 15a9 9 0 0 1 12 0" />
+        </svg>
+        <p class="tab-text">Customer 360</p>
+      </div>
+    </button>
+
+   <button onclick="showTab(4)" id="tab-4" class="tab-btn tabgrp hover:text-blue-500">
+    <div class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
+        <path d="M12 18v-6" />
+        <path d="M12 6v6" />
+        <path d="M18 12h-6" />
+        <path d="M6 12h6" />
+        <path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0z" />
+      </svg>
+      <p class="tab-text">Consume Data Via API</p>
+    </div>
+</button>
+   <button onclick="showTab(5)" id="tab-5" class="tab-btn tabgrp hover:text-blue-500">
     <div class="flex items-center gap-3">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
-        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-6 15a9 9 0 0 1 12 0" />
-      </svg>
-      <p class="tab-text">Customer 360</p>
-    </div>
-  </button>
-
- <button onclick="showTab(4)" id="tab-4" class="tab-btn tabgrp hover:text-blue-500">
-  <div class="flex items-center gap-2">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6">
-      <path d="M12 18v-6" />
-      <path d="M12 6v6" />
-      <path d="M18 12h-6" />
-      <path d="M6 12h6" />
-      <path d="M2 12a10 10 0 1 0 20 0 10 10 0 1 0-20 0z" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-9">
+      <path d="M16.5 9.5a4.5 4.5 0 0 1-9 0" />
+      <path d="M7 14h4v-4H7z" />
+      <path d="M17 14h-4v-4h4z" />
+      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
     </svg>
-    <p class="tab-text">Consume Data Via API</p>
-  </div>
-</button>
- <button onclick="showTab(5)" id="tab-5" class="tab-btn tabgrp hover:text-blue-500">
-  <div class="flex items-center gap-3">
-     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-9">
-    <path d="M16.5 9.5a4.5 4.5 0 0 1-9 0" />
-    <path d="M7 14h4v-4H7z" />
-    <path d="M17 14h-4v-4h4z" />
-    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z" />
-  </svg>
-  <p class="tab-text">GenAI Powered Data Stewardship</p>
-  </div>
+    <p class="tab-text">GenAI Powered Data Stewardship</p>
+    </div>
 </button>
 
 
 </div>
+    </div>
 
     <script>
       function showTab(tabIndex) {
@@ -2621,18 +2701,14 @@ html.dark #blobs-bg .blob {
       }
     </script>
 
-    <!-- Example Tab Contents -->
-
-    <!-- Deduplicate Using AI -->
-<div id="content-0" class="tab-content block" >
-  <div  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
-  <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px]  lg:pr-[60px]">
+    <div id="content-0" class="tab-content block mt-5" >
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
+  <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px]   lg:pr-[60px]">
 
       
-      <!-- Left Column -->
       <div class="space-y-4 sm:space-y-6">
         <h2 style="font-family: UxumGrotesque, sans-serif; font-size: 43px; color: rgb(39, 19, 64);"
-            class="text-2xl sm:text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100">
+            class="text-2xl sm:text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100 normal-text">
           <span class="gradient-text">Deduplicate</span> Using AI
         </h2>
 
@@ -2653,8 +2729,7 @@ html.dark #blobs-bg .blob {
         </div>
       </div>
 
-      <!-- Right Column (Image) -->
-     <div class="flex justify-center">
+      <div class="flex justify-center">
   <div 
     class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
     style="background-size: cover; background-position: center;"
@@ -2662,7 +2737,7 @@ html.dark #blobs-bg .blob {
     <img 
       src="DeDuplicate_UsingAI.gif" 
       alt="Deduplicate Using AI"
-      class="rounded-2xl shadow-2xl hover-rise w-full max-w-xl h-auto"
+      class="rounded-2xl shadow-2xl w-full max-w-xl h-auto"
       style="background: #f6f7fb; box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);" 
     />
   </div>
@@ -2675,29 +2750,12 @@ html.dark #blobs-bg .blob {
 
 
 
-    <!-- Advanced Data Stewardship -->
-    <div id="content-1" class="tab-content hidden">
+    <div id="content-1" class="tab-content hidden mt-5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px] lg:pr-[56px]">
-              <div class="flex justify-center">
-  <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
-    style="background-size: cover; background-position: center;"
-  >
-            <img
-              src="Advanced_Data_Stewardship.gif"
-              alt="Advanced Data Stewardship"
-              class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
-              style="
-                background: #f6f7fb;
-                box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
-              "
-            />
-          </div>
-           </div>
           <div class="space-y-4 sm:space-y-6">
             <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 43px;color: RGB(39, 19, 64);"
-              class="text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
+              class="text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100 normal-text"
             >
               <span class="gradient-text">Advanced</span>  Data Stewardship
             </h2>
@@ -2720,17 +2778,32 @@ html.dark #blobs-bg .blob {
               Outcome: Perform stewardship in few simple steps
             </p>
           </div>
+           <div class="flex justify-center">
+  <div 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    style="background-size: cover; background-position: center;"
+  >
+              <img
+                src="Advanced_Data_Stewardship.gif"
+                alt="Advanced Data Stewardship"
+                class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
+                style="
+                  background: #f6f7fb;
+                  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+                "
+              />
+            </div>
+            </div>
         </div>
       </div>
     </div>
 
-    <!-- Bulk Match -->
-    <div id="content-2" class="tab-content hidden">
+    <div id="content-2" class="tab-content hidden mt-5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px] lg:pr-[60px]">
           <div class="space-y-4 sm:space-y-6">
             <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 43px;color: RGB(39, 19, 64);"
-              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100"
+              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100 normal-text"
             >
               <span class="gradient-text">Bulk</span> Match
             </h2>
@@ -2750,33 +2823,32 @@ html.dark #blobs-bg .blob {
               Outcome: Stewardship in minutes - Not days
             </p>
           </div>
-                       <div class="flex justify-center">
+               <div class="flex justify-center">
   <div 
     class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
-            <img
-              src="Bulk_Match.gif"
-              alt="Bulk Match"
-              class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
-              style="
-                background: #f6f7fb;
-                box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
-              "
-            />
-          </div>
-          </div>
+              <img
+                src="Bulk_Match.gif"
+                alt="Bulk Match"
+                class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
+                style="
+                  background: #f6f7fb;
+                  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+                "
+              />
+            </div>
+            </div>
         </div>
       </div>
     </div>
 
-    <!-- Customer 360 -->
-    <div id="content-3" class="tab-content hidden"> 
+    <div id="content-3" class="tab-content hidden mt-5"> 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px] lg:pr-[60px]">
           <div class="space-y-4 sm:space-y-6">
             <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 43px;color: RGB(39, 19, 64);"
-              class="text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
+              class="text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100 normal-text"
             >
              <span class="gradient-text">Customer</span>  360°
             </h2>
@@ -2809,27 +2881,27 @@ html.dark #blobs-bg .blob {
     class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
-            <img
-              src="Customer_360.gif"
-              alt="Customer 360"
-              class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
-              style="
-                background: #f6f7fb;
-                box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
-              "
-            />
-  </div>
+              <img
+                src="Customer_360.gif"
+                alt="Customer 360"
+                class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
+                style="
+                  background: #f6f7fb;
+                  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+                "
+              />
+          </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="content-4" class="tab-content hidden">
+    <div id="content-4" class="tab-content hidden mt-5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
-        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px]  lg:pr-[60px]">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px]   lg:pr-[60px]">
           <div class="space-y-4 sm:space-y-6">
             <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 43px;color: RGB(39, 19, 64);"
-              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100"
+              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100 normal-text"
             >
               <span class="gradient-text">Consume</span> data via API
             </h2>
@@ -2847,22 +2919,12 @@ html.dark #blobs-bg .blob {
             </p>
             <div class="space-y-4">
               <div class="flex items-center space-x-3">
-                <!-- <div
-                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-check-line text-white text-sm"></i>
-                </div> -->
                 <span style="font-family: Golos Text, sans-serif;font-size: 17px;"
                   class="font-medium text-blue-500 dark:text-blue-500"
                   >Outcome: Improve Data Quality by preventing duplicate data
                 </span>
               </div>
               <div class="flex items-center space-x-3">
-                <!-- <div
-                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center"
-                >
-                  <i class="ri-check-line text-white text-sm"></i>
-                </div> -->
                 <span style="font-family: Golos Text, sans-serif;font-size: 17px;"
                   class="font-medium text-blue-500 dark:text-blue-500"
                   >Business Outcome: Faster, Lower cost of onboarding
@@ -2875,28 +2937,27 @@ html.dark #blobs-bg .blob {
     class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
-            <img
-              src="api data.png"
-              alt="Customer 360"
-              class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
-              style="
-                background: #f6f7fb;
-                box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
-              "
-            />
-          </div>
-           </div>
+              <img
+                src="api data.png"
+                alt="Customer 360"
+                class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
+                style="
+                  background: #f6f7fb;
+                  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+                "
+              />
+            </div>
+            </div>
         </div>
       </div>
     </div>
 
-    <!-- GenAI Powered Data Stewardship -->
-    <div id="content-5" class="tab-content hidden">
+    <div id="content-5" class="tab-content hidden mt-5">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12" style="margin-left: auto; margin-right: auto;">
         <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:pl-[56px] lg:pr-[60px]">
           <div class="space-y-4 sm:space-y-6">
             <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 43px;color: RGB(39, 19, 64);"
-              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100"
+              class="text-4xl font-extrabold font-manrope text-gray-800 dark:text-gray-100 normal-text"
             >
               <span class="gradient-text">GenAI</span> Powered Data Stewardship (Chat with your data in Natural
               Language)
@@ -2927,16 +2988,16 @@ html.dark #blobs-bg .blob {
     class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
-            <img
-              src="GenAI_PoweredData_Stewardship.gif"
-              alt="GenAI Powered Data Stewardship"
-              class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
-              style="
-                background: #f6f7fb;
-                box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
-              "
-            />
-          </div>
+              <img
+                src="GenAI_PoweredData_Stewardship.gif"
+                alt="GenAI Powered Data Stewardship"
+                class="rounded-2xl shadow-2xl w-full max-w-xl h-auto mx-auto"
+                style="
+                  background: #f6f7fb;
+                  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+                "
+              />
+            </div>
             </div>
         </div>
       </div>
@@ -3118,7 +3179,7 @@ html.dark #blobs-bg .blob {
     });
   </script> -->
 
-    <section id="searchContainer" class="py-20 scroll-reveal">
+    <section id="searchContainer" class="py-20 scroll-reveal" style="padding-bottom: 2rem !important;">
   <div class="max-w-7xl mx-auto max-h-100xl px-6">
     <div id="searchSection"  class="text-center mb-16">
       <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
@@ -3128,7 +3189,7 @@ html.dark #blobs-bg .blob {
       </h2>
       <p class="reveal tracking-in-expand-fwd-bottom text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
-    font-size: 16px;;">
+    font-size: 16px;">
         Look for customer records based on a variety of search criteria.
       </p>
       <p style="font-family: Golos Text, sans-serif;font-size: 15px;"
@@ -3504,7 +3565,7 @@ observer.observe(section);
 
 
 
-    <section class="py-20 scroll-reveal" id="business-benefits">
+    <section class="py-20 scroll-reveal" style="padding-top: 1rem !important;" id="business-benefits">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 reveal tracking-in-expand-fwd-bottom">
@@ -3819,7 +3880,7 @@ observer.observe(section);
       });
     </script>
 
-    <div class="text-center mb-16">
+    <div class="text-center mb-4">
       <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
         class="reveal tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
       >
@@ -3997,7 +4058,7 @@ observer.observe(section);
     <section class="feature-section" id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
-<div class="relative bg-[url('/IndustryBanner.jpg')] bg-cover bg-center p-6 flex justify-center">
+<div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
   <div 
     class="feature-left shadow-md bg-white rounded-2xl shadow-lg p-6 w-full sm:w-[300px] md:w-[350px] lg:w-[459px] lg:h-[352px] md:h-[345px]" 
     style="border-radius: 14px;"
@@ -4180,6 +4241,7 @@ html.dark .feature-section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin:5px
       }
       .feature-left h3 {
         font-size: 28px;
@@ -4292,6 +4354,12 @@ html.dark .feature-section {
         .feature-left {
           text-align: left;
         }
+        /* .gradient-text{
+          font-size: 25px;
+        } */
+        .normal-text{
+          font-size: 25px !important;
+        }
       }
       @media (max-width: 990px) {
   #addTestimonialButton {
@@ -4334,7 +4402,9 @@ html.dark .feature-section {
     <button
       id="addTestimonialButton"
       class="px-4 py-2 text-sm sm:text-base bg-gradient-to-r from-neutral-50 to-neutral-50 text-black rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
-      aria-label="Add Testimonial" style="border-radius: 0px 11px 11px 0px;    font-weight: 600;
+      aria-label="Add Testimonial" style="border-radius: 0px 11px 11px 0px;   
+      text-align: left;
+      font-weight: 600;
     font-family: Golos Text, sans-serif;
     font-size: 16px;"
     >
@@ -4593,9 +4663,9 @@ html.dark .feature-section {
 
     <!-- Social Links -->
     <div class="flex flex-wrap items-center justify-center gap-10" style="
-    font-weight: 400;
+    font-weight: 400 !important;
     font-family: Golos Text, sans-serif;
-    font-size: 14px;
+    font-size: 13px;
 ">
       <!-- Twitter -->
       <a href="#" class="flex items-center space-x-2 text-gray-800 dark:text-white ">
@@ -5078,7 +5148,7 @@ background-color: #0f0f0f;}
       </div>
     </section> -->
   <section class="py-12" id="blogs">
-  <div class="max-w-4xl mx-auto px-4 mt-5">
+  <div class="blogwidth mx-auto px-4 mt-5">
      <div class="text-center mb-16">
           <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
             class="reveal tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"

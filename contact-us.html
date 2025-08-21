@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Details - SiNGL</title>
+    <title>Contact Us - SiNGL</title>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -777,7 +777,7 @@
           document.addEventListener("DOMContentLoaded", function () {
             const navLinks = document.querySelectorAll(".nav-link");
             navLinks.forEach((l) => l.classList.remove("active"));
-            if (navLinks.length > 0) navLinks[3].classList.add("active");
+            if (navLinks.length > 0) navLinks[4].classList.add("active");
             navLinks.forEach((link) => {
               link.addEventListener("click", function (e) {
                 navLinks.forEach((l) => l.classList.remove("active"));
@@ -892,6 +892,34 @@
         color: #fdfeff;
         margin: 0;
         padding: 0;
+      }
+      .logobanner-img {
+        width: 73px;
+        height: 22px;
+        /* margin: 10px 0px; */
+        margin-top: 3px;
+        /* height: auto; */
+        /* object-fit: contain; */
+        background-color: transparent;
+        /* border-radius: 4px; */
+        /* padding: 4px; */
+        transition: background-color 0.3s ease;
+      }
+      .fade-logo img {
+        animation: fadeInOut 4s ease-in-out infinite;
+      }
+
+      @keyframes fadeInOut {
+        0%,
+        100% {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        20%,
+        80% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
 
@@ -1549,31 +1577,241 @@
 
       /* Improve touch targets for mobile */
     </style>
-    <main class="pt-32 pb-20 min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div
-        class="max-w-3xl mx-auto px-4 sm:px-6 no-animation"
-        style="
-          font-weight: 500;
-          font-family: Golos Text, sans-serif;
-          font-size: 18px;
-        "
+    <main class="pt-12 pb-10 min-h-screen bg-gray-50 dark:bg-gray-900">
+      <!-- Hero Section -->
+      <section
+        class="relative text-gray-900 dark:text-white py-12 sm:py-16 md:py-20"
       >
-        <a href="index.html#blogs" class="back-btn"
-          ><i class="ri-arrow-left-line"></i>Back to Blogs</a
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-20 text-center"
         >
-        <article
-          id="blog-article"
-          class="blog-content bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 min-h-[300px] flex flex-col items-center justify-center"
-        >
-          <div
-            id="blog-loading"
-            class="text-lg text-gray-500 dark:text-gray-300"
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-600 to-green-400 bg-clip-text text-transparent animate-fade-in"
           >
-            Loading blog...
+            Get in Touch
+          </h1>
+          <p
+            class="text-base sm:text-lg md:text-xl opacity-90 max-w-xl sm:max-w-2xl mx-auto animate-fade-in-up text-gray-700 dark:text-gray-300"
+            style="font-family: Golos Text, sans-serif"
+          >
+            Have questions about our
+            <span class="relative inline-flex items-center fade-logo">
+              <!-- Light mode only -->
+              <img
+                src="./textimage2.png"
+                alt="Logo Light"
+                class="logobanner-img block dark:!hidden"
+              />
+              <!-- Dark mode only -->
+              <img
+                src="./textimage1.png"
+                alt="Logo Dark"
+                class="logobanner-img !hidden dark:!block"
+              />
+            </span>
+            platform? We're here to help you unlock the power of artificial
+            intelligence for your business.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        class="py-10 sm:py-14 md:py-20 bg-white dark:bg-gray-800 shadow-lg rounded-2xl sm:rounded-3xl mx-4 sm:mx-6 md:mx-12 lg:mx-28"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start"
+          >
+            <!-- Contact Form -->
+            <div class="animate-slide-up">
+              <h2
+                class="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6 sm:mb-8"
+              >
+                Send us a message
+              </h2>
+              <form class="space-y-5 sm:space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
+                    placeholder="john@company.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Subject</label
+                  >
+                  <select
+                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm pr-8"
+                  >
+                    <option>General Inquiry</option>
+                    <option>Technical Support</option>
+                    <option>Sales Question</option>
+                    <option>Partnership</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    rows="5"
+                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm resize-none"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full py-3 sm:py-4 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-purple-600 to-purple-400 text-white font-semibold hover:opacity-90 transition-all duration-300 flex items-center justify-center"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="animate-slide-up mt-10 lg:mt-0">
+              <h2
+                class="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6 sm:mb-8"
+              >
+                Let's start a conversation
+              </h2>
+              <p
+                class="text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg"
+              >
+                Our team is ready to help you. Reach out to us through any of
+                the channels below.
+              </p>
+
+              <!-- Contact Cards -->
+              <div class="space-y-5 sm:space-y-6">
+                <!-- Email -->
+                <div
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                >
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary/10 rounded-lg"
+                    >
+                      <i
+                        class="ri-mail-line text-primary text-lg sm:text-xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <h3
+                        class="font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                      >
+                        Email Us
+                      </h3>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1 sm:mb-2">
+                        Get in touch via email
+                      </p>
+                      <a
+                        href="mailto:info@singlview.ai"
+                        class="text-primary font-medium hover:underline text-sm sm:text-base"
+                        >info@singlview.ai</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                >
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary/10 rounded-lg"
+                    >
+                      <i
+                        class="ri-phone-line text-primary text-lg sm:text-xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <h3
+                        class="font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                      >
+                        Call Us
+                      </h3>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1 sm:mb-2">
+                        Monday to Friday, 9AM to 6PM PST
+                      </p>
+                      <a
+                        href="tel:+XX-XXXXXXXXXX"
+                        class="text-primary font-medium hover:underline text-sm sm:text-base"
+                        >+XX XXXXXXXXXX</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Address -->
+                <div
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                >
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="w-10 sm:w-12 h-10 sm:h-12 flex items-center justify-center bg-primary/10 rounded-lg"
+                    >
+                      <i
+                        class="ri-map-pin-line text-primary text-lg sm:text-xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <h3
+                        class="font-semibold text-gray-700 dark:text-gray-300 mb-1"
+                      >
+                        Visit Us
+                      </h3>
+                      <p class="text-gray-600 dark:text-gray-400 mb-1 sm:mb-2">
+                        Come say hello at our office
+                      </p>
+                      <p
+                        class="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
+                      >
+                        UK | Singapore | USA
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </section>
     </main>
+
     <div id="contactModal" class="modal">
       <div
         class="modal-content relative bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-lg shadow-lg"
@@ -1781,7 +2019,7 @@
               <li>
                 <!-- id="footerOpenContactModal" -->
                 <a
-                  id="footerOpenContactModal"
+                  href="./contact-us.html"
                   class="hover:text-white transition-colors"
                   style="cursor: pointer"
                   >Contact Us</a
@@ -1885,7 +2123,7 @@
         });
       });
     </script>
-    <script>
+    <!-- <script>
       // Blog details static loader
       document.addEventListener("DOMContentLoaded", function () {
         const blogMap = {
@@ -1996,7 +2234,7 @@
         }
         article.innerHTML = blogMap[id];
       });
-    </script>
+    </script> -->
     <script>
       document
         .getElementById("footerOpenContactModal")
