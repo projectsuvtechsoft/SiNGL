@@ -40,7 +40,20 @@
               "3xl": "32px",
               full: "9999px",
               button: "8px",
-            },
+            }, screens: {
+                        'xs': '475px',
+                        '3xl': '1920px',
+                        '4xl': '2560px',
+                        '5xl': '3200px',
+                        '6xl': '3840px',
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                        '9xl': '96rem',
+                        '10xl': '104rem',
+                        '11xl': '112rem',
+                        '12xl': '120rem',
+                    },
             fontFamily: {
               sans: ["Manrope", "Inter", "sans-serif"],
               manrope: ["Manrope", "sans-serif"],
@@ -1624,6 +1637,79 @@ html.dark #blobs-bg .blob {
       </nav>
 
       <style>
+         @media (min-width: 640px) {
+            .logo-img, .logo-img1 {
+                height: 35px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo-img, .logo-img1 {
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .logo-img, .logo-img1 {
+                height: 45px;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .logo-img, .logo-img1 {
+                height: 50px;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            .logo-img, .logo-img1 {
+                height: 60px;
+            }
+        }
+
+        /* Responsive font sizes for navigation */
+        @media (min-width: 1920px) {
+            .nav-link {
+                font-size: 12px !important;
+                padding: 5px 18px !important;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .nav-link {
+                font-size: 13px !important;
+                padding: 6px 20px !important;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            .nav-link {
+                font-size: 15px !important;
+                padding: 8px 24px !important;
+            }
+        }
+
+        /* Responsive button sizes */
+        @media (min-width: 1920px) {
+            #btn-toggle a {
+                padding: 10px 24px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            #btn-toggle a {
+                padding: 12px 28px !important;
+                font-size: 15px !important;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            #btn-toggle a {
+                padding: 14px 32px !important;
+                font-size: 17px !important;
+            }
+        }
         body {
           font-family: "Roboto Mono", monospace;
         }
@@ -2063,7 +2149,7 @@ html.dark #blobs-bg .blob {
   class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
   style="animation-delay: 1.3s"
 >
-  Deliver
+  Deliver 
 
 <span class="relative inline-flex items-center fade-logo">
   <!-- Light mode only -->
@@ -2079,6 +2165,7 @@ html.dark #blobs-bg .blob {
     class="logobanner-img !hidden dark:!block"
   />
 </span>
+
 
 
 
@@ -2257,7 +2344,7 @@ html.dark #blobs-bg .blob {
  
 
     <!-- News Scroll Section -->
-     <div class="bg-[url('/Newss.jpg')] py-1  px-4 margin-lr" >
+     <div class="bg-[url('/Newss.jpg')]  py-1  px-4 margin-lr" >
     <div
       class="relative py-0 px-0 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 shadow-sm rounded-4xl"
     >
@@ -2442,8 +2529,8 @@ html.dark #blobs-bg .blob {
       }
 
       /* Tab button default state */
-      .tab-btn {
-      flex: 1; /* Key Change: Allows buttons to grow equally */
+      /* .tab-btn {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2457,8 +2544,29 @@ html.dark #blobs-bg .blob {
       font-weight: 600;
       text-align: center;
       transition: all 0.3s ease-in-out;
-        /* color: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8); */
-      }
+      } */
+
+
+     .tab-btn {
+    flex: 1;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #F5F8FE;
+    border: 1px solid #dbdee4;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
       /* Icon size */
       .tab-btn img {
@@ -2490,21 +2598,41 @@ html.dark #blobs-bg .blob {
 
 
       /* Active tab style with #1B1AFF gradient range */
-      .tab-btn.active {
-    background: #3B82F6;;
-        /* background: linear-gradient(90deg, #1b1aff, #4c4bff); */
-        color: white;
-      }
+    /* Default (light mode) tab button */
+.tab-btn {
+  background: #f3f4f6; /* light background */
+  color: #1f2937; /* gray-800 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  transition: all 0.3s ease;
+}
 
-      /* Active text color */
-      .tab-text.active-text {
-        color: white !important;
-      }
+/* Active tab in light mode */
+.tab-btn.active {
+  background: #3B82F6; /* blue-500 */
+  color: white;
+}
 
-      /* Dark theme specific styles */
-      html.dark .tab-btn {
-        color: white;
-      }
+.tab-text.active-text {
+  color: white !important;
+}
+
+/* Dark mode default tab button */
+html.dark .tab-btn {
+  background: #081c44; /* dark navy */
+  border: 1px solid #374e78fc; /* dark border */
+  color: #e5e7eb; /* gray-200 text */
+}
+
+/* Dark mode active tab button */
+html.dark .tab-btn.active {
+  background: #3B82F6; /* same blue as light mode */
+  color: white;
+}
+
+html.dark .tab-text.active-text {
+  color: white !important;
+}
+
 
       html.dark .tab-text {
         color: white;
@@ -2731,7 +2859,7 @@ html.dark #blobs-bg .blob {
 
       <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
     <img 
@@ -2780,7 +2908,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2825,7 +2953,7 @@ html.dark #blobs-bg .blob {
           </div>
                <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2878,7 +3006,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2934,7 +3062,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2985,7 +3113,7 @@ html.dark #blobs-bg .blob {
           </div>
             <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -3566,7 +3694,7 @@ observer.observe(section);
 
 
     <section class="py-20 scroll-reveal" style="padding-top: 1rem !important;" id="business-benefits">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class=" max-w-[3800px] mx-auto mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 reveal tracking-in-expand-fwd-bottom">
           <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
@@ -4055,7 +4183,7 @@ observer.observe(section);
           transform: translateY(20px);
       }
     </style>
-    <section class="feature-section" id="use-cases">
+    <section class="feature-section max-w-[3800px] mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
 <div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
@@ -4375,7 +4503,7 @@ html.dark .feature-section {
      
 <section id="Testimonials"class="section-gradient py-9 px-0  mt-16" style="border-radius: 0px 0px 60px 60px;">
  
-      <div class="max-w-7xl mx-auto mt-10">
+      <div class="max-w-[3800] mx-auto mt-10">
     
      <div
   class="relative text-center mb-16 header-content animate-fade-in-up"
