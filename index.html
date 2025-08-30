@@ -40,7 +40,20 @@
               "3xl": "32px",
               full: "9999px",
               button: "8px",
-            },
+            }, screens: {
+                        'xs': '475px',
+                        '3xl': '1920px',
+                        '4xl': '2560px',
+                        '5xl': '3200px',
+                        '6xl': '3840px',
+                    },
+                    maxWidth: {
+                        '8xl': '88rem',
+                        '9xl': '96rem',
+                        '10xl': '104rem',
+                        '11xl': '112rem',
+                        '12xl': '120rem',
+                    },
             fontFamily: {
               sans: ["Manrope", "Inter", "sans-serif"],
               manrope: ["Manrope", "sans-serif"],
@@ -1623,7 +1636,211 @@ html.dark #blobs-bg .blob {
         </div>
       </nav>
 
-      <style>
+     
+
+      <div class="flex items-center space-x-2 sm:space-x-4">
+        <!-- <button id="theme-toggle"
+          class="w-9 h-9 sm:w-10 sm:h-10 rounded-4xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <i class="ri-sun-line dark:ri-moon-line text-lg"></i>
+        </button> -->
+
+        <button id="theme-toggle" class="btntoggle w-9 h-9 sm:w-10 sm:h-10 rounded-4xl  flex items-center justify-center transition-colors
+                 hover:bg-gray-700 
+                 dark:bg-gray-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-800">
+          <i class="ri-sun-line text-lg dark-light:ri-moon-line"></i>
+        </button>
+
+        <button id="btn-toggle" class="w-30 rounded-xl flex items-center justify-center dark:text-black">
+          <a style="padding:8px 20px;font-size: 13px;
+    font-weight: 500;">Book Demo </a>
+        </button>
+
+        <button id="mobile-menu-toggle"
+          class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+          <svg id="hamburger-icon" class="w-6 h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu"
+      class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
+      style="backdrop-filter: blur(4px)">
+      <a href="#"
+        class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link">Home</a>
+      <a href="#features"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Features</a>
+      <a href="#use-cases"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Industry</a>
+      <a href="#blogs"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Blog</a>
+      <a href="./contact-us.html"
+        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Contact
+        Us</a>
+    </div>
+    <div id="mobile-menu-overlay"
+      class="fixed inset-0 z-[99] bg-black bg-opacity-30 hidden transition-opacity duration-300"></div>
+  </header>
+
+   <style>
+        /* Base styles (already in your header) are fine */
+
+/* Extra large screens (2K, 4K, etc.) */
+@media screen and (min-width: 1920px) {
+  header {
+    padding: 10px 30px;
+  }
+
+  .logo-wrapper img {
+    max-height: 80px; /* increase logo size */
+  }
+
+  nav {
+    font-size: 13px;
+  }
+
+  #btn-toggle a {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+
+  .nav-link {
+    padding: 6px 20px !important;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  header {
+    padding: 12px 40px;
+  }
+
+  .logo-wrapper img {
+    max-height: 100px;
+  }
+
+  nav {
+    font-size: 14px;
+  }
+
+  #btn-toggle a {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .nav-link {
+    padding: 8px 25px !important;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  header {
+    padding: 15px 60px;
+  }
+
+  .logo-wrapper img {
+    max-height: 120px;
+  }
+
+  nav {
+    font-size: 16px;
+  }
+
+  #btn-toggle a {
+    padding: 16px 40px;
+    font-size: 18px;
+  }
+
+  .nav-link {
+    padding: 10px 30px !important;
+  }
+}
+
+/* Mobile adjustments (optional) */
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  #mobile-menu {
+    top: 56px;
+  }
+}
+
+         @media (min-width: 640px) {
+            .logo-img, .logo-img1 {
+                height: 35px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .logo-img, .logo-img1 {
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .logo-img, .logo-img1 {
+                height: 45px;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .logo-img, .logo-img1 {
+                height: 50px;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            .logo-img, .logo-img1 {
+                height: 60px;
+            }
+        }
+
+        /* Responsive font sizes for navigation */
+        @media (min-width: 1920px) {
+            .nav-link {
+                font-size: 12px !important;
+                padding: 5px 18px !important;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .nav-link {
+                font-size: 13px !important;
+                padding: 6px 20px !important;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            .nav-link {
+                font-size: 15px !important;
+                padding: 8px 24px !important;
+            }
+        }
+
+        /* Responsive button sizes */
+        @media (min-width: 1920px) {
+            #btn-toggle a {
+                padding: 10px 24px !important;
+                font-size: 14px !important;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            #btn-toggle a {
+                padding: 12px 28px !important;
+                font-size: 15px !important;
+            }
+        }
+
+        @media (min-width: 3840px) {
+            #btn-toggle a {
+                padding: 14px 32px !important;
+                font-size: 17px !important;
+            }
+        }
         body {
           font-family: "Roboto Mono", monospace;
         }
@@ -1694,52 +1911,6 @@ html.dark #blobs-bg .blob {
           });
         });
       </script>
-
-      <div class="flex items-center space-x-2 sm:space-x-4">
-        <!-- <button id="theme-toggle"
-          class="w-9 h-9 sm:w-10 sm:h-10 rounded-4xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-          <i class="ri-sun-line dark:ri-moon-line text-lg"></i>
-        </button> -->
-
-        <button id="theme-toggle" class="btntoggle w-9 h-9 sm:w-10 sm:h-10 rounded-4xl  flex items-center justify-center transition-colors
-                 hover:bg-gray-700 
-                 dark:bg-gray-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-800">
-          <i class="ri-sun-line text-lg dark-light:ri-moon-line"></i>
-        </button>
-
-        <button id="btn-toggle" class="w-30 rounded-xl flex items-center justify-center dark:text-black">
-          <a style="padding:8px 20px;font-size: 13px;
-    font-weight: 500;">Book Demo </a>
-        </button>
-
-        <button id="mobile-menu-toggle"
-          class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-          <svg id="hamburger-icon" class="w-6 h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-
-    <div id="mobile-menu"
-      class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
-      style="backdrop-filter: blur(4px)">
-      <a href="#"
-        class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link">Home</a>
-      <a href="#features"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Features</a>
-      <a href="#use-cases"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Industry</a>
-      <a href="#blogs"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Blog</a>
-      <a href="./contact-us.html"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Contact
-        Us</a>
-    </div>
-    <div id="mobile-menu-overlay"
-      class="fixed inset-0 z-[99] bg-black bg-opacity-30 hidden transition-opacity duration-300"></div>
-  </header>
   <style>
     
       .btntoggle {
@@ -2063,7 +2234,7 @@ html.dark #blobs-bg .blob {
   class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
   style="animation-delay: 1.3s"
 >
-  Deliver
+  Deliver 
 
 <span class="relative inline-flex items-center fade-logo">
   <!-- Light mode only -->
@@ -2079,6 +2250,7 @@ html.dark #blobs-bg .blob {
     class="logobanner-img !hidden dark:!block"
   />
 </span>
+
 
 
 
@@ -2257,7 +2429,7 @@ html.dark #blobs-bg .blob {
  
 
     <!-- News Scroll Section -->
-     <div class="bg-[url('/Newss.jpg')] py-1  px-4 margin-lr" >
+     <div class="bg-[url('/Newss.jpg')]  py-1  px-4 margin-lr" >
     <div
       class="relative py-0 px-0 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 shadow-sm rounded-4xl"
     >
@@ -2442,8 +2614,8 @@ html.dark #blobs-bg .blob {
       }
 
       /* Tab button default state */
-      .tab-btn {
-      flex: 1; /* Key Change: Allows buttons to grow equally */
+      /* .tab-btn {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2457,8 +2629,29 @@ html.dark #blobs-bg .blob {
       font-weight: 600;
       text-align: center;
       transition: all 0.3s ease-in-out;
-        /* color: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8); */
-      }
+      } */
+
+
+     .tab-btn {
+    flex: 1;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #F5F8FE;
+    border: 1px solid #dbdee4;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
       /* Icon size */
       .tab-btn img {
@@ -2490,21 +2683,41 @@ html.dark #blobs-bg .blob {
 
 
       /* Active tab style with #1B1AFF gradient range */
-      .tab-btn.active {
-    background: #3B82F6;;
-        /* background: linear-gradient(90deg, #1b1aff, #4c4bff); */
-        color: white;
-      }
+    /* Default (light mode) tab button */
+.tab-btn {
+  background: #f3f4f6; /* light background */
+  color: #1f2937; /* gray-800 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  transition: all 0.3s ease;
+}
 
-      /* Active text color */
-      .tab-text.active-text {
-        color: white !important;
-      }
+/* Active tab in light mode */
+.tab-btn.active {
+  background: #3B82F6; /* blue-500 */
+  color: white;
+}
 
-      /* Dark theme specific styles */
-      html.dark .tab-btn {
-        color: white;
-      }
+.tab-text.active-text {
+  color: white !important;
+}
+
+/* Dark mode default tab button */
+html.dark .tab-btn {
+  background: #081c44; /* dark navy */
+  border: 1px solid #374e78fc; /* dark border */
+  color: #e5e7eb; /* gray-200 text */
+}
+
+/* Dark mode active tab button */
+html.dark .tab-btn.active {
+  background: #3B82F6; /* same blue as light mode */
+  color: white;
+}
+
+html.dark .tab-text.active-text {
+  color: white !important;
+}
+
 
       html.dark .tab-text {
         color: white;
@@ -2731,7 +2944,7 @@ html.dark #blobs-bg .blob {
 
       <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
     <img 
@@ -2780,7 +2993,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2825,7 +3038,7 @@ html.dark #blobs-bg .blob {
           </div>
                <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2878,7 +3091,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2934,7 +3147,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2985,7 +3198,7 @@ html.dark #blobs-bg .blob {
           </div>
             <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -3566,7 +3779,7 @@ observer.observe(section);
 
 
     <section class="py-20 scroll-reveal" style="padding-top: 1rem !important;" id="business-benefits">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class=" max-w-[3800px] mx-auto mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 reveal tracking-in-expand-fwd-bottom">
           <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
@@ -4055,7 +4268,7 @@ observer.observe(section);
           transform: translateY(20px);
       }
     </style>
-    <section class="feature-section" id="use-cases">
+    <section class="feature-section max-w-[3800px] mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
 <div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
@@ -4375,7 +4588,7 @@ html.dark .feature-section {
      
 <section id="Testimonials"class="section-gradient py-9 px-0  mt-16" style="border-radius: 0px 0px 60px 60px;">
  
-      <div class="max-w-7xl mx-auto mt-10">
+      <div class="max-w-[3800] mx-auto mt-10">
     
      <div
   class="relative text-center mb-16 header-content animate-fade-in-up"
