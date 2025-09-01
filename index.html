@@ -40,7 +40,7 @@
               "3xl": "32px",
               full: "9999px",
               button: "8px",
-            },
+            }, 
             fontFamily: {
               sans: ["Manrope", "Inter", "sans-serif"],
               manrope: ["Manrope", "sans-serif"],
@@ -143,6 +143,7 @@
       });
     </script>
     <style>
+      
       @font-face {
   font-family: 'UxumGrotesque';
   src: url('/fonts/uxumregular.otf') format('opentype');
@@ -1439,6 +1440,145 @@ html.dark #blobs-bg .blob {
           #a78bfa 100%
         );
       }
+     /* Base header styles */
+#header {
+  width: 100% !important;
+  left: 0;
+  right: 0;
+}
+
+#header > div {
+  width: 100%;
+  max-width: none !important; /* remove desktop cap */
+}
+
+/* Logo sizing */
+#header .logo-wrapper img {
+  max-height: 50px;
+  transition: max-height 0.3s ease;
+}
+
+/* Nav links */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* Buttons (Book Demo, Toggle) */
+#header .btntoggle {
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .logo-wrapper img {
+    max-height: 65px;
+  }
+  #header .nav-link {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+  #header .btntoggle {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+/* 4K screens (2560px+) */
+@media (min-width: 2560px) {
+  #header .logo-wrapper img {
+    max-height: 80px;
+  }
+  #header .nav-link {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+  #header .btntoggle {
+    font-size: 16px;
+    padding: 12px 26px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .logo-wrapper img {
+    max-height: 95px;
+  }
+  #header .nav-link {
+    font-size: 18px;
+    padding: 12px 26px;
+  }
+  #header .btntoggle {
+    font-size: 18px;
+    padding: 14px 30px;
+  }
+}
+  /* Default nav links (desktop) */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .nav-link {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header .nav-link {
+    font-size: 17px;
+    padding: 10px 24px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .nav-link {
+    font-size: 19px;
+    padding: 12px 28px;
+  }
+}
+/* Base navbar container */
+#header nav > div {
+  padding: 4px 8px; /* default desktop */
+  transition: padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header nav > div {
+    padding: 6px 14px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header nav > div {
+    padding: 8px 20px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header nav > div {
+    padding: 10px 26px;
+  }
+}
+
+
     </style>
     <script>
       // Parallax effect for blobs (desktop only)
@@ -1579,169 +1719,335 @@ html.dark #blobs-bg .blob {
 
     <!-- Header -->
 
-      <header class="fixed top-0 left-0 right-0 z-50 flex flex-col items-center bg-transparent transition-all duration-300"
-    id="header">
-    <div
-      class="max-w-7xl w-full mx-auto  flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent"
-      style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding:5px 15px 5px">
-      <div class="flex items-center py-1 rounded-lg logo-left">
-        <div class="logo-wrapper">
-          <img src="./image (3).png" alt="Logo" class="logo-img  hidden dark:block" />
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300"
+  id="header"
+>
+  <div
+    class="w-full flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent px-6"
+    style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 20px;"
+  >
+        <div class="flex items-center py-1 rounded-lg">
+          <div class="logo-wrapper">
+            <img
+              src="./image (3).png"
+              alt="Logo"
+              class="logo-img hidden dark:block"
+            />
 
-          <img src="logoo1.png" alt="Logo" class=" logo-img1 block dark:hidden" />
+            <img
+              src="logoo1.png"
+              alt="Logo"
+              class="logo-img1 block dark:hidden"
+            />
+          </div>
         </div>
-      </div>
 
-      <nav class="hidden md:flex justify-center relative">
-        <div
-          class="flex items-center min-w-fit bg-white/40 dark:bg-blue-950/40 border border-gray-200/50 dark:border-blue-800/50 rounded-full px-2 py-1 shadow-sm"
-          style="backdrop-filter: blur(8px); font-family: Golos Text, sans-serif; font-size: 11px;">
+        <nav class="hidden md:flex justify-center relative">
+          <div
+            class="flex items-center min-w-fit bg-white/40 dark:bg-blue-950/40 border border-gray-200/50 dark:border-blue-800/50 rounded-full px-2 py-1 shadow-sm"
+            style="
+              backdrop-filter: blur(8px);
+              font-family: Golos Text, sans-serif;
+              font-size: 11px;
+            "
+          >
+            <!-- active -->
+            <!-- class="nav-link active px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
 
-          <!-- active -->
-          <!-- class="nav-link active px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
-
-          <!-- other  -->
-          <!-- class="nav-link px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
-          <a href="#"
+            <!-- other  -->
+            <!-- class="nav-link px-4 py-2 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 text-gray-700 dark:text-purple-100 hover:bg-purple-100 dark:hover:bg-purple-800 hover:text-purple-700 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-purple-200 dark:focus:bg-purple-900 active:bg-purple-200 dark:active:bg-purple-950" -->
+            <!-- <a href="#"
             class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none "
-            style="cursor: pointer;font-size: 11px;font-weight: 600;padding: 4px 15px 4px 15px; color:#969696;">
+            style="cursor: pointer;font-size: 12px;font-weight: 600;padding: 4px 15px 4px 15px; color:#969696;">
             Home
-          </a>
-          <a href="#features"
+          </a> -->
+
+            <a
+              href="/"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+                color: #969696;
+              "
+              >Home</a
+            >
+
+            <a
+              href="index.html#features"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+                color: #969696;
+              "
+              >Features</a
+            >
+            <a
+              href="index.html#use-cases"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+                color: #969696;
+              "
+              >Industry</a
+            >
+            <!-- <a href="#blogs"
             class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
-            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Features</a>
-          <a href="#use-cases"
-            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
-            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Industry</a>
-          <a href="#blogs"
-            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
-            style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Blog</a>
-          <a href="./contact-us.html"
-            class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
-            style="cursor: pointer; font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Contact
-            Us</a>
-        </div>
-      </nav>
+            style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Blog</a> -->
 
-      <style>
-        body {
-          font-family: "Roboto Mono", monospace;
-        }
+            <a
+              href="index.html#blogs"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+                color: #969696;
+              "
+            >
+              Blog
+            </a>
 
-                  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+            <a
+              href="./contact-us.html"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+                color: #969696;
+              "
+              >Contact Us</a
+            >
+          </div>
+        </nav>
 
+        <style>
+          body {
+            font-family: "Roboto Mono", monospace;
+          }
 
-        .nav-link.active {
-          /* background: linear-gradient(90deg, #c463f1 0%, #9839dc 100%);  */
-          background: #F0F2F8;
-          /* color: #fff !important; */
-          /* padding: 13px 16px 8px 18px; */
-        }
+          @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
 
-        .dark .nav-link.active {
-          /* background: linear-gradient(90deg, #9839dc 0%, #d98fff 100%); */
-          background: #F0F2F8;
+          .nav-link.active {
+            /* background: linear-gradient(90deg, #c463f1 0%, #9839dc 100%);  */
+            background: #f0f2f8;
+            /* color: #fff !important; */
+            /* padding: 13px 16px 8px 18px; */
+          }
 
-          /* color: #fff !important; */
-        }
+          .dark .nav-link.active {
+            /* background: linear-gradient(90deg, #9839dc 0%, #d98fff 100%); */
+            background: #f0f2f8;
 
-        .nav-link {
-          margin-left: 0.3rem;
-          margin-right: 0.3rem;
-        }
+            /* color: #fff !important; */
+          }
 
-        
-      button,
-      a {
-        min-height: auto;
-        min-width: 44px;
-      }
-        header a {
-      letter-spacing: 0.06rem !important;
-      font-family: "Roboto Mono", Sans-serif !important;
-    }
+          .nav-link {
+            margin-left: 0.3rem;
+            margin-right: 0.3rem;
+          }
 
+          button,
+          a {
+            min-height: auto;
+            min-width: 44px;
+          }
 
-#btn-toggle {
-  /* ... other styles ... */
-  background: linear-gradient(100deg, #f1e7fa, #f1e7fa,#f7f0f8,#f6e7fa, #f8d0ff, #edc7f5, #f6e7fa, #f6e7fa, #f6e7fa);
-  background-size: 400% 100%;
-  animation: slider 8s infinite linear;
-}
+          header a {
+            letter-spacing: 0.06rem !important;
+            font-family: "Roboto Mono", Sans-serif !important;
+          }
 
-@keyframes slider {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
-}
+          #btn-toggle {
+            /* ... other styles ... */
+            background: linear-gradient(
+              100deg,
+              #f1e7fa,
+              #f1e7fa,
+              #f7f0f8,
+              #f6e7fa,
+              #f8d0ff,
+              #edc7f5,
+              #f6e7fa,
+              #f6e7fa,
+              #f6e7fa
+            );
+            background-size: 400% 100%;
+            animation: slider 8s infinite linear;
+          }
 
+          @keyframes slider {
+            from {
+              background-position: 0% 50%;
+            }
 
-      </style>
-      <script>
-        // Navigation active tab logic
-        document.addEventListener("DOMContentLoaded", function () {
-          const navLinks = document.querySelectorAll(".nav-link");
-          navLinks.forEach((l) => l.classList.remove("active"));
-          if (navLinks.length > 0) navLinks[0].classList.add("active");
-          navLinks.forEach((link) => {
-            link.addEventListener("click", function (e) {
-              navLinks.forEach((l) => l.classList.remove("active"));
-              link.classList.add("active");
+            to {
+              background-position: 100% 50%;
+            }
+          }
+        </style>
+        <script>
+          // Navigation active tab logic
+          document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll(".nav-link");
+            navLinks.forEach((l) => l.classList.remove("active"));
+            if (navLinks.length > 0) navLinks[4].classList.add("active");
+            navLinks.forEach((link) => {
+              link.addEventListener("click", function (e) {
+                navLinks.forEach((l) => l.classList.remove("active"));
+                link.classList.add("active");
+              });
             });
           });
-        });
-      </script>
+        </script>
 
-      <div class="flex items-center space-x-2 sm:space-x-4">
-        <!-- <button id="theme-toggle"
+        <div class="flex items-center space-x-2 sm:space-x-4">
+          <!-- <button id="theme-toggle"
           class="w-9 h-9 sm:w-10 sm:h-10 rounded-4xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
           <i class="ri-sun-line dark:ri-moon-line text-lg"></i>
         </button> -->
 
-        <button id="theme-toggle" class="btntoggle w-9 h-9 sm:w-10 sm:h-10 rounded-4xl  flex items-center justify-center transition-colors
-                 hover:bg-gray-700 
-                 dark:bg-gray-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-800">
-          <i class="ri-sun-line text-lg dark-light:ri-moon-line"></i>
-        </button>
+          <button
+            id="theme-toggle"
+            class="btntoggle w-9 h-9 sm:w-10 sm:h-10 rounded-3xl flex items-center justify-center transition-colors hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-100 hover:text-gray-100 dark:hover:text-gray-800"
+          >
+            <i class="ri-sun-line text-lg dark:ri-moon-line"></i>
+          </button>
 
-        <button id="btn-toggle" class="w-30 rounded-xl flex items-center justify-center dark:text-black">
-          <a style="padding:8px 20px;font-size: 13px;
-    font-weight: 500;">Book Demo </a>
-        </button>
+          <button
+            id="btn-toggle"
+            class="w-30 rounded-3xl flex items-center justify-center dark:text-black"
+          >
+            <a style="padding: 8px 20px; font-size: 13px; font-weight: 500"
+              >Book Demo
+            </a>
+          </button>
 
-        <button id="mobile-menu-toggle"
-          class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-          <svg id="hamburger-icon" class="w-6 h-6 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg"
-            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+          <button
+            id="mobile-menu-toggle"
+            class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          >
+            <svg
+              id="hamburger-icon"
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div id="mobile-menu"
-      class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
-      style="backdrop-filter: blur(4px)">
-      <a href="#"
-        class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link">Home</a>
-      <a href="#features"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Features</a>
-      <a href="#use-cases"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Industry</a>
-      <a href="#blogs"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Blog</a>
-      <a href="./contact-us.html"
-        class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link">Contact
-        Us</a>
-    </div>
-    <div id="mobile-menu-overlay"
-      class="fixed inset-0 z-[99] bg-black bg-opacity-30 hidden transition-opacity duration-300"></div>
-  </header>
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
+        style="backdrop-filter: blur(4px)"
+      >
+        <a
+          href="/"
+          class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link"
+          >Home</a
+        >
+        <a
+          href="index.html#features"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
+          >Features</a
+        >
+        <a
+          href="index.html#use-cases"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
+          >Industry</a
+        >
+        <a
+          href="index.html#blogs"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
+          >Blog</a
+        >
+        <a
+          href="./contact-us.html"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
+          >Contact Us</a
+        >
+      </div>
+      <div
+        id="mobile-menu-overlay"
+        class="fixed inset-0 z-[99] bg-black bg-opacity-30 hidden transition-opacity duration-300"
+      ></div>
+    </header>
   <style>
-    
+    @media (min-width: 1920px) {
+  #header .logo-wrapper img {
+    max-height: 70px;
+  }
+  #header .nav-link {
+    font-size: 13px;
+    padding: 6px 18px;
+  }
+  #header .btntoggle {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+/* 4K Screens (2560px–3840px) */
+@media (min-width: 2560px) {
+  #header .logo-wrapper img {
+    max-height: 90px;
+  }
+  #header .nav-link {
+    font-size: 16px;
+    padding: 8px 22px;
+  }
+  #header .btntoggle {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}
+
+/* Ultra-Wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .logo-wrapper img {
+    max-height: 110px;
+  }
+  #header .nav-link {
+    font-size: 18px;
+    padding: 10px 26px;
+  }
+  #header .btntoggle {
+    font-size: 18px;
+    padding: 14px 32px;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media (max-width: 768px) {
+  #header nav {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: flex;
+  }
+}
       .btntoggle {
     font-family: inherit;
     font-feature-settings: inherit;
@@ -1947,6 +2253,7 @@ html.dark #blobs-bg .blob {
           margin: 0;
         }
       }
+      
     </style>
 
     <!-- Announcement Strip -->
@@ -2063,7 +2370,7 @@ html.dark #blobs-bg .blob {
   class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
   style="animation-delay: 1.3s"
 >
-  Deliver
+  Deliver 
 
 <span class="relative inline-flex items-center fade-logo">
   <!-- Light mode only -->
@@ -2079,6 +2386,7 @@ html.dark #blobs-bg .blob {
     class="logobanner-img !hidden dark:!block"
   />
 </span>
+
 
 
 
@@ -2139,6 +2447,36 @@ html.dark #blobs-bg .blob {
  
       <!-- Flip Word Styles -->
       <style>
+        /* ===========================
+   HEADER RESPONSIVENESS
+=========================== */
+
+/* Base (Tailwind handles <1280px) */
+
+/* 2K Screens (1921px–2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  #home {
+    gap: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  #home h1 {
+    font-size: 4rem !important;
+    line-height: 1.2;
+    max-width: 900px;
+  }
+  #home p, 
+  #home div {
+    font-size: 1.3rem !important;
+    line-height: 1.8;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+}
+
+/* 4K Screens (2561px–3840px) */
+
         .logobanner-img1{
     width: 73px;
     /* height: auto; */
@@ -2257,11 +2595,11 @@ html.dark #blobs-bg .blob {
  
 
     <!-- News Scroll Section -->
-     <div class="bg-[url('/Newss.jpg')] py-1  px-4 margin-lr" >
+     <div class="bg-[url('/Newss.jpg')]  py-1  px-4 margin-lr" >
     <div
       class="relative py-0 px-0 bg-white dark:bg-gray-900 border-y border-gray-200 dark:border-gray-800 shadow-sm rounded-4xl"
     >
-      <div style="    font-weight: 500;
+      <div style="font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 18px;"
         class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center gap-2 sm:gap-4 px-4 sm:px-6"
@@ -2442,8 +2780,8 @@ html.dark #blobs-bg .blob {
       }
 
       /* Tab button default state */
-      .tab-btn {
-      flex: 1; /* Key Change: Allows buttons to grow equally */
+      /* .tab-btn {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2457,8 +2795,29 @@ html.dark #blobs-bg .blob {
       font-weight: 600;
       text-align: center;
       transition: all 0.3s ease-in-out;
-        /* color: linear-gradient(90deg, #8B5CF6, #3B82F6, #10b981a8); */
-      }
+      } */
+
+
+     .tab-btn {
+    flex: 1;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #F5F8FE;
+    border: 1px solid #dbdee4;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
 
       /* Icon size */
       .tab-btn img {
@@ -2490,21 +2849,41 @@ html.dark #blobs-bg .blob {
 
 
       /* Active tab style with #1B1AFF gradient range */
-      .tab-btn.active {
-    background: #3B82F6;;
-        /* background: linear-gradient(90deg, #1b1aff, #4c4bff); */
-        color: white;
-      }
+    /* Default (light mode) tab button */
+.tab-btn {
+  background: #f3f4f6; /* light background */
+  color: #1f2937; /* gray-800 */
+  border: 1px solid #d1d5db; /* gray-300 */
+  transition: all 0.3s ease;
+}
 
-      /* Active text color */
-      .tab-text.active-text {
-        color: white !important;
-      }
+/* Active tab in light mode */
+.tab-btn.active {
+  background: #3B82F6; /* blue-500 */
+  color: white;
+}
 
-      /* Dark theme specific styles */
-      html.dark .tab-btn {
-        color: white;
-      }
+.tab-text.active-text {
+  color: white !important;
+}
+
+/* Dark mode default tab button */
+html.dark .tab-btn {
+  background: #081c44; /* dark navy */
+  border: 1px solid #374e78fc; /* dark border */
+  color: #e5e7eb; /* gray-200 text */
+}
+
+/* Dark mode active tab button */
+html.dark .tab-btn.active {
+  background: #3B82F6; /* same blue as light mode */
+  color: white;
+}
+
+html.dark .tab-text.active-text {
+  color: white !important;
+}
+
 
       html.dark .tab-text {
         color: white;
@@ -2731,7 +3110,7 @@ html.dark #blobs-bg .blob {
 
       <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
     <img 
@@ -2780,7 +3159,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2825,7 +3204,7 @@ html.dark #blobs-bg .blob {
           </div>
                <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2878,7 +3257,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2934,7 +3313,7 @@ html.dark #blobs-bg .blob {
           </div>
            <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -2985,7 +3364,7 @@ html.dark #blobs-bg .blob {
           </div>
             <div class="flex justify-center">
   <div 
-    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-4 rounded-2xl" 
+    class="relative bg-[url('/gifbanner1.png')] bg-cover bg-center p-2 rounded-2xl" 
     style="background-size: cover; background-position: center;"
   >
               <img
@@ -3565,8 +3944,8 @@ observer.observe(section);
 
 
 
-    <section class="py-20 scroll-reveal" style="padding-top: 1rem !important;" id="business-benefits">
-      <div class="max-w-7xl mx-auto px-6">
+<section class="py-20 scroll-reveal" style="padding-top: 1rem !important;" id="business-benefits">
+      <div class=" max-w-8xl mx-auto mx-auto px-6">
         <!-- Section Header -->
         <div class="text-center mb-16 reveal tracking-in-expand-fwd-bottom">
           <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
@@ -3713,7 +4092,7 @@ observer.observe(section);
     </section>
 
     <style>
-.text-benefits{
+      .text-benefits{
     background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3789,6 +4168,163 @@ observer.observe(section);
           transform: translateY(0);
         }
       }
+/* ---------- Grid Setup ---------- */
+#business-benefits .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 1vw + 1rem, 1rem);
+  max-width: 95%;
+  margin: 0 auto;
+  justify-items: center; /* center cards horizontally */
+}
+
+/* ---------- Section Titles ---------- */
+#business-benefits .section-title {
+  font-size: clamp(2rem, 4vw, 8rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+#business-benefits .section-subtitle {
+  font-size: clamp(1rem, 1.2vw, 1.8rem);
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ---------- Benefit Cards ---------- */
+#business-benefits .benefit-card {
+  padding: clamp(1.5rem, 1vw + 1rem, 5rem);
+  text-align: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+}
+
+#business-benefits .benefit-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ---------- Card Title & Text ---------- */
+#business-benefits .benefit-title {
+  font-size: clamp(1.25rem, 1.5vw, 2.5rem);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#business-benefits .benefit-text {
+  font-size: clamp(0.9rem, 1vw, 1.3rem);
+  line-height: 1.6;
+}
+
+/* ---------- Icon Wrapper ---------- */
+#business-benefits .icon-wrapper {
+  width: clamp(60px, 5vw, 120px);
+  height: clamp(60px, 5vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#business-benefits .benefit-card:hover .icon-wrapper {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* ---------- Scroll Reveal Animation ---------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive Breakpoints (Optional Fine-tuning) ---------- */
+/* ---------- Mobile / Small screens ---------- */
+@media (max-width: 768px) {
+  #business-benefits .grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1rem;
+  }
+}
+
+/* ---------- Tablets / Medium screens ---------- */
+@media (min-width: 769px) and (max-width: 1023px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 2rem;
+  }
+}
+
+/* ---------- Desktop / Large screens ---------- */
+@media (min-width: 1024px) and (max-width: 1679px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1.5rem;
+    margin-left: 103px;
+    margin-right: 100px;
+  }
+}
+
+/* ---------- Large screens: 1680px ---------- */
+@media (min-width: 1680px) and (max-width: 1919px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    gap: 2.5rem;
+  }
+}
+
+/* ---------- Ultra HD: 1920px ---------- */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 3 columns */
+    gap: 3rem;
+  }
+}
+
+/* ---------- 2560px ---------- */
+@media (min-width: 2560px) and (max-width: 3839px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 3.5rem;
+  }
+}
+
+/* ---------- 3840px and above ---------- */
+@media (min-width: 3840px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 1rem;
+     margin-left: 103px;
+    margin-right: 100px;
+  }
+
+}
+
+
+/* @media (min-width: 3840px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+  }
+} */
+
     </style>
 
 
@@ -4055,7 +4591,7 @@ observer.observe(section);
           transform: translateY(20px);
       }
     </style>
-    <section class="feature-section" id="use-cases">
+    <section class="feature-section max-w-[3800px] mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
 <div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
@@ -4375,7 +4911,7 @@ html.dark .feature-section {
      
 <section id="Testimonials"class="section-gradient py-9 px-0  mt-16" style="border-radius: 0px 0px 60px 60px;">
  
-      <div class="max-w-7xl mx-auto mt-10">
+      <div class="max-w-[3800] mx-auto mt-10">
     
      <div
   class="relative text-center mb-16 header-content animate-fade-in-up"
@@ -5147,95 +5683,204 @@ background-color: #0f0f0f;}
         </div>
       </div>
     </section> -->
-  <section class="py-12" id="blogs">
-  <div class="blogwidth mx-auto px-4 mt-5">
-     <div class="text-center mb-16">
-          <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
-            class="reveal tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
-          >
-            Blogs
-          </h2>
-        </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+<style>
+/* =========================
+   BLOG SECTION RESPONSIVENESS
+   Fully responsive for all screens
+=========================== */
 
-      <article
-        class="bg-white rounded-xl shadow hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden"
-      >
-        <div class="aspect-w-16 aspect-h-9">
-          <a href="blog-details.html?id=1">
-          <img
-            src="blog_1.jpg"
-            alt="Exploring the Basics of SiNGL"
-            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-          />
-          </a>
-        </div>
+/* Base Styles */
+.blog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-title {
+  font-family: UxumGrotesque, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937; /* gray-800 */
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+.blog-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.img-wrapper {
+ width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.img-wrapper img {
+ width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+.blog-heading a {
+  font-family: UxumGrotesque, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.blog-heading a:hover {
+  color: #6b21a8; /* purple */
+}
+
+/* Medium Screens */
+@media (min-width: 640px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .blog-title {
+    font-size: 3rem;
+  }
+  .blog-heading a {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .blog-title {
+    font-size: 3.5rem;
+  }
+  .blog-heading a {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 1680px) {
+  .blog-container {
+    max-width: 1200px;
+  }
+  .blog-title {
+    font-size: 4rem;
+  }
+  .blog-heading a {
+    font-size: 1.4rem;
+  }
+}
+
+/* 2K Screens (1920px–2560px) */
+@media (min-width: 1920px) {
+  .blog-container {
+    max-width: 1400px;
+  }
+  .blog-title {
+    font-size: 4rem;
+  }
+  .blog-heading a {
+    font-size: 1.4rem;
+  }
+}
+
+/* 4K Screens (2560px–3840px) */
+@media (min-width: 2560px) {
+  .blog-container {
+    max-width: 2000px;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  .blog-title {
+    font-size: 4.5rem;
+  }
+  .blog-heading a {
+    font-size: 1.6rem;
+  }
+}
+
+/* Ultra-Wide Screens (3840px+) */
+@media (min-width: 3840px) {
+  .blog-container {
+    max-width: 2400px;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  .blog-title {
+    font-size: 5rem;
+  }
+  .blog-heading a {
+    font-size: 1.8rem;
+  }
+}
+
+
+</style>
+ <section class="py-12" id="blogs">
+  <div class="blog-container mx-auto px-6 mt-5">
+    <div class="text-center mb-16">
+      <h2 class="blog-title">Blogs</h2>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card ">
+        <a href="blog-details.html?id=1" class="img-wrapper">
+          <img src="blog_1.jpg" alt="Exploring the Basics of SiNGL" />
+        </a>
         <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-800 hover:text-purple-700 dark:hover:text-gray-700 transition-colors" style=" 
-    font-family: UxumGrotesque,sans-serif;
-    font-size: 17px;
-    font-weight: 600;">
-            <a href="blog-details.html?id=1" class="block dark:hover:text-purple-700">Exploring the Basics of SiNGL</a> 
+          <h3 class="blog-heading">
+            <a href="blog-details.html?id=1">Exploring the Basics of SiNGL</a>
           </h3>
         </div>
-        <!-- <div class="p-4">
-  <h3 
-    class="text-[11px] font-bold font-['Roboto_Mono'] text-[rgb(59,73,92)] hover:text-purple-700 dark:hover:text-gray-700 transition-colors"
-  >
-    <a 
-      href="blog-details.html?id=1" 
-      class="block hover:text-purple-700 dark:hover:text-purple-500"
-    >
-      READ&nbsp;MORE &gt;
-    </a>
-  </h3>
-</div> -->
-
       </article>
 
-      <article
-        class="bg-white rounded-xl shadow hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden"
-      >
-        <div class="aspect-w-16 aspect-h-9">
-          <a href="blog-details.html?id=2">
-           <img
-            src="blog_2.jpg"
-            alt="Exploring the Basics of SiNGL"
-            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-          />
-          </a>
-        </div>
+      <article class="blog-card bg-white">
+        <a href="blog-details.html?id=2" class="img-wrapper">
+          <img src="blog_2.jpg" alt="SiNGL vs. Traditional MDM" />
+        </a>
         <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-purple-700 transition-colors  dark:hover:text-gray-700" style=" font-weight: 600;
-     font-family: UxumGrotesque,sans-serif;
-    font-size: 17px;;">
-           <a href="blog-details.html?id=2" class="block dark:hover:text-purple-700">SiNGL vs. Traditional MDM:Finding the Right Fit </a>
-          </h3>
-        </div>
-        
-      </article>
-
-      <article
-        class="bg-white rounded-xl shadow hover:shadow-lg transition-all duration-300 cursor-pointer group overflow-hidden"
-      >
-        <div class="aspect-w-16 aspect-h-9">
-          <a href="blog-details.html?id=3">
-           <img
-            src="blog_3.jpg"
-            alt="Exploring the Basics of SiNGL"
-            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-          />
-          </a>
-        </div>
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-gray-800 group-hover:text-purple-700 transition-colors"style=" font-weight: 600;
-     font-family: UxumGrotesque,sans-serif;
-    font-size: 17px;;">
-          <a href="blog-details.html?id=3" class="block dark:hover:text-purple-700">Quantifying ROI with SiNGL:A Deep Dive</a>   
+          <h3 class="blog-heading">
+            <a href="blog-details.html?id=2">SiNGL vs. Traditional MDM: Finding the Right Fit</a>
           </h3>
         </div>
       </article>
 
+      <article class="blog-card bg-white">
+        <a href="blog-details.html?id=3" class="img-wrapper">
+          <img src="blog_3.jpg" alt="Quantifying ROI with SiNGL" />
+        </a>
+        <div class="p-4">
+          <h3 class="blog-heading">
+            <a href="blog-details.html?id=3">Quantifying ROI with SiNGL: A Deep Dive</a>
+          </h3>
+        </div>
+      </article>
     </div>
   </div>
 </section>

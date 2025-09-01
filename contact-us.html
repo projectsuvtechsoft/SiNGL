@@ -51,6 +51,162 @@
       };
     </script>
     <style>
+      /* ===========================
+   GLOBAL RESET & CONTAINER FIX
+=========================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+ 
+/* Ensure all sections fit the viewport */
+section,
+header,
+footer,
+main,
+div {
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+ 
+/* Prevent unwanted padding/margin from Tailwind */
+.container,
+.max-w-7xl,
+.max-w-full {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+ 
+/* Ensure hero/banner content centers correctly */
+.hero,
+.header-content,
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+ 
+/* ===========================
+   MEDIA QUERIES FOR RESPONSIVENESS
+=========================== */
+ 
+/* For desktops & large screens */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+  .max-w-7xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+ 
+/* For tablets and medium devices */
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+ 
+  /* Collapse grid into a single column */
+  .grid-cols-2,
+  .lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+ 
+  /* Reduce spacing */
+  .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+ 
+/* For tablets & small laptops */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+ 
+  header {
+    padding: 0.5rem 1rem;
+  }
+ 
+  /* Mobile hamburger menu */
+  #mobile-menu-toggle {
+    display: block !important;
+  }
+ 
+  nav {
+    display: none !important;
+  }
+ 
+  /* Adjust hero/title size */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+ 
+/* For mobile screens */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+ 
+  .logobanner-img {
+    width: 65px;
+  }
+ 
+  /* Form input adjustments */
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+ 
+  button {
+    font-size: 1rem;
+    padding: 0.7rem;
+    width: 100%;
+  }
+ 
+  /* Contact cards stacked */
+  .contact-card {
+    padding: 1rem;
+  }
+ 
+  .max-w-7xl {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+ 
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+ 
+  h1,
+  h2 {
+    font-size: 1.2rem !important;
+  }
+ 
+  .contact-card {
+    padding: 0.75rem;
+  }
+ 
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
       @font-face {
         font-family: "UxumGrotesque";
         src: url("/fonts/uxumregular.otf") format("opentype");
@@ -215,6 +371,143 @@
         font-family: Golos Text, sans-serif;
         font-weight: 500;
       }
+      /* Base header styles */
+#header {
+  width: 100% !important;
+  left: 0;
+  right: 0;
+}
+
+#header > div {
+  width: 100%;
+  max-width: none !important; /* remove desktop cap */
+}
+
+/* Logo sizing */
+#header .logo-wrapper img {
+  max-height: 50px;
+  transition: max-height 0.3s ease;
+}
+
+/* Nav links */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* Buttons (Book Demo, Toggle) */
+#header .btntoggle {
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .logo-wrapper img {
+    max-height: 65px;
+  }
+  #header .nav-link {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+  #header .btntoggle {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+/* 4K screens (2560px+) */
+@media (min-width: 2560px) {
+  #header .logo-wrapper img {
+    max-height: 80px;
+  }
+  #header .nav-link {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+  #header .btntoggle {
+    font-size: 16px;
+    padding: 12px 26px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .logo-wrapper img {
+    max-height: 95px;
+  }
+  #header .nav-link {
+    font-size: 18px;
+    padding: 12px 26px;
+  }
+  #header .btntoggle {
+    font-size: 18px;
+    padding: 14px 30px;
+  }
+}
+  /* Default nav links (desktop) */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .nav-link {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header .nav-link {
+    font-size: 17px;
+    padding: 10px 24px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .nav-link {
+    font-size: 19px;
+    padding: 12px 28px;
+  }
+}
+/* Base navbar container */
+#header nav > div {
+  padding: 4px 8px; /* default desktop */
+  transition: padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header nav > div {
+    padding: 6px 14px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header nav > div {
+    padding: 8px 20px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header nav > div {
+    padding: 10px 26px;
+  }
+}
     </style>
   </head>
   <body
@@ -591,16 +884,13 @@
     <!-- Header -->
 
     <header
-      class="fixed top-0 left-0 right-0 z-50 flex flex-col items-center bg-transparent transition-all duration-300"
-      id="header"
-    >
-      <div
-        class="max-w-7xl w-full mx-auto flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent"
-        style="
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 5px 15px 5px;
-        "
-      >
+  class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300"
+  id="header"
+>
+  <div
+    class="w-full flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent px-6"
+    style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 20px;"
+  >
         <div class="flex items-center py-1 rounded-lg">
           <div class="logo-wrapper">
             <img
@@ -1576,6 +1866,7 @@
     } */
 
       /* Improve touch targets for mobile */
+      
     </style>
     <main class="pt-12 pb-10 min-h-screen bg-gray-50 dark:bg-gray-900">
       <!-- Hero Section -->
