@@ -2253,7 +2253,91 @@ html.dark #blobs-bg .blob {
           margin: 0;
         }
       }
-      
+      /* Default desktop */
+#home {
+  max-width: 1280px;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #home {
+    max-width: 100% !important;
+  }
+  #home h1,
+  #home .flip-words {
+    font-size: 60px !important;
+    line-height: 1.2 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+  #home button {
+    font-size: 18px !important;
+    padding: 12px 28px !important;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #home {
+    max-width: 100% !important;
+    max-width: 1800px; /* cap to prevent overspread */
+  }
+  #home h1,
+  #home .flip-words {
+    font-size: 70px !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 22px !important;
+  }
+  #home button {
+    font-size: 20px !important;
+    padding: 14px 32px !important;
+  }
+  #home img {
+    max-height: 600px !important;
+  }
+}
+
+/* Ultra-wide 8K (3840px+) */
+@media (min-width: 3840px) {
+  #home {
+    max-width: 100% !important;
+    max-width: 2000px; /* optional cap */
+
+  }
+  .left-margin{
+        margin-left: 200px !important;
+      }
+  /* #home h1,
+  #home .flip-words {
+    font-size: 80px !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 24px !important;
+  }
+  #home button {
+    font-size: 22px !important;
+    padding: 16px 36px !important;
+  }
+  #home img {
+    max-height: 700px !important;
+  } */
+}
+
     </style>
 
     <!-- Announcement Strip -->
@@ -2306,9 +2390,9 @@ html.dark #blobs-bg .blob {
  
       <!-- Main layout: Two columns -->
       <div
-        id="home"
-        class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-gray-800 dark:text-white"
-      >
+  id="home"
+  class="relative z-10 w-full mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-gray-800 dark:text-white"
+>
         <!-- Left Column: Text -->
         <div class="flex-1 flex flex-col gap-4 sm:gap-6 text-left w-full left-margin">
           <h1
@@ -2454,24 +2538,59 @@ html.dark #blobs-bg .blob {
 /* Base (Tailwind handles <1280px) */
 
 /* 2K Screens (1921px–2560px) */
+/* ===========================
+   HEADER RESPONSIVENESS
+=========================== */
+
+/* 2K Screens (1921px–2560px) */
 @media (min-width: 1921px) and (max-width: 2560px) {
   #home {
     gap: 6rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
   #home h1 {
-    font-size: 4rem !important;
+    font-size: 5rem !important; /* Bigger main heading */
     line-height: 1.2;
-    max-width: 900px;
+    max-width: 1100px;
   }
-  #home p, 
+  #home p,
   #home div {
-    font-size: 1.3rem !important;
-    line-height: 1.8;
+    font-size: 1.5rem !important; /* Larger body text */
+    line-height: 1.9;
+  }
+  #home button {
+    font-size: 1.25rem !important; /* Bigger button text */
+    padding: 14px 28px !important;
   }
   #home img {
-    max-height: 500px !important;
+    max-height: 600px !important;
+  }
+}
+
+/* 4K Screens (2561px–3840px) */
+@media (min-width: 2561px) {
+  #home {
+    gap: 8rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  #home h1 {
+    font-size: 6rem !important; /* Huge main heading */
+    line-height: 1.2;
+    max-width: 1300px;
+  }
+  #home p,
+  #home div {
+    font-size: 1.5rem !important; /* Larger body text */
+    line-height: 2;
+  }
+  #home button {
+    font-size: 1.5rem !important; /* Bigger button text */
+    padding: 16px 32px !important;
+  }
+  #home img {
+    max-height: 750px !important;
   }
 }
 
