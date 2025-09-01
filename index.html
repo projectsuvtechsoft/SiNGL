@@ -4270,19 +4270,49 @@ observer.observe(section);
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 2rem;
-     margin-left: 103px;
-    margin-right: 100px;
+   margin-left: 99px;
+    margin-right: 109px;
   }
+  #business-benefits .benefit-card {
+width: 487px;
+}
+}
+@media (min-width: 1023px) and (max-width: 1240px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 2rem;
+   margin-left: 99px;
+    margin-right: 109px;
+  }
+  #business-benefits .benefit-card {
+width: 478px;
+}
 }
 
 /* ---------- Desktop / Large screens ---------- */
-@media (min-width: 1024px) and (max-width: 1679px) {
+@media (min-width: 1024px) and (max-width: 1100px) {
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 1.5rem;
-    margin-left: 103px;
-    margin-right: 100px;
+    margin-left: 99px;
+    /* margin-right: 109px; */
   }
+  #business-benefits .benefit-card {
+width: 367px;
+}
+
+}
+@media (min-width: 1100px) and (max-width: 1680px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1.5rem;
+    margin-left: 99px;
+    /* margin-right: 109px; */
+  }
+  #business-benefits .benefit-card {
+width: 485px;
+}
+
 }
 
 /* ---------- Large screens: 1680px ---------- */
@@ -4290,10 +4320,25 @@ observer.observe(section);
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 3 columns */
       gap: 2.5rem;
-   /* margin-left: 291px;
-        margin-right: 253px; */
+    margin-left: 99px;
+    margin-right: 109px;
   }
+  #business-benefits .benefit-card {
+width: 487px;
 }
+    #business-benefits ul {
+   
+    font-size: 22px !important
+}
+#business-benefits .section-title {
+    font-size: 77px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 22px !important;
+}
+}
+
+
 
 /* ---------- Ultra HD: 1920px ---------- */
 @media (min-width: 1920px) and (max-width: 2559px) {
@@ -4303,6 +4348,16 @@ observer.observe(section);
         /* margin-left: 374px;
         margin-right: 423px; */
   }
+  #business-benefits ul {
+   
+    font-size: 22px !important
+}
+#business-benefits .section-title {
+    font-size: 79px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 24px !important;
+}
 }
 
 /* ---------- 2560px ---------- */
@@ -4313,6 +4368,21 @@ observer.observe(section);
             /* margin-left: 721px;
         margin-right: 680px; */
   }
+  #business-benefits ul {
+   
+    font-size: 27px !important
+}
+#business-benefits .section-title {
+    font-size: clamp(2rem, 4vw, 8rem);
+    line-height: 1.1;
+    text-align: center;
+}
+#business-benefits .section-title {
+    font-size: 80px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 26px !important;
+}
 }
 
 /* ---------- 3840px and above ---------- */
@@ -4327,8 +4397,39 @@ observer.observe(section);
 #business-benefits .benefit-card {
 width: 1146px;
 }
+#business-benefits ul {
+   
+    font-size: 29px !important
 }
-
+#business-benefits .section-title {
+    font-size: 82px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 28px !important;
+}
+}
+@media (min-width: 5120px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 2rem;
+        /* margin-left: 1353px;
+        margin-right: 1320px; */
+        display: grid;
+  }
+#business-benefits .benefit-card {
+width: 1589px;
+}
+#business-benefits ul {
+   
+    font-size: 31px !important
+}
+#business-benefits .section-title {
+    font-size: 84px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 30px !important;
+}
+}
 
 /* @media (min-width: 3840px) {
   #business-benefits .grid {
@@ -4602,7 +4703,7 @@ width: 1146px;
           transform: translateY(20px);
       }
     </style>
-    <section class="feature-section max-w-[3800px] mx-auto " id="use-cases">
+    <section class="feature-section max-w-7xl mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
 <div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
