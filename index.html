@@ -1440,6 +1440,145 @@ html.dark #blobs-bg .blob {
           #a78bfa 100%
         );
       }
+     /* Base header styles */
+#header {
+  width: 100% !important;
+  left: 0;
+  right: 0;
+}
+
+#header > div {
+  width: 100%;
+  max-width: none !important; /* remove desktop cap */
+}
+
+/* Logo sizing */
+#header .logo-wrapper img {
+  max-height: 50px;
+  transition: max-height 0.3s ease;
+}
+
+/* Nav links */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* Buttons (Book Demo, Toggle) */
+#header .btntoggle {
+  font-size: 13px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .logo-wrapper img {
+    max-height: 65px;
+  }
+  #header .nav-link {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+  #header .btntoggle {
+    font-size: 14px;
+    padding: 10px 22px;
+  }
+}
+
+/* 4K screens (2560px+) */
+@media (min-width: 2560px) {
+  #header .logo-wrapper img {
+    max-height: 80px;
+  }
+  #header .nav-link {
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+  #header .btntoggle {
+    font-size: 16px;
+    padding: 12px 26px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .logo-wrapper img {
+    max-height: 95px;
+  }
+  #header .nav-link {
+    font-size: 18px;
+    padding: 12px 26px;
+  }
+  #header .btntoggle {
+    font-size: 18px;
+    padding: 14px 30px;
+  }
+}
+  /* Default nav links (desktop) */
+#header .nav-link {
+  font-size: 12px;
+  padding: 6px 14px;
+  font-weight: 600;
+  transition: font-size 0.3s ease, padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header .nav-link {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header .nav-link {
+    font-size: 17px;
+    padding: 10px 24px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header .nav-link {
+    font-size: 19px;
+    padding: 12px 28px;
+  }
+}
+/* Base navbar container */
+#header nav > div {
+  padding: 4px 8px; /* default desktop */
+  transition: padding 0.3s ease;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #header nav > div {
+    padding: 6px 14px;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #header nav > div {
+    padding: 8px 20px;
+  }
+}
+
+/* Ultra-wide (3840px+) */
+@media (min-width: 3840px) {
+  #header nav > div {
+    padding: 10px 26px;
+  }
+}
+
+
     </style>
     <script>
       // Parallax effect for blobs (desktop only)
@@ -1580,14 +1719,14 @@ html.dark #blobs-bg .blob {
 
     <!-- Header -->
 
-  <header
+<header
   class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300"
   id="header"
 >
-<div
-    class="w-full flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent px-4"
-    style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 5px 15px;"
->
+  <div
+    class="w-full flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent px-6"
+    style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 20px;"
+  >
         <div class="flex items-center py-1 rounded-lg">
           <div class="logo-wrapper">
             <img
@@ -1856,29 +1995,6 @@ html.dark #blobs-bg .blob {
       ></div>
     </header>
   <style>
-    /* Make header full width always */
-#header {
-  width: 100% !important;
-  left: 0;
-  right: 0;
-}
- 
-/* Ensure inner content stretches full width */
-#header > div {
-  width: 100%;
-  max-width: none !important; /* remove the max-w-7xl constraint */
-}
- 
-/* Adjust padding for breathing room */
-#header .logo-wrapper img {
-  max-height: 60px; /* you can tweak for 4K screens */
-}
- 
-@media (min-width: 2560px) {
-  #header .logo-wrapper img {
-    max-height: 80px;
-  }
-}
     @media (min-width: 1920px) {
   #header .logo-wrapper img {
     max-height: 70px;
@@ -4167,6 +4283,9 @@ observer.observe(section);
     margin-left: 103px;
     margin-right: 100px;
   }
+  #business-benefits .benefit-card {
+width: 500px;
+}
 }
 
 /* ---------- Large screens: 1680px ---------- */
@@ -4177,6 +4296,16 @@ observer.observe(section);
    /* margin-left: 291px;
         margin-right: 253px; */
   }
+    #business-benefits ul {
+   
+    font-size: 22px !important
+}
+#business-benefits .section-title {
+    font-size: 77px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 22px !important;
+}
 }
 
 /* ---------- Ultra HD: 1920px ---------- */
@@ -4187,6 +4316,16 @@ observer.observe(section);
         /* margin-left: 374px;
         margin-right: 423px; */
   }
+  #business-benefits ul {
+   
+    font-size: 22px !important
+}
+#business-benefits .section-title {
+    font-size: 79px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 24px !important;
+}
 }
 
 /* ---------- 2560px ---------- */
@@ -4197,6 +4336,21 @@ observer.observe(section);
             /* margin-left: 721px;
         margin-right: 680px; */
   }
+  #business-benefits ul {
+   
+    font-size: 27px !important
+}
+#business-benefits .section-title {
+    font-size: clamp(2rem, 4vw, 8rem);
+    line-height: 1.1;
+    text-align: center;
+}
+#business-benefits .section-title {
+    font-size: 80px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 26px !important;
+}
 }
 
 /* ---------- 3840px and above ---------- */
@@ -4211,9 +4365,15 @@ observer.observe(section);
 #business-benefits .benefit-card {
 width: 1146px;
 }
-#business-benefits .benefit-text {
-    line-height: 1.6;
-    font-size: 29px;
+#business-benefits ul {
+   
+    font-size: 29px !important
+}
+#business-benefits .section-title {
+    font-size: 82px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 28px !important;
 }
 }
 @media (min-width: 5120px) {
@@ -4227,9 +4387,15 @@ width: 1146px;
 #business-benefits .benefit-card {
 width: 1589px;
 }
-#business-benefits .benefit-text {
-    line-height: 1.6;
-    font-size: 31px;
+#business-benefits ul {
+   
+    font-size: 31px !important
+}
+#business-benefits .section-title {
+    font-size: 84px  !important;;
+}
+#business-benefits .section-subtitle {
+    font-size: 30px !important;
 }
 }
 
