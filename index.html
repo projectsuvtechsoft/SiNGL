@@ -2253,7 +2253,91 @@ html.dark #blobs-bg .blob {
           margin: 0;
         }
       }
-      
+      /* Default desktop */
+#home {
+  max-width: 1280px;
+}
+
+/* 2K screens (1920px–2559px) */
+@media (min-width: 1920px) {
+  #home {
+    max-width: 100% !important;
+  }
+  #home h1,
+  #home .flip-words {
+    font-size: 60px !important;
+    line-height: 1.2 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+  }
+  #home button {
+    font-size: 18px !important;
+    padding: 12px 28px !important;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+}
+
+/* 4K screens (2560px–3839px) */
+@media (min-width: 2560px) {
+  #home {
+    max-width: 100% !important;
+    max-width: 1800px; /* cap to prevent overspread */
+  }
+  #home h1,
+  #home .flip-words {
+    font-size: 70px !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 22px !important;
+  }
+  #home button {
+    font-size: 20px !important;
+    padding: 14px 32px !important;
+  }
+  #home img {
+    max-height: 600px !important;
+  }
+}
+
+/* Ultra-wide 8K (3840px+) */
+@media (min-width: 3840px) {
+  #home {
+    max-width: 100% !important;
+    max-width: 2000px; /* optional cap */
+
+  }
+  .left-margin{
+        margin-left: 85px;
+      }
+  #home h1,
+  #home .flip-words {
+    font-size: 80px !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 24px !important;
+  }
+  #home button {
+    font-size: 22px !important;
+    padding: 16px 36px !important;
+  }
+  #home img {
+    max-height: 700px !important;
+  }
+}
+
     </style>
 
     <!-- Announcement Strip -->
@@ -2306,9 +2390,9 @@ html.dark #blobs-bg .blob {
  
       <!-- Main layout: Two columns -->
       <div
-        id="home"
-        class="relative z-10 w-full mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-gray-800 dark:text-white"
-      >
+  id="home"
+  class="relative z-10 w-full mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-gray-800 dark:text-white"
+>
         <!-- Left Column: Text -->
         <div class="flex-1 flex flex-col gap-4 sm:gap-6 text-left w-full left-margin">
           <h1
@@ -4168,174 +4252,6 @@ observer.observe(section);
           transform: translateY(0);
         }
       }
-/* ---------- Grid Setup ---------- */
-#business-benefits .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(1rem, 1vw + 1rem, 1rem);
-  max-width: 65%;
-  margin: 0 auto;
-  justify-items: center; /* center cards horizontally */
-}
-
-/* ---------- Section Titles ---------- */
-#business-benefits .section-title {
-  font-size: clamp(2rem, 4vw, 8rem);
-  line-height: 1.1;
-  text-align: center;
-}
-
-#business-benefits .section-subtitle {
-  font-size: clamp(1rem, 1.2vw, 1.8rem);
-  max-width: 80rem;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 500;
-}
-
-/* ---------- Benefit Cards ---------- */
-#business-benefits .benefit-card {
-  padding: clamp(1.5rem, 1vw + 1rem, 5rem);
-  text-align: center;
-  background-color: #fff;
-  border-radius: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  /* max-width: 500px; */
-}
-
-#business-benefits .benefit-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-}
-
-/* ---------- Card Title & Text ---------- */
-#business-benefits .benefit-title {
-  font-size: clamp(1.25rem, 1.5vw, 2.5rem);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-#business-benefits .benefit-text {
-  font-size: clamp(0.9rem, 1vw, 1.3rem);
-  line-height: 1.6;
-}
-
-/* ---------- Icon Wrapper ---------- */
-#business-benefits .icon-wrapper {
-  width: clamp(60px, 5vw, 120px);
-  height: clamp(60px, 5vw, 120px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(1.5rem, 2vw, 3rem);
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#business-benefits .benefit-card:hover .icon-wrapper {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-}
-
-/* ---------- Scroll Reveal Animation ---------- */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ---------- Responsive Breakpoints (Optional Fine-tuning) ---------- */
-/* ---------- Mobile / Small screens ---------- */
-@media (max-width: 768px) {
-  #business-benefits .grid {
-    grid-template-columns: 1fr; /* single column */
-    gap: 1rem;
-  }
-}
-
-/* ---------- Tablets / Medium screens ---------- */
-@media (min-width: 769px) and (max-width: 1023px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 2rem;
-     margin-left: 103px;
-    margin-right: 100px;
-  }
-}
-
-/* ---------- Desktop / Large screens ---------- */
-@media (min-width: 1024px) and (max-width: 1679px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1.5rem;
-    margin-left: 103px;
-    margin-right: 100px;
-  }
-}
-
-/* ---------- Large screens: 1680px ---------- */
-@media (min-width: 1680px) and (max-width: 1919px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 3 columns */
-      gap: 2.5rem;
-   /* margin-left: 291px;
-        margin-right: 253px; */
-  }
-}
-
-/* ---------- Ultra HD: 1920px ---------- */
-@media (min-width: 1920px) and (max-width: 2559px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 3 columns */
-            gap: 2rem;
-        /* margin-left: 374px;
-        margin-right: 423px; */
-  }
-}
-
-/* ---------- 2560px ---------- */
-@media (min-width: 2560px) and (max-width: 3839px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: 2rem;
-            /* margin-left: 721px;
-        margin-right: 680px; */
-  }
-}
-
-/* ---------- 3840px and above ---------- */
-@media (min-width: 3840px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: 2rem;
-        /* margin-left: 1353px;
-        margin-right: 1320px; */
-        display: grid;
-  }
-#business-benefits .benefit-card {
-width: 1146px;
-}
-}
-
-
-/* @media (min-width: 3840px) {
-  #business-benefits .grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-  }
-} */
-
     </style>
 
 
