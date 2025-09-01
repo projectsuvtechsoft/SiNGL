@@ -4270,22 +4270,49 @@ observer.observe(section);
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 2rem;
-     margin-left: 103px;
-    margin-right: 100px;
+   margin-left: 99px;
+    margin-right: 109px;
   }
+  #business-benefits .benefit-card {
+width: 487px;
+}
+}
+@media (min-width: 1023px) and (max-width: 1240px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 2rem;
+   margin-left: 99px;
+    margin-right: 109px;
+  }
+  #business-benefits .benefit-card {
+width: 478px;
+}
 }
 
 /* ---------- Desktop / Large screens ---------- */
-@media (min-width: 1024px) and (max-width: 1679px) {
+@media (min-width: 1024px) and (max-width: 1100px) {
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 1.5rem;
-    margin-left: 103px;
-    margin-right: 100px;
+    margin-left: 99px;
+    /* margin-right: 109px; */
   }
   #business-benefits .benefit-card {
-width: 500px;
+width: 367px;
 }
+
+}
+@media (min-width: 1100px) and (max-width: 1680px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 1.5rem;
+    margin-left: 99px;
+    /* margin-right: 109px; */
+  }
+  #business-benefits .benefit-card {
+width: 485px;
+}
+
 }
 
 /* ---------- Large screens: 1680px ---------- */
@@ -4293,9 +4320,12 @@ width: 500px;
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 3 columns */
       gap: 2.5rem;
-   /* margin-left: 291px;
-        margin-right: 253px; */
+    margin-left: 99px;
+    margin-right: 109px;
   }
+  #business-benefits .benefit-card {
+width: 487px;
+}
     #business-benefits ul {
    
     font-size: 22px !important
@@ -4307,6 +4337,8 @@ width: 500px;
     font-size: 22px !important;
 }
 }
+
+
 
 /* ---------- Ultra HD: 1920px ---------- */
 @media (min-width: 1920px) and (max-width: 2559px) {
@@ -4671,7 +4703,7 @@ width: 1589px;
           transform: translateY(20px);
       }
     </style>
-    <section class="feature-section max-w-[3800px] mx-auto " id="use-cases">
+    <section class="feature-section max-w-7xl mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
 <div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
