@@ -51,6 +51,162 @@
       };
     </script>
     <style>
+      /* ===========================
+   GLOBAL RESET & CONTAINER FIX
+=========================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+ 
+/* Ensure all sections fit the viewport */
+section,
+header,
+footer,
+main,
+div {
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+ 
+/* Prevent unwanted padding/margin from Tailwind */
+.container,
+.max-w-7xl,
+.max-w-full {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+ 
+/* Ensure hero/banner content centers correctly */
+.hero,
+.header-content,
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+ 
+/* ===========================
+   MEDIA QUERIES FOR RESPONSIVENESS
+=========================== */
+ 
+/* For desktops & large screens */
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+  .max-w-7xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+ 
+/* For tablets and medium devices */
+@media (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+ 
+  /* Collapse grid into a single column */
+  .grid-cols-2,
+  .lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+  }
+ 
+  /* Reduce spacing */
+  .max-w-7xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+ 
+/* For tablets & small laptops */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+ 
+  header {
+    padding: 0.5rem 1rem;
+  }
+ 
+  /* Mobile hamburger menu */
+  #mobile-menu-toggle {
+    display: block !important;
+  }
+ 
+  nav {
+    display: none !important;
+  }
+ 
+  /* Adjust hero/title size */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+}
+ 
+/* For mobile screens */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+ 
+  .logobanner-img {
+    width: 65px;
+  }
+ 
+  /* Form input adjustments */
+  input,
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+ 
+  button {
+    font-size: 1rem;
+    padding: 0.7rem;
+    width: 100%;
+  }
+ 
+  /* Contact cards stacked */
+  .contact-card {
+    padding: 1rem;
+  }
+ 
+  .max-w-7xl {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+ 
+/* For very small mobile devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+ 
+  h1,
+  h2 {
+    font-size: 1.2rem !important;
+  }
+ 
+  .contact-card {
+    padding: 0.75rem;
+  }
+ 
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
       @font-face {
         font-family: "UxumGrotesque";
         src: url("/fonts/uxumregular.otf") format("opentype");
