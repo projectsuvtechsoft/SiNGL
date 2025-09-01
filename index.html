@@ -4702,11 +4702,140 @@ width: 1589px;
           opacity: 0;
           transform: translateY(20px);
       }
+      /* ✅ Extra Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .feature-left h3 {
+    font-size: 20px;
+  }
+  .feature-left li {
+    font-size: 14px;
+  }
+  .card {
+    font-size: 13px;
+  }
+}
+
+/* Small Laptops */
+@media (max-width: 1023px) {
+  .feature-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .feature-left {
+    width: 100%;
+  }
+  .feature-right {
+    width: 100%;
+  }
+}
+
+/* Between 1024px and 1100px */
+@media (max-width: 1100px) {
+  .feature-left h3 {
+    font-size: 24px;
+  }
+  .feature-left li {
+    font-size: 15px;
+  }
+  .card {
+    font-size: 13px;
+  }
+}
+
+/* Large Desktop - 1680px */
+@media (min-width: 1680px) {
+  .feature-section {
+    max-width: 1300px;
+  }
+  .feature-left h3 {
+    font-size: 32px;
+  }
+  .feature-left li {
+    font-size: 18px;
+  }
+  .card {
+    font-size: 15px;
+  }
+}
+
+/* Ultra HD - 1920px */
+@media (min-width: 1920px) {
+  .feature-section {
+    max-width: 1500px;
+  }
+  .feature-left h3 {
+    font-size: 34px;
+  }
+  .feature-left li {
+    font-size: 20px;
+  }
+  .card {
+    font-size: 16px;
+  }
+}
+
+/* 2.5K - 2556px */
+@media (min-width: 2556px) {
+  .feature-section {
+    max-width: 1800px;
+  }
+  .feature-left h3 {
+    font-size: 36px;
+  }
+  .feature-left li {
+    font-size: 22px;
+  }
+  .card {
+    font-size: 18px;
+  }
+}
+
+/* 4K - 3840px */
+@media (min-width: 3840px) {
+  .feature-section {
+    max-width: 2200px;
+  }
+  .feature-left h3 {
+    font-size: 40px;
+  }
+  .feature-left li {
+    font-size: 24px;
+  }
+  .card {
+    font-size: 20px;
+  }
+  .featurediv{
+    width: 1146px;
+  }
+  .feature-left {
+   
+    height: 98%;
+}
+}
+
+/* 5K+ - 5120px */
+@media (min-width: 5120px) {
+  .feature-section {
+    max-width: 2600px;
+  }
+  .feature-left h3 {
+    font-size: 46px;
+  }
+  .feature-left li {
+    font-size: 28px;
+  }
+  .card {
+    font-size: 22px;
+  }
+}
+
     </style>
     <section class="feature-section max-w-7xl mx-auto " id="use-cases">
       <div class="feature-container">
         <!-- LEFT SIDE: Dynamic Content Only -->
-<div class="relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
+<div class="featurediv relative bg-[url('/IndustryBanner.jpg')] rounded-2xl bg-cover bg-center p-6 flex justify-center">
   <div 
     class="feature-left shadow-md bg-white rounded-2xl shadow-lg p-6 w-full sm:w-[300px] md:w-[350px] lg:w-[459px] lg:h-[352px] md:h-[345px]" 
     style="border-radius: 14px;"
