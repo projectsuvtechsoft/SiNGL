@@ -4211,8 +4211,27 @@ observer.observe(section);
 #business-benefits .benefit-card {
 width: 1146px;
 }
+#business-benefits .benefit-text {
+    line-height: 1.6;
+    font-size: 29px;
 }
-
+}
+@media (min-width: 5120px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr); /* 4 columns */
+    gap: 2rem;
+        /* margin-left: 1353px;
+        margin-right: 1320px; */
+        display: grid;
+  }
+#business-benefits .benefit-card {
+width: 1589px;
+}
+#business-benefits .benefit-text {
+    line-height: 1.6;
+    font-size: 31px;
+}
+}
 
 /* @media (min-width: 3840px) {
   #business-benefits .grid {
