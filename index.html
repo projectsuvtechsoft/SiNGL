@@ -3953,6 +3953,160 @@ html.dark .tab-text.active-text {
 </section>
 
 <style>
+  /* 🔽 Responsive Media Queries for Search Section */
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+  #searchSection h2 {
+    font-size: 26px !important;
+  }
+  #searchSection p {
+    font-size: 13px !important;
+  }
+  #searchInput {
+    font-size: 14px !important;
+    padding: 0.75rem 1rem 0.75rem 3rem !important;
+  }
+  #searchButton {
+    font-size: 13px !important;
+    padding: 0.75rem 1.25rem !important;
+  }
+}
+
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+  #searchSection h2 {
+    font-size: 32px !important;
+  }
+  #searchSection p {
+    font-size: 14px !important;
+  }
+  #searchInput {
+    font-size: 15px !important;
+  }
+  #searchResults {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Small Laptops (769px - 1023px) */
+@media (max-width: 1023px) {
+  #searchSection h2 {
+    font-size: 38px !important;
+  }
+  #searchInput {
+    font-size: 16px !important;
+  }
+  #searchButton {
+    font-size: 14px !important;
+  }
+}
+
+/* Large Desktop (1680px - 1919px) */
+@media (min-width: 1680px) and (max-width: 1919px) {
+  #searchSection h2 {
+    font-size: 52px !important;
+  }
+  #searchSection p {
+    font-size: 18px !important;
+  }
+  #searchInput {
+    font-size: 18px !important;
+    padding: 1.25rem 1.5rem 1.25rem 3.5rem !important;
+  }
+  #searchButton {
+    font-size: 16px !important;
+    padding: 1.25rem 2rem !important;
+  }
+  #searchResults {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Full HD (1920px - 2559px) */
+@media (min-width: 1920px) and (max-width: 2559px) {
+  #searchSection h2 {
+    font-size: 56px !important;
+  }
+  #searchSection p {
+    font-size: 20px !important;
+  }
+  #searchInput {
+    font-size: 20px !important;
+    padding: 1.5rem 2rem 1.5rem 4rem !important;
+  }
+  #searchButton {
+    font-size: 18px !important;
+    padding: 1.5rem 2.5rem !important;
+  }
+  #searchResults {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* 2.5K (2560px - 3839px) */
+@media (min-width: 2560px) and (max-width: 3839px) {
+  #searchSection h2 {
+    font-size: 64px !important;
+  }
+  #searchSection p {
+    font-size: 22px !important;
+  }
+  #searchInput {
+    font-size: 22px !important;
+    padding: 1.75rem 2.25rem 1.75rem 4.5rem !important;
+  }
+  #searchButton {
+    font-size: 20px !important;
+    padding: 1.75rem 3rem !important;
+  }
+  #searchResults {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* 4K (3840px - 5119px) */
+@media (min-width: 3840px) and (max-width: 5119px) {
+  #searchSection h2 {
+    font-size: 72px !important;
+  }
+  #searchSection p {
+    font-size: 24px !important;
+  }
+  #searchInput {
+    font-size: 24px !important;
+    padding: 2rem 2.5rem 2rem 5rem !important;
+  }
+  #searchButton {
+    font-size: 22px !important;
+    padding: 2rem 3.5rem !important;
+  }
+  #searchResults {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* 5K+ (5120px and above) */
+@media (min-width: 5120px) {
+  #searchSection h2 {
+    font-size: 90px !important;
+  }
+  #searchSection p {
+    font-size: 28px !important;
+  }
+  #searchInput {
+    font-size: 28px !important;
+    padding: 2.5rem 3rem 2.5rem 6rem !important;
+  }
+  #searchButton {
+    font-size: 26px !important;
+    padding: 2.5rem 4rem !important;
+  }
+  #searchResults {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+}
+
     /* .searchButton:hover {
     background-color: #964ad4; 
     color: white;
@@ -4503,7 +4657,7 @@ observer.observe(section);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: clamp(1rem, 1vw + 1rem, 1rem);
-  max-width: 65%;
+  max-width: 89%;
   margin: 0 auto;
   justify-items: center; /* center cards horizontally */
 }
@@ -4607,6 +4761,12 @@ observer.observe(section);
 width: 487px;
 }
 }
+@media (min-width: 1400px)  {
+    #business-benefits .benefit-card {
+        width: 743px;
+        margin-left: 52px;
+    }
+}
 @media (min-width: 1023px) and (max-width: 1240px) {
   #business-benefits .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -4654,7 +4814,8 @@ width: 485px;
     margin-right: 109px;
   }
   #business-benefits .benefit-card {
-width: 487px;
+width: 639px;
+        margin-left: 3px;
 }
     #business-benefits ul {
    
@@ -4713,6 +4874,10 @@ width: 487px;
 #business-benefits .section-subtitle {
     font-size: 26px !important;
 }
+    #business-benefits .benefit-card {
+        width: 1032px;
+        margin-left: 52px;
+    }
 }
 
 /* ---------- 3840px and above ---------- */
@@ -4725,7 +4890,8 @@ width: 487px;
         display: grid;
   }
 #business-benefits .benefit-card {
-width: 1146px;
+width: 1603px;
+        margin-left: -33px;
 }
 #business-benefits ul {
    
@@ -5133,7 +5299,7 @@ width: 1589px;
 /* Large Desktop - 1680px */
 @media (min-width: 1100px) and (max-width: 1680px ) {
   .feature-section {
-    max-width: 1300px;
+    max-width: 1900px;
   }
   .feature-left h3 {
     font-size: 32px;
@@ -5143,10 +5309,10 @@ width: 1589px;
   }
   .card {
     font-size: 15px !important;
-        width: 458px;
+        width: 491px;
   }
    .featurediv{
-    width: 500px !important;
+    width: 519px !important;
         margin-left: 89px;
   }
   .button1 {
@@ -5192,7 +5358,7 @@ width: 1589px;
 /* 2.5K - 2556px */
 @media (min-width: 2556px) {
   .feature-section {
-    max-width: 1800px;
+    max-width: 2300px;
   }
   .feature-left h3 {
     font-size: 36px !important;
@@ -5202,11 +5368,11 @@ width: 1589px;
     }
       .card {
         font-size: 27px !important;
-        width: 752px;
+        width: 1057px;
     }
        .featurediv {
         margin-left: 52px;
-        width: 817px !important;
+        width: 1062px !important;
     }
     .button1 {
         font-size: 28px !important;
@@ -5221,21 +5387,21 @@ width: 1589px;
 /* 4K - 3840px */
 @media (min-width: 3840px) {
   .feature-section {
-    max-width: 2500px;
+    max-width: 3500px;
   }
      .feature-left h3 {
-        font-size: 53px !important;
+        font-size: 79px !important;
     }
       .feature-left li {
-        font-size: 35px !important;
+        font-size: 44px !important;
     }
  
       .featurediv {
-        width: 1187px !important;
+        width: 1695px !important;
         margin-left: 1px;
     }
      .button1 {
-        font-size: 35px !important;
+        font-size: 48px !important;
     }
 
   .feature-left {
@@ -5243,8 +5409,8 @@ width: 1589px;
     height: 98%;
 }
     .card {
-        width: 1193px;
-        font-size: 38px !important;
+        width: 1540px;
+        font-size: 48px !important;
     }
 }
 
