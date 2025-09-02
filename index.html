@@ -1508,9 +1508,9 @@ html.dark #blobs-bg .blob {
 
 /* Ultra-wide (3840px+) */
 @media (min-width: 3840px) {
-  #header .logo-wrapper img {
+  /* #header .logo-wrapper img {
     max-height: 4rem !important;
-  }
+  } */
   #header .nav-link {
     font-size: 2rem !important;
     padding: 25px 50px !important;
@@ -1730,15 +1730,16 @@ html.dark #blobs-bg .blob {
         <div class="flex items-center py-1 rounded-lg">
           <div class="logo-wrapper">
             <img
+              
               src="./image (3).png"
               alt="Logo"
-              class="logo-img hidden dark:block"
+              class="logo-img hidden dark:block image-heightwidth"
             />
 
             <img
               src="logoo1.png"
               alt="Logo"
-              class="logo-img1 block dark:hidden"
+              class="logo-img1 block dark:hidden image-heightwidth"
             />
           </div>
         </div>
@@ -2022,6 +2023,18 @@ html.dark #blobs-bg .blob {
     font-size: 16px;
     padding: 12px 28px;
   }
+   /* #theme-toggle.btntoggle i.text-lg{
+    font-size: 4rem !important;
+
+  }
+  #theme-toggle.btntoggle{
+    height:100px !important
+  }
+
+   #btn-toggle,#btn-toggle>a{
+
+    font-size:30px !important
+  } */
 }
 
 /* Ultra-Wide (3840px+) */
@@ -2036,6 +2049,25 @@ html.dark #blobs-bg .blob {
   #header .btntoggle {
     font-size: 18px;
     padding: 14px 32px;
+  }
+  .image-heightwidth{
+    height: 200px !important;
+    width: 300px !important;
+  }
+  #header{
+    margin-top:20px !important
+  }
+   #theme-toggle.btntoggle i.text-lg{
+    font-size: 4rem !important;
+
+  }
+  #theme-toggle.btntoggle{
+    height:100px !important
+  }
+
+   #btn-toggle,#btn-toggle>a{
+
+    font-size:30px !important
   }
 }
 
@@ -2072,6 +2104,12 @@ html.dark #blobs-bg .blob {
     margin: 0;
     padding: 0;
 }  
+.image-heightwidth{
+  height: auto;
+  width: auto;
+
+}
+
   </style>
     <!-- JS for improved mobile menu -->
     <script>
