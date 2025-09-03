@@ -398,21 +398,6 @@
           font-size: 16px;
         }
 
-}
-
-/* Mobile view → horizontal scrolling row */
-@media (max-width: 768px) {
- 
-  .features-container{
-  display: flex;
-  flex-flow:row-reverse
-}
-  .feature-right{
-  display: contents;
-}
-   .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
         .testimonial-card {
           min-width: 16rem;
           max-width: 18rem;
@@ -2061,56 +2046,64 @@ html.dark #blobs-bg .blob {
 /* Ultra-Wide (3840px+) */
 @media (min-width: 3840px) {
   #header .logo-wrapper img {
-    max-height: 110px;
-  }
-  #header .nav-link {
-    font-size: 18px;
-    padding: 10px 26px;
-  }
-      /* #header .nav-link {
-        font-size: 3rem !important;
-        padding: 50px 50px !important;
-    } */
-  #header .btntoggle {
-    font-size: 18px;
-    padding: 14px 32px;
-  }
-  .image-heightwidth{
-    height: 200px !important;
-    width: 300px !important;
-  }
-  #header{
-    margin-top:20px !important
-  }
-   #theme-toggle.btntoggle i.text-lg{
-    font-size: 4rem !important;
-
-  }
-  #theme-toggle.btntoggle{
-    height:100px !important
-  }
-
-   #btn-toggle,#btn-toggle>a{
-
-    font-size:30px !important
-  }
-}
-
-@media (min-width: 4096px) {
-  #header .logo-wrapper img {
-    max-height: 200px;
+    max-height: 120px;
     margin-left: 20px;
   }
  #header .nav-link {
-        font-size: 3rem !important;
-        padding: 50px 50px !important;
+        font-size: 2rem !important;
+        padding: 30px 50px !important;
+    }
+      #header > div{
+      margin-top: 3rem !important;
+  }
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 4rem !important;
+
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 100px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+        padding: 20px 20px !important;
+        font-size: 40px !important;
+        width: 350px;
+        height: 104px;
+        border-radius: 60px;
+    }
+/* } */
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:100px !important
+  }
+      #home {
+        gap: 8rem;
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+        height: 70vh;
+    }
+}
+
+@media (min-width: 4096px) {
+  #header > div{
+      margin-top: 3rem;
+  }
+  #header .logo-wrapper img {
+    max-height: 150px !important;
+    margin-left: 20px !important;
+  }
+ #header .nav-link {
+        font-size: 2.5rem !important;
+        padding: 50px 70px !important;
     }
  #theme-toggle.btntoggle i.text-lg{
     font-size: 4rem !important;
 
   }
   #theme-toggle.btntoggle{
-    height:120px !important
+    height:100px !important
   }
 
    #btn-toggle,#btn-toggle>a{
@@ -2125,15 +2118,51 @@ html.dark #blobs-bg .blob {
      gap:100px !important
   }
       #home {
-        gap: 8rem;
-        padding-left: 10rem !important;
-        padding-right: 10rem !important;
+        /* gap: 8rem; */
+        padding-left: 14rem !important;
+        /* padding-right: 10rem !important; */
     }
        
 }
 
 /* Small Screens (Mobile) */
+@media (max-width: 768px) {
+  #header nav {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: flex;
+  }
+}
+      .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #67686a;
+    margin: 0;
+    padding: 0;
+}
+  html.dark .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #fdfeff;
+    margin: 0;
+    padding: 0;
+}  
+.image-heightwidth{
+  height: auto;
+  width: auto;
 
+}
 
   </style>
     <!-- JS for improved mobile menu -->
@@ -2408,6 +2437,7 @@ html.dark #blobs-bg .blob {
     }
       
  }
+ 
     </style>
 
     <!-- Announcement Strip -->
@@ -2521,7 +2551,7 @@ html.dark #blobs-bg .blob {
             </div>
        <div
   style="font-family: UxumGrotesque, sans-serif"
-  class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
+  class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text2 font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
   style="animation-delay: 1.3s"
 >
   Deliver 
@@ -2584,14 +2614,14 @@ html.dark #blobs-bg .blob {
        <div class="flex-1 flex justify-center items-center w-full" style="margin-top: -20px;">
   <!-- Light mode image -->
   <img
-    src="./Singl_View_white.gif"
+    src="./Single View.gif"
     alt="Light Banner"
     class="reveal opacity-0 max-w-full max-h-[400px] rounded-2xl object-cover bg-transparent dark:hidden"
   />
 
   <!-- Dark mode image -->
   <img
-    src="./Singl_View_Dark.gif"
+    src="./Single View (1).gif"
     alt="Dark Banner"
     class="reveal opacity-0 max-w-full max-h-[400px] rounded-2xl object-cover bg-transparent hidden dark:block"
   />
@@ -2671,6 +2701,83 @@ html.dark #blobs-bg .blob {
         margin-top:0.1rem !important;
       }
 }
+@media (min-width: 3840px) {
+  .blog-container {
+    max-width: 2400px;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  .blog-title {
+    font-size: 5rem;
+  }
+  .blog-heading a {
+    font-size: 1.8rem;
+  }
+  #home button {
+        /* font-size: 3rem !important; */
+        margin: 32px 0px !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:2.8rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 40px 0px !important;
+    }
+    #home{
+      gap:25rem !important;
+      margin-top: 10rem !important;
+    }
+    .heroheight {
+    min-height: 60vh !important;
+}
+     .margin-lr{
+        margin: 0rem 16rem !important
+        /* margin-top:-3.9rem !important; */
+      }
+body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:2.4rem !important;
+}
+#newsTicker{
+  font-size: 2rem !important;
+}
+
+#home h1,
+  #home .flip-words {
+    font-size: 6rem !important;
+    line-height: 1.4 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 2.5rem !important;
+    line-height: 1.8 !important;
+  }
+
+  #home .text2 {
+    font-size: 3rem !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden
+  {
+    width: 180px !important;
+    height: 100px !important;
+    padding:13px
+  }
+  #home button {
+    font-size: 30px !important;
+    padding: 20px 40px !important;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
+    #home img {
+        max-height: 1000px !important;
+    }
+}
 @media (min-width: 4096px) {
     #home button {
         /* font-size: 3rem !important; */
@@ -2681,17 +2788,18 @@ html.dark #blobs-bg .blob {
       font-size:2.8rem !important;
     }
     body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
-      padding: 25px 0px !important;
+      padding: 40px 0px !important;
     }
     #home{
       gap:25rem !important;
+      margin-top: 10rem !important;
     }
     .heroheight {
-    min-height: 60vh !important;
+    min-height: 40vh !important;
 }
      .margin-lr{
-        margin: 0px 262px !important;
-        margin-top:-3.9rem !important;
+        margin: 0rem 20rem !important
+        /* margin-top:-3.9rem !important; */
       }
 body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
 {
@@ -2700,6 +2808,36 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
 #newsTicker{
   font-size: 2rem !important;
 }
+
+#home h1,
+  #home .flip-words {
+    font-size: 6.5rem !important;
+    line-height: 1.4 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 3rem !important;
+    line-height: 1.8 !important;
+  }
+
+  #home .text2 {
+    font-size: 4.5rem !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden
+  {
+    width: 180px !important;
+    height: 100px !important;
+    padding:13px
+  }
+  #home button {
+    font-size: 30px !important;
+    padding: 20px 40px !important;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
     #home img {
         max-height: 1000px !important;
     }
@@ -2710,6 +2848,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
     .tab-btn p{
        font-size:2.4rem !important;
     }
+
 /* } */
 }
 /* 4K Screens (2561px–3840px) */
@@ -2949,7 +3088,6 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         margin-left: 85px;
       }
       @media (max-width: 768px) {
-        
         .left-margin{
           margin-left: 0px;
         }
@@ -3217,7 +3355,6 @@ html.dark .tab-text.active-text {
       } */
 
       @media (max-width: 768px) {
-        
         .btns {
           flex-wrap: nowrap;
           overflow-x: auto;
@@ -5614,43 +5751,43 @@ width: 1589px;
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
         </span>
-       <span class="text">Banking & Financial Services</span> 
+        Banking & Financial Services
       </div>
       <div class="card" onclick="showContent(1)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </span>
-        <span class="text">Insurance Industry</span>
+        Insurance Industry
       </div>
       <div class="card" onclick="showContent(2)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </span>
-        <span class="text">Healthcare Industry</span>
+        Healthcare Industry
       </div>
       <div class="card" onclick="showContent(3)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </span>
-        <span class="text">Telecom Industry</span>
+        Telecom Industry
       </div>
       <div class="card" onclick="showContent(4)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pill"><path d="M12 21a9 9 0 1 0-9-9c0 1.95 0 2.25 0 4s0 2.25 0 4c1.95 0 2.25 0 4 0s2.25 0 4 0zm0 0v-9"></path></svg>
         </span>
-        <span class="text">Pharmaceuticals</span>
+        Pharmaceuticals
       </div>
       <div class="card" onclick="showContent(5)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </span>
-        <span class="text">Retail Industry</span>
+        Retail Industry
       </div>
       <div class="card" onclick="showContent(6)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
         </span>
-        <span class="text">Government</span>
+        Government
       </div>
     </div>
       </div>
@@ -5844,76 +5981,12 @@ html.dark .feature-section {
     
       @media (max-width: 768px) {
         .feature-container {
-          flex-direction: row-reverse;
+          flex-direction: column-reverse;
           text-align: center;
-          justify-content: space-evenly;
         }
-
-.feature-right{
-    flex: 0.5;
-  display: flex;
-  justify-content: center;
-    align-items: center;
-}
-      
-  .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
-
-  .featurediv{
-    margin-left: 0;
-  }
-/* Card styling */
-.feature-right .card {
-
-  display: content;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Keep text in one line */
-  width: max-content;
-}
-
-
-
-/* Mobile view → horizontal scrolling row */
-@media (max-width: 768px) {
-.features-container{
-  
-  flex-direction: row-reverse !important
-}
-.feature-right{
-  display: flex;
-}
-      
-  .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
-
-/* Card styling */
-.feature-right .card {
-  display: content;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Keep text in one line */
-  width: max-content;
-}
-
+        .feature-right {
+          width: 100%;
+        }
         .card {
           justify-content: flex-start;
         }
@@ -6854,21 +6927,7 @@ background-color: #0f0f0f;}
 }
 
 /* Ultra-Wide Screens (3840px+) */
-@media (min-width: 3840px) {
-  .blog-container {
-    max-width: 2400px;
-  }
-  .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-  }
-  .blog-title {
-    font-size: 5rem;
-  }
-  .blog-heading a {
-    font-size: 1.8rem;
-  }
-}
+
 
 
 </style>
