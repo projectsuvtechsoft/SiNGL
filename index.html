@@ -398,21 +398,6 @@
           font-size: 16px;
         }
 
-}
-
-/* Mobile view → horizontal scrolling row */
-@media (max-width: 768px) {
- 
-  .features-container{
-  display: flex;
-  flex-flow:row-reverse
-}
-  .feature-right{
-  display: contents;
-}
-   .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
         .testimonial-card {
           min-width: 16rem;
           max-width: 18rem;
@@ -2013,7 +1998,7 @@ html.dark #blobs-bg .blob {
   <style>
     @media (min-width: 1920px) {
   #header .logo-wrapper img {
-    max-height: 70px;
+    max-height: 50px;
   }
   #header .nav-link {
     font-size: 13px;
@@ -2028,14 +2013,14 @@ html.dark #blobs-bg .blob {
 /* 4K Screens (2560px–3840px) */
 @media (min-width: 2560px) {
   #header .logo-wrapper img {
-    max-height: 90px;
+    max-height: 70px;
   }
   #header .nav-link {
     font-size: 16px;
     padding: 8px 22px;
   }
   #header .btntoggle {
-    font-size: 16px;
+    font-size: 40px;
     padding: 12px 28px;
   }
    /* #theme-toggle.btntoggle i.text-lg{
@@ -2052,27 +2037,68 @@ html.dark #blobs-bg .blob {
   } */
 }
 
+/* @media (min-width: 3840px) {
+    #header .nav-link {
+        font-size: 3rem !important;
+        padding: 50px 50px !important;
+    }
+} */
 /* Ultra-Wide (3840px+) */
 @media (min-width: 3840px) {
   #header .logo-wrapper img {
-    max-height: 110px;
+    max-height: 120px;
+    margin-left: 20px;
   }
-  #header .nav-link {
-    font-size: 18px;
-    padding: 10px 26px;
+ #header .nav-link {
+        font-size: 2rem !important;
+        padding: 30px 50px !important;
+    }
+      #header > div{
+      margin-top: 3rem !important;
   }
-  #header .btntoggle {
-    font-size: 18px;
-    padding: 14px 32px;
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 4rem !important;
+
   }
-  .image-heightwidth{
-    height: 200px !important;
-    width: 300px !important;
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 100px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+        padding: 20px 20px !important;
+        font-size: 40px !important;
+        width: 350px;
+        height: 104px;
+        border-radius: 60px;
+    }
+/* } */
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:100px !important
   }
-  #header{
-    margin-top:20px !important
+      #home {
+        gap: 8rem;
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+        height: 70vh;
+    }
+}
+
+@media (min-width: 4096px) {
+  #header > div{
+      margin-top: 3rem;
   }
-   #theme-toggle.btntoggle i.text-lg{
+  #header .logo-wrapper img {
+    max-height: 150px !important;
+    margin-left: 20px !important;
+  }
+ #header .nav-link {
+        font-size: 2.5rem !important;
+        padding: 50px 70px !important;
+    }
+ #theme-toggle.btntoggle i.text-lg{
     font-size: 4rem !important;
 
   }
@@ -2081,13 +2107,62 @@ html.dark #blobs-bg .blob {
   }
 
    #btn-toggle,#btn-toggle>a{
-
-    font-size:30px !important
+    padding: 20px 20px !important;
+   font-size: 50px !important;
+        width: 400px;
+        height: 120px;
+        border-radius: 60px;
+    
   }
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:100px !important
+  }
+      #home {
+        /* gap: 8rem; */
+        padding-left: 14rem !important;
+        /* padding-right: 10rem !important; */
+    }
+       
 }
 
 /* Small Screens (Mobile) */
+@media (max-width: 768px) {
+  #header nav {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: flex;
+  }
+}
+      .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #67686a;
+    margin: 0;
+    padding: 0;
+}
+  html.dark .btntoggle {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: #fdfeff;
+    margin: 0;
+    padding: 0;
+}  
+.image-heightwidth{
+  height: auto;
+  width: auto;
 
+}
 
   </style>
     <!-- JS for improved mobile menu -->
@@ -2355,6 +2430,14 @@ html.dark #blobs-bg .blob {
   } */
 }
 
+ @media (min-width:4096px) {
+   #home .text-base, #home .text-lg, #home .text-xl, #home .text-2xl {
+        
+        font-size: 3rem !important;
+    }
+      
+ }
+ 
     </style>
 
     <!-- Announcement Strip -->
@@ -2468,7 +2551,7 @@ html.dark #blobs-bg .blob {
             </div>
        <div
   style="font-family: UxumGrotesque, sans-serif"
-  class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
+  class="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl text2 font-semibold opacity-0 animate-fade-in-up flex items-center gap-2"
   style="animation-delay: 1.3s"
 >
   Deliver 
@@ -2531,14 +2614,14 @@ html.dark #blobs-bg .blob {
        <div class="flex-1 flex justify-center items-center w-full" style="margin-top: -20px;">
   <!-- Light mode image -->
   <img
-    src="./Singl_View_white.gif"
+    src="./Single View.gif"
     alt="Light Banner"
     class="reveal opacity-0 max-w-full max-h-[400px] rounded-2xl object-cover bg-transparent dark:hidden"
   />
 
   <!-- Dark mode image -->
   <img
-    src="./Singl_View_Dark.gif"
+    src="./Single View (1).gif"
     alt="Dark Banner"
     class="reveal opacity-0 max-w-full max-h-[400px] rounded-2xl object-cover bg-transparent hidden dark:block"
   />
@@ -2618,7 +2701,156 @@ html.dark #blobs-bg .blob {
         margin-top:0.1rem !important;
       }
 }
+@media (min-width: 3840px) {
+  .blog-container {
+    max-width: 2400px;
+  }
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  .blog-title {
+    font-size: 5rem;
+  }
+  .blog-heading a {
+    font-size: 1.8rem;
+  }
+  #home button {
+        /* font-size: 3rem !important; */
+        margin: 32px 0px !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:2.8rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 40px 0px !important;
+    }
+    #home{
+      gap:25rem !important;
+      margin-top: 10rem !important;
+    }
+    .heroheight {
+    min-height: 60vh !important;
+}
+     .margin-lr{
+        margin: 0rem 16rem !important
+        /* margin-top:-3.9rem !important; */
+      }
+body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:2.4rem !important;
+}
+#newsTicker{
+  font-size: 2rem !important;
+}
 
+#home h1,
+  #home .flip-words {
+    font-size: 6rem !important;
+    line-height: 1.4 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 2.5rem !important;
+    line-height: 1.8 !important;
+  }
+
+  #home .text2 {
+    font-size: 3rem !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden
+  {
+    width: 180px !important;
+    height: 100px !important;
+    padding:13px
+  }
+  #home button {
+    font-size: 30px !important;
+    padding: 20px 40px !important;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
+    #home img {
+        max-height: 1000px !important;
+    }
+}
+@media (min-width: 4096px) {
+    #home button {
+        /* font-size: 3rem !important; */
+        margin: 32px 0px !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:2.8rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 40px 0px !important;
+    }
+    #home{
+      gap:25rem !important;
+      margin-top: 10rem !important;
+    }
+    .heroheight {
+    min-height: 40vh !important;
+}
+     .margin-lr{
+        margin: 0rem 20rem !important
+        /* margin-top:-3.9rem !important; */
+      }
+body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:2.4rem !important;
+}
+#newsTicker{
+  font-size: 2rem !important;
+}
+
+#home h1,
+  #home .flip-words {
+    font-size: 6.5rem !important;
+    line-height: 1.4 !important;
+  }
+  #home .text-base,
+  #home .text-lg,
+  #home .text-xl,
+  #home .text-2xl {
+    font-size: 3rem !important;
+    line-height: 1.8 !important;
+  }
+
+  #home .text2 {
+    font-size: 4.5rem !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden
+  {
+    width: 180px !important;
+    height: 100px !important;
+    padding:13px
+  }
+  #home button {
+    font-size: 30px !important;
+    padding: 20px 40px !important;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
+    #home img {
+        max-height: 1000px !important;
+    }
+    /* @media (min-width: 2561px) { */
+    #features {
+        font-size: 5rem !important;
+    }
+    .tab-btn p{
+       font-size:2.4rem !important;
+    }
+
+/* } */
+}
 /* 4K Screens (2561px–3840px) */
 
         .logobanner-img1{
@@ -2856,7 +3088,6 @@ html.dark #blobs-bg .blob {
         margin-left: 85px;
       }
       @media (max-width: 768px) {
-        
         .left-margin{
           margin-left: 0px;
         }
@@ -3124,7 +3355,6 @@ html.dark .tab-text.active-text {
       } */
 
       @media (max-width: 768px) {
-        
         .btns {
           flex-wrap: nowrap;
           overflow-x: auto;
@@ -4057,7 +4287,7 @@ font-size: 22px !important;
     font-size: 18px !important;
   }
  #searchInput {
-       font-size: 29px !important;
+      font-size: 26px !important;
         padding: 1rem 2.5rem 1rem 5rem !important;
         width: 1203px !important;
         /* max-width: 1200px !important; */
@@ -4065,7 +4295,7 @@ font-size: 22px !important;
         display: block;
   }
   #searchButton {
-font-size: 27px !important;
+font-size: 24px !important;
         padding: 1rem 3.5rem !important;
         /* width: 179px; */
         margin-left: 8px;
@@ -4076,6 +4306,17 @@ font-size: 27px !important;
   #searchResults {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+  .text-benefits {
+        background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* display: inline-block; */
+        /* margin-top: 13px; */
+        line-height: 1.2;
+        padding: 0.05em 0;
+    }
 }
 
 /* Full HD (1920px - 2559px) */
@@ -4107,6 +4348,17 @@ font-size: 26px !important;
   #searchResults {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+  .text-benefits {
+        background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* display: inline-block; */
+        /* margin-top: 13px; */
+        line-height: 1.2;
+        padding: 0.05em 0;
+    }
 }
 
 /* 2.5K (2560px - 3839px) */
@@ -4137,6 +4389,17 @@ font-size: 26px !important;
   #searchResults {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+  .text-benefits {
+        background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* display: inline-block; */
+        /* margin-top: 13px; */
+        line-height: 1.2;
+        padding: 0.05em 0;
+    }
 }
 
 /* 4K (3840px - 5119px) */
@@ -4176,15 +4439,17 @@ font-size: 26px !important;
   #searchResults {
     grid-template-columns: repeat(4, 1fr) !important;
   }
-  .text-benefits {
-   background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* display: inline-block; */
-    margin-top: 13px;
-}
+.text-benefits {
+        background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* display: inline-block; */
+        /* margin-top: 13px; */
+        line-height: 1.2;
+        padding: 0.05em 0;
+    }
  
 }
 
@@ -4218,14 +4483,17 @@ font-size: 31px !important;
   #searchResults {
     grid-template-columns: repeat(5, 1fr) !important;
   }
-  .text-benefits {
-    background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* display: inline-block; */
-}
+.text-benefits {
+        background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        /* display: inline-block; */
+        /* margin-top: 13px; */
+        line-height: 1.2;
+        padding: 0.05em 0;
+    }
 }
 
     /* .searchButton:hover {
@@ -5147,7 +5415,7 @@ width: 1589px;
 
     <div class="text-center mb-4">
       <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
-        class="reveal tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
+        class="industrytitle tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100"
       >
         Industry Use <span class="industry-gradient">Cases</span>
       </h2>
@@ -5434,7 +5702,7 @@ width: 1589px;
   }
    .featurediv{
     width: 519px !important;
-        margin-left: 89px;
+        margin-left: 167px;
   }
   .button1 {
     font-size: 14px  !important;; 
@@ -5518,8 +5786,8 @@ width: 1589px;
     }
  
       .featurediv {
-        width: 1695px !important;
-        margin-left: 1px;
+      width: 1585px !important;
+        margin-left: 56px;
     }
      .button1 {
         font-size: 48px !important;
@@ -5530,9 +5798,26 @@ width: 1589px;
     height: 98%;
 }
     .card {
-        width: 1540px;
+        width: 1580px;
         font-size: 48px !important;
     }
+    .icon-svg svg {
+         width: 46px;
+        height: 49px;
+  }
+    .industrytitle{
+    font-size: 84px !important;
+  }
+.industry-gradient {
+  background: linear-gradient(90deg, #A48FDE 0%, #5391E4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* keep gradient visible */
+  display: inline-block; /* ensures proper rendering */
+  line-height: 1.2;       /* avoid cutoff */
+  padding: 0.05em 0;      /* gives breathing space */
+}
 }
 
 /* 5K+ - 5120px */
@@ -5563,6 +5848,32 @@ width: 1589px;
         width: 1728px;
         font-size: 45px !important;
     }
+     .icon-svg svg {
+         width: 46px;
+        height: 49px;
+  }
+  .industrytitle{
+    font-size: 84px !important;
+  }
+  .industry-gradient {
+    background: linear-gradient(90deg, #A48FDE 0%, #5391E4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* margin-top: 37px; */
+    /* display: inline-block; */
+    /* -webkit-text-fill-color: transparent; */
+}.industry-gradient {
+  background: linear-gradient(90deg, #A48FDE 0%, #5391E4 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* keep gradient visible */
+  display: inline-block; /* ensures proper rendering */
+  line-height: 1.2;       /* avoid cutoff */
+  padding: 0.05em 0;      /* gives breathing space */
+}
+
 }
 
     </style>
@@ -5623,43 +5934,43 @@ width: 1589px;
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
         </span>
-       <span class="text">Banking & Financial Services</span> 
+        Banking & Financial Services
       </div>
       <div class="card" onclick="showContent(1)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
         </span>
-        <span class="text">Insurance Industry</span>
+        Insurance Industry
       </div>
       <div class="card" onclick="showContent(2)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </span>
-        <span class="text">Healthcare Industry</span>
+        Healthcare Industry
       </div>
       <div class="card" onclick="showContent(3)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         </span>
-        <span class="text">Telecom Industry</span>
+        Telecom Industry
       </div>
       <div class="card" onclick="showContent(4)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pill"><path d="M12 21a9 9 0 1 0-9-9c0 1.95 0 2.25 0 4s0 2.25 0 4c1.95 0 2.25 0 4 0s2.25 0 4 0zm0 0v-9"></path></svg>
         </span>
-        <span class="text">Pharmaceuticals</span>
+        Pharmaceuticals
       </div>
       <div class="card" onclick="showContent(5)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
         </span>
-        <span class="text">Retail Industry</span>
+        Retail Industry
       </div>
       <div class="card" onclick="showContent(6)">
         <span class="icon-svg">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
         </span>
-        <span class="text">Government</span>
+        Government
       </div>
     </div>
       </div>
@@ -5853,76 +6164,12 @@ html.dark .feature-section {
     
       @media (max-width: 768px) {
         .feature-container {
-          flex-direction: row-reverse;
+          flex-direction: column-reverse;
           text-align: center;
-          justify-content: space-evenly;
         }
-
-.feature-right{
-    flex: 0.5;
-  display: flex;
-  justify-content: center;
-    align-items: center;
-}
-      
-  .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
-
-  .featurediv{
-    margin-left: 0;
-  }
-/* Card styling */
-.feature-right .card {
-
-  display: content;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Keep text in one line */
-  width: max-content;
-}
-
-
-
-/* Mobile view → horizontal scrolling row */
-@media (max-width: 768px) {
-.features-container{
-  
-  flex-direction: row-reverse !important
-}
-.feature-right{
-  display: flex;
-}
-      
-  .feature-right .card .text {
-    display: none; /* Hides the text after the icon */
-  }
-
-/* Card styling */
-.feature-right .card {
-  display: content;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
-  white-space: nowrap; /* Keep text in one line */
-  width: max-content;
-}
-
+        .feature-right {
+          width: 100%;
+        }
         .card {
           justify-content: flex-start;
         }
@@ -5943,6 +6190,295 @@ html.dark .feature-section {
     display: inline-flex;
   }
 }
+@media (max-width: 1024px) {
+  #Testimonials h2 {
+    font-size: 35px !important;
+  }
+  #Testimonials p {
+    font-size: 20px !important;
+  }
+   #Testimonials .testimonial-card {
+ min-width: 30rem !important;
+        max-width: 11rem !important;
+        padding: 2rem !important;
+        height: 318px;
+    }
+  #Testimonials blockquote {
+font-size: 17px !important;
+        line-height: 1.8;
+    }
+     .testcard {
+        font-size: 14px !important;
+        line-height: 1.5rem;
+    }
+  .starrate{
+  font-size: 25px !important;
+}
+}
+/* 1680px and larger */
+@media (min-width: 1680px) {
+  #Testimonials h2 {
+    font-size: 49px !important;
+  }
+  #Testimonials p {
+    font-size: 19px !important;
+  }
+   #Testimonials .testimonial-card {
+ min-width: 30rem !important;
+        max-width: 11rem !important;
+        padding: 2rem !important;
+        height: 318px;
+    }
+  #Testimonials blockquote {
+font-size: 17px !important;
+        line-height: 1.8;
+    }
+     .testcard {
+        font-size: 14px !important;
+        line-height: 1.5rem;
+    }
+  .starrate{
+  font-size: 25px !important;
+}
+}
+
+/* 1920px and larger */
+@media (min-width: 1920px ) and (max-width:2559px) {
+  #Testimonials h2 {
+    font-size: 50px !important;
+  }
+  #Testimonials p {
+    font-size: 21px !important;
+  }
+  #Testimonials .testimonial-card {
+    min-width: 13rem !important;
+        max-width: 32rem !important;
+        padding: 2rem !important;
+        height: 349px;
+  }
+  #Testimonials blockquote {
+                font-size: 18px !important;
+        line-height: 1.8;
+  }
+    .testcard {
+      font-size: 13px !important;
+        line-height: 1.5rem;
+}
+  .starrate{
+  font-size: 27px !important;
+}
+  #Testimonials .avatar-pulse {
+        width: 3rem !important;
+        height: 3rem !important;
+        font-size: 20px !important;
+
+  }
+  .customer-gradient {
+    background: linear-gradient(90deg, #99B3BE 0%, #8559B9 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1.2;
+    padding: 0.05em 0;
+}
+#addTestimonialButton{
+  font-size: 25px !important;
+}
+}
+
+/* 2560px and larger */
+@media (min-width: 2560px) {
+  #Testimonials h2 {
+    font-size: 60px !important;
+  }
+  #Testimonials p {
+    font-size: 25px !important;
+  }
+  #Testimonials .testimonial-card {
+            min-width: 53rem !important;
+        max-width: 61rem !important;
+        padding: 5rem !important;
+        height: 574px;
+  }
+  #Testimonials blockquote {
+   font-size: 33px !important;
+        line-height: 1.8;
+  }
+    .testcard {
+
+    font-size: 32px !important;
+    line-height: 2.5rem;
+}
+  .starrate{
+  font-size: 40px !important;
+}
+ 
+  #Testimonials .avatar-pulse {
+    width: 6rem !important;
+    height: 6rem !important;
+    font-size: 24px !important;
+  }
+ 
+.customer-gradient {
+    background: linear-gradient(90deg, #99B3BE 0%, #8559B9 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1.2;
+    padding: 0.05em 0;
+}
+.dotscls{
+  width: 23px !important;
+    height: 22px !important;
+}
+#addTestimonialButton{
+  font-size: 25px !important;
+}
+}
+
+/* 3840px and larger (8K screens) */
+@media (min-width: 3840px) {
+#titlcust h2{
+  font-size: 82px !important;
+}
+  #Testimonials h2 {
+    font-size: 82px !important;
+  }
+  #Testimonials p {
+    font-size: 33px !important;
+  }
+  #Testimonials .testimonial-card {
+            min-width: 53rem !important;
+        max-width: 61rem !important;
+        padding: 5rem !important;
+  }
+  #Testimonials blockquote {
+    font-size: 37px !important;
+        line-height: 1.8;
+  }
+    .testcard {
+
+    font-size: 32px !important;
+    line-height: 2.5rem;
+}
+  .starrate{
+  font-size: 40px !important;
+}
+  #Testimonials .avatar-pulse {
+    width: 8rem !important;
+    height: 8rem !important;
+    font-size: 32px !important;
+  }
+  #Testimonials #testimonialDots .dot {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  #Testimonials .section-gradient {
+    border-radius: 0 0 120px 120px !important;
+  }
+
+.customer-gradient {
+    background: linear-gradient(90deg, #99B3BE 0%, #8559B9 100%);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    line-height: 1.2;
+    padding: 0.05em 0;
+}
+.dotscls{
+  width: 23px !important;
+    height: 22px !important;
+}
+#addTestimonialButton{
+  font-size: 28px !important;
+}
+#jjoincomm h2 {
+    font-size: 80px !important;
+  }
+}
+
+/* Default (already handled by Tailwind classes) */
+
+/* 1680px */
+@media (min-width: 1680px) {
+  #join-community h2 {
+    font-size: 34px !important;
+  }
+  #join-community a svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #join-community a p {
+    font-size: 18px !important;
+  }
+  #join-community > p {
+    font-size: 18px !important;
+  }
+}
+
+/* 1920px */
+@media (min-width: 1920px) {
+  #join-community h2 {
+    font-size: 48px !important;
+  }
+  #join-community a svg {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  #join-community a p {
+    font-size: 20px !important;
+  }
+  #join-community > p {
+    font-size: 20px !important;
+  }
+}
+
+/* 2560px */
+@media (min-width: 2560px) {
+  #join-community h2 {
+    font-size: 51px !important;
+  }
+  #join-community a svg {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  #join-community a p {
+    font-size: 20px !important;
+  }
+  #join-community > p {
+    font-size: 20px !important;
+  }
+}
+
+/* 3840px */
+@media (min-width: 3840px) {
+  #join-community h2 {
+    font-size: 57px !important;
+  }
+  #join-community a svg {
+    width: 72px !important;
+    height: 72px !important;
+  }
+  #join-community a p {
+    font-size: 28px !important;
+  }
+  #join-community > p {
+    font-size: 28px !important;
+  }
+  #join-community .flex {
+    gap: 3rem !important;
+  }
+}
+
 
     </style>
 
@@ -5956,7 +6492,7 @@ html.dark .feature-section {
   class="relative text-center mb-16 header-content animate-fade-in-up"
  
 >
-  <h2
+  <h2 id="titlcust"
     class="reveal tracking-in-expand-fwd-bottom text-4xl font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100 "
     style="font-family: UxumGrotesque,sans-serif;font-size: 45px;"
   >
@@ -5997,11 +6533,11 @@ html.dark .feature-section {
               class="testimonial-card  bg-white dark:bg-gray-800 p-4 sm:p-8 flex-shrink-0 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base" style=" font-weight: 500;
@@ -6034,11 +6570,11 @@ html.dark .feature-section {
               class="testimonial-card bg-white dark:bg-gray-800 flex-shrink-0 p-4 sm:p-8 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"style=" font-weight: 500;
@@ -6070,11 +6606,11 @@ html.dark .feature-section {
               class="testimonial-card bg-white flex-shrink-0 dark:bg-gray-800 p-4 sm:p-8 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"style=" font-weight: 500;
@@ -6107,11 +6643,11 @@ html.dark .feature-section {
               class="testimonial-card bg-white flex-shrink-0 dark:bg-gray-800 p-4 sm:p-8 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"style=" font-weight: 500;
@@ -6144,11 +6680,11 @@ html.dark .feature-section {
               class="testimonial-card bg-white flex-shrink-0 dark:bg-gray-800 p-4 sm:p-8 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"style=" font-weight: 500;
@@ -6181,11 +6717,11 @@ html.dark .feature-section {
               class="testimonial-card bg-white flex-shrink-0 dark:bg-gray-800 p-4 sm:p-8 rounded-2xl shadow-lg hover-rise min-w-[16rem] max-w-xs sm:min-w-[20rem] sm:max-w-md"
             >
               <div class="flex mb-3 sm:mb-4">
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
-                <span class="star text-lg text-amber-400">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
+                <span class="star text-lg text-amber-400 starrate">★</span>
               </div>
               <blockquote
                 class="text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base"style=" font-weight: 500;
@@ -6217,22 +6753,22 @@ html.dark .feature-section {
           </div>
         </div>
  <div id="testimonialDots" class="flex justify-center gap-2 mt-6">
-    <span class="dot active w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
-    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
-    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
-    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
-    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+    <span class="dot active w-3 h-3 bg-gray-400 rounded-full cursor-pointer dotscls"></span>
+    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer dotscls"></span>
+    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer dotscls"></span>
+    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer dotscls"></span>
+    <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer dotscls"></span>
   </div>
       </div>
       
       <!-- Join the Community CTA -->
 <!-- Join the Community Section -->
-<div class=" relative">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center mt-20 md:text-left lg:pl-[50px] lg:pr-[73px]">
+<div class=" relative" id="join-community">
+  <div class="mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center mt-20 md:text-left lg:pl-[50px] lg:pr-[73px]">
     
     <!-- Left Title -->
-    <h2     style="animation-delay: 0.3s;font-family: UxumGrotesque,sans-serif;font-size: 24px;"
- class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-[UxumGrotesque]">
+    <h2  style="animation-delay: 0.3s;font-family: UxumGrotesque,sans-serif;font-size: 24px;"
+ class="jointext-2xl md:text-3xl font-bold text-gray-900 dark:text-white font-[UxumGrotesque]">
       Join the community
     </h2>
 
@@ -6863,21 +7399,7 @@ background-color: #0f0f0f;}
 }
 
 /* Ultra-Wide Screens (3840px+) */
-@media (min-width: 3840px) {
-  .blog-container {
-    max-width: 2400px;
-  }
-  .blog-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-  }
-  .blog-title {
-    font-size: 5rem;
-  }
-  .blog-heading a {
-    font-size: 1.8rem;
-  }
-}
+
 
 
 </style>
