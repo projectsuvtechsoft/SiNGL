@@ -3927,7 +3927,7 @@ html.dark .tab-text.active-text {
       </p>
     </div>
     <div class="max-w-4xl mx-auto">
-      <div class="relative mb-12">
+      <div class="relative mb-12 serchbox">
         <div class="relative z-10 flex flex-col sm:flex-row items-center gap-4">
           <div class="relative w-full">
             <input style="font-family: Golos Text, sans-serif;font-size: 17px;"
@@ -3960,9 +3960,9 @@ html.dark .tab-text.active-text {
 
 
         </div>
-        <div
+        <!-- <div
           class="absolute -inset-1 bg-gradient-to-r from-neutral-200 to-neutral-400 rounded-2xl opacity-20 blur animate-pulse-glow hidden sm:block"
-        ></div>
+        ></div> -->
       </div>
       <div id="searchResults" class="grid md:grid-cols-2 gap-6" style="font-weight: 500;
     font-family: Golos Text, sans-serif;
@@ -4020,7 +4020,34 @@ html.dark .tab-text.active-text {
     font-size: 14px !important;
   }
 }
-
+@media (max-width: 1024px)  {
+  #searchSection h2 {
+    font-size: 52px !important;
+  }
+  #searchSection p {
+    font-size: 18px !important;
+  }
+ #searchInput {
+     font-size: 17px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 599px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
+  }
+  #searchButton {
+font-size: 22px !important;
+        padding: 1rem 3.5rem !important;
+        width: 153px;
+        margin-right: 76px;
+  }
+   .serchbox{
+        margin-left: 111px;
+  }
+  #searchResults {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 /* Large Desktop (1680px - 1919px) */
 @media (min-width: 1680px) and (max-width: 1919px) {
   #searchSection h2 {
@@ -4029,13 +4056,22 @@ html.dark .tab-text.active-text {
   #searchSection p {
     font-size: 18px !important;
   }
-  #searchInput {
-    font-size: 18px !important;
-    padding: 1.25rem 1.5rem 1.25rem 3.5rem !important;
+ #searchInput {
+       font-size: 29px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 1203px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
   }
   #searchButton {
-    font-size: 16px !important;
-    padding: 1.25rem 2rem !important;
+font-size: 27px !important;
+        padding: 1rem 3.5rem !important;
+        /* width: 179px; */
+        margin-left: 8px;
+  }
+   .serchbox{
+        margin-left: -178px;
   }
   #searchResults {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -4050,13 +4086,23 @@ html.dark .tab-text.active-text {
   #searchSection p {
     font-size: 20px !important;
   }
-  #searchInput {
-    font-size: 20px !important;
-    padding: 1.5rem 2rem 1.5rem 4rem !important;
+ #searchInput {
+                font-size: 29px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 1249px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
   }
   #searchButton {
-    font-size: 18px !important;
-    padding: 1.5rem 2.5rem !important;
+font-size: 26px !important;
+        padding: 1rem 3.5rem !important;
+        /* width: 179px; */
+        margin-left: 11px;
+      
+  }
+   .serchbox{
+        margin-left: -236px;
   }
   #searchResults {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -4071,13 +4117,22 @@ html.dark .tab-text.active-text {
   #searchSection p {
     font-size: 22px !important;
   }
-  #searchInput {
-    font-size: 22px !important;
-    padding: 1.75rem 2.25rem 1.75rem 4.5rem !important;
+ #searchInput {
+         font-size: 32px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 1649px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
   }
   #searchButton {
-    font-size: 20px !important;
-    padding: 1.75rem 3rem !important;
+ font-size: 27px !important;
+        padding: 1rem 3.5rem !important;
+        /* width: 179px; */
+        margin-left: 171px;
+  }
+   .serchbox{
+        margin-left: -478px;
   }
   #searchResults {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -4085,6 +4140,12 @@ html.dark .tab-text.active-text {
 }
 
 /* 4K (3840px - 5119px) */
+/* Global: center input + button */
+#searchSection .flex {
+  justify-content: center !important;
+}
+
+/* Ultra-large screens (3840px - 5119px) */
 @media (min-width: 3840px) and (max-width: 5119px) {
   #searchSection h2 {
     font-size: 72px !important;
@@ -4092,18 +4153,33 @@ html.dark .tab-text.active-text {
   #searchSection p {
     font-size: 24px !important;
   }
+  #searchSection .flex {
+    justify-content: center !important; /* keeps them centered */
+  }
   #searchInput {
-    font-size: 24px !important;
-    padding: 2rem 2.5rem 2rem 5rem !important;
+    font-size: 39px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 2425px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
   }
   #searchButton {
-    font-size: 22px !important;
-    padding: 2rem 3.5rem !important;
+ font-size: 30px !important;
+        padding: 1rem 3.5rem !important;
+        /* width: 179px; */
+        margin-left: 570px;
+  }
+   .serchbox{
+        margin-left: -842px;
   }
   #searchResults {
     grid-template-columns: repeat(4, 1fr) !important;
   }
+ 
 }
+
+
 
 /* 5K+ (5120px and above) */
 @media (min-width: 5120px) {
@@ -4113,13 +4189,22 @@ html.dark .tab-text.active-text {
   #searchSection p {
     font-size: 28px !important;
   }
-  #searchInput {
-    font-size: 28px !important;
-    padding: 2.5rem 3rem 2.5rem 6rem !important;
+ #searchInput {
+        font-size: 45px !important;
+        padding: 1rem 2.5rem 1rem 5rem !important;
+        width: 3008px !important;
+        /* max-width: 1200px !important; */
+        /* margin-left: -98px; */
+        display: block;
   }
   #searchButton {
-    font-size: 26px !important;
-    padding: 2.5rem 4rem !important;
+font-size: 31px !important;
+        padding: 1rem 3.5rem !important;
+        /* width: 179px; */
+        margin-left: 664px;
+  }
+   .serchbox{
+        margin-left: -1347px;
   }
   #searchResults {
     grid-template-columns: repeat(5, 1fr) !important;
@@ -4909,8 +4994,8 @@ width: 639px;
         display: grid;
   }
 #business-benefits .benefit-card {
-width: 1603px;
-        margin-left: -33px;
+width: 1542px;
+        margin-left: 29px;
 }
 #business-benefits ul {
    
