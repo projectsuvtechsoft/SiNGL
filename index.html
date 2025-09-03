@@ -4148,7 +4148,7 @@ font-size: 26px !important;
 /* Ultra-large screens (3840px - 5119px) */
 @media (min-width: 3840px) and (max-width: 5119px) {
   #searchSection h2 {
-    font-size: 72px !important;
+    font-size: 82px !important;
   }
   #searchSection p {
     font-size: 24px !important;
@@ -4176,6 +4176,15 @@ font-size: 26px !important;
   #searchResults {
     grid-template-columns: repeat(4, 1fr) !important;
   }
+  .text-benefits {
+   background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* display: inline-block; */
+    margin-top: 13px;
+}
  
 }
 
@@ -4209,6 +4218,14 @@ font-size: 31px !important;
   #searchResults {
     grid-template-columns: repeat(5, 1fr) !important;
   }
+  .text-benefits {
+    background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* display: inline-block; */
+}
 }
 
     /* .searchButton:hover {
@@ -7121,13 +7138,11 @@ background-color: #0f0f0f;}
 
 </section>
     <!-- Footer -->
-    <footer id="footer"class=" footer bg-gray-900 text-white py-16 no-animation">
+<footer id="footer" class="footer bg-gray-900 text-white py-16 xl:py-20 2xl:py-24 no-animation">
+
       <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-8 mb-12" style="
-    font-weight: 500;
-    font-family:  Golos Text,sans-serif;
-    font-size: 16px;
-">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-12 2xl:gap-16 mb-12 font-medium">
+
           <div class="space-y-4">
             <div class="flex items-center space-x-2">
               <!-- <img
@@ -7138,7 +7153,7 @@ background-color: #0f0f0f;}
                           <img src="./image (3).png" alt="Logo" class="logo-imgfotter  " />
 
             </div>
-            <p class="text-gray-400">
+            <p class="text-gray-400 text-sm md:text-base xl:text-lg 2xl:text-xl">
               AI-powered Master Data Management platform that transforms how
               enterprises manage and utilize their data.
             </p>
@@ -7164,8 +7179,8 @@ background-color: #0f0f0f;}
             </div>
           </div>
           <div>
-            <h3 class="font-semibold mb-4">Product</h3>
-            <ul class="space-y-2 text-gray-400">
+         <h3 class="font-semibold mb-4 text-base sm:text-lg xl:text-xl 2xl:text-2xl">Product</h3>
+<ul class="space-y-2">
               <li>
                 <a href="#features" class="hover:text-white transition-colors"
                   >Features</a
@@ -7239,12 +7254,12 @@ background-color: #0f0f0f;}
         <div style=" font-weight: 500; font-family:  Golos Text,sans-serif; font-size: 16px;"
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between"
         >
-          <p class="text-gray-400 text-sm" >
+          <p class="text-gray-400 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">
             © 2024 SiNGL. All rights reserved.
           </p>
 
           <!-- <h6 class="font-semibold mb-4">Address</h6> -->
-          <div class="text-gray-400 text-sm">
+          <div class="text-gray-400 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">
             <p>Address : UK | Singapore | USA</p>
             <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
           <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
@@ -7923,5 +7938,171 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+<style>
+
+
+/* ============================
+   FOOTER BASE STYLES
+============================ */
+footer.footer {
+  width: 100%;
+  padding: 3rem 1rem;
+  font-family: "Golos Text", sans-serif;
+  font-size: clamp(14px, 1vw + 0.4rem, 16px);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+/* Container — allow it to stretch on bigger screens */
+.footer .max-w-7xl {
+  width: 100%;
+  max-width: 100%; /* Remove fixed max-width for ultra-wide */
+  margin: 0 auto;
+  padding-left: clamp(1rem, 3vw, 6rem);
+  padding-right: clamp(1rem, 3vw, 6rem);
+}
+
+/* Grid layout */
+.footer .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  font-weight: 500;
+}
+
+/* Headings */
+.footer h3 {
+  font-weight: 600;
+  font-size: clamp(16px, 0.9vw + 0.4rem, 24px);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  font-size: clamp(14px, 0.7vw + 0.35rem, 20px);
+  transition: color 0.2s ease-in-out;
+}
+
+/* Social icons */
+.footer .flex.space-x-4 a {
+  width: clamp(2.5rem, 3vw, 3.5rem);
+  height: clamp(2.5rem, 3vw, 3.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+/* Logo scales dynamically */
+.logo-imgfotter {
+  width: clamp(90px, 6vw, 160px);
+  height: auto;
+}
+
+/* Bottom footer */
+.footer .border-t {
+  border-top: 1px solid #1f2937;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(13px, 0.7vw + 0.3rem, 18px);
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINTS
+============================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .footer .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .footer {
+    padding: 2.5rem 1rem;
+    font-size: clamp(14px, 1vw + 0.3rem, 16px);
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .footer .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer .flex.space-x-4 {
+    justify-content: center;
+  }
+  .footer .border-t {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  footer.footer {
+    font-size: clamp(13px, 2vw, 15px);
+  }
+}
+
+/* Large desktops ≥1440px */
+@media (min-width: 1440px) {
+  .footer {
+    padding: 4rem clamp(2rem, 4vw, 6rem);
+    font-size: clamp(16px, 0.9vw + 0.3rem, 20px);
+  }
+  .footer .grid {
+    gap: 3rem;
+  }
+}
+
+/* Ultra-wide ≥2560px (2K / 4K) */
+@media (min-width: 2560px) {
+  .footer {
+    padding: 5rem clamp(3rem, 5vw, 8rem);
+    font-size: clamp(18px, 0.8vw + 0.5rem, 22px);
+  }
+  .footer .grid {
+    gap: 4rem;
+  }
+}
+
+/* Extreme-wide ≥3840px (5K) */
+@media (min-width: 3840px) {
+  .footer {
+    padding: 6rem clamp(4rem, 6vw, 10rem);
+    font-size: clamp(20px, 0.7vw + 0.5rem, 24px);
+  }
+  .footer .grid {
+    gap: 5rem;
+  }
+}
+
+/* Super Ultra-wide ≥5120px (8K / 5K) */
+@media (min-width: 5120px) {
+  .footer {
+    padding: 7rem clamp(5rem, 8vw, 12rem);
+    font-size: clamp(22px, 0.6vw + 0.6rem, 26px);
+  }
+  .footer .grid {
+    gap: 6rem;
+  }
+}
+
+
+
+</style>
   </body>
 </html>
