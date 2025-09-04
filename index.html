@@ -2710,7 +2710,7 @@ html.dark #blobs-bg .blob {
     gap: 4rem;
   }
   .blog-title {
-    font-size: 5rem;
+    font-size: 82px;
   }
   .blog-heading a {
     font-size: 1.8rem;
@@ -4167,7 +4167,7 @@ html.dark .tab-text.active-text {
               class="w-full px-6 py-4 pl-14 text-lg border-2 border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-gray-800  focus:outline-none transition-colors"
             />
             <div
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center search-icon"
             >
               <i class="ri-search-line text-gray-400 text-xl"></i>
             </div>
@@ -4249,7 +4249,13 @@ html.dark .tab-text.active-text {
   #searchButton {
     font-size: 14px !important;
   }
-}
+   #searchResults {
+           grid-template-columns: repeat(1, 1fr) !important;
+      margin-left: 156px;
+        width: 1085px !important;
+    }
+  }
+
 @media (max-width: 1024px)  {
   #searchSection h2 {
     font-size: 52px !important;
@@ -4304,7 +4310,10 @@ font-size: 24px !important;
         margin-left: -178px;
   }
   #searchResults {
-    grid-template-columns: repeat(2, 1fr) !important;
+          grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -153px;
+        width: 1100px;
+        font-size: 28px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -4346,7 +4355,10 @@ font-size: 26px !important;
         margin-left: -236px;
   }
   #searchResults {
-    grid-template-columns: repeat(3, 1fr) !important;
+           grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -235px;
+        width: 1230px;
+        font-size: 28px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -4387,7 +4399,10 @@ font-size: 26px !important;
         margin-left: -478px;
   }
   #searchResults {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -458px;
+        width: 1542px;
+        font-size: 32px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -4437,8 +4452,21 @@ font-size: 26px !important;
         margin-left: -842px;
   }
   #searchResults {
-    grid-template-columns: repeat(4, 1fr) !important;
+          grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: -768px;
+        width: 2103px;
+        font-size: 38px !important;
   }
+  .searchreslttext {
+        font-size: 23px;
+        line-height: 2.25rem;
+    }
+    .search-icon i {
+    font-size: 2.5rem; /* text-4xl */
+  }
+    .sorucetext{
+      font-size: 21px !important;
+    }
 .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
         /* -webkit-background-clip: text; */
@@ -4481,8 +4509,18 @@ font-size: 31px !important;
         margin-left: -1347px;
   }
   #searchResults {
-    grid-template-columns: repeat(5, 1fr) !important;
+                  grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: -1322px;
+        width: 2203px;
+        font-size: 41px !important;
   }
+.searchreslttext {
+        font-size: 23px;
+        line-height: 2.25rem;
+    }
+    .sorucetext{
+      font-size: 21px !important;
+    }
 .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
         /* -webkit-background-clip: text; */
@@ -4665,10 +4703,10 @@ observer.observe(section);
             </div>
             <div>
               <h3 class="font-semibold">${item.name}</h3>
-              <p class="text-sm text-gray-500">Source: ${item.identifier}</p>
+              <p class="text-sm text-gray-500 sorucetext">Source: ${item.identifier}</p>
             </div>
           </div>
-          <div class="space-y-2 text-sm">
+          <div class="space-y-2 text-sm searchreslttext">
             ${details}
           </div>
         `;
@@ -6408,7 +6446,21 @@ font-size: 17px !important;
 }
 
 /* Default (already handled by Tailwind classes) */
-
+/* @media (min-width: 1024px) {
+  #join-community h2 {
+    font-size: 34px !important;
+  }
+  #join-community a svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #join-community a p {
+    font-size: 18px !important;
+  }
+  #join-community > p {
+    font-size: 18px !important;
+  }
+} */
 /* 1680px */
 @media (min-width: 1680px) {
   #join-community h2 {
@@ -7341,7 +7393,19 @@ background-color: #0f0f0f;}
   }
 
 }
+@media (min-width: 1168px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .blog-title {
+    font-size: 50px;
+  }
+  .blog-heading a {
+    font-size: 1.2rem;
+  }
 
+}
 /* Large Screens */
 @media (min-width: 1024px) {
   .blog-grid {
@@ -7349,7 +7413,7 @@ background-color: #0f0f0f;}
     gap: 2.5rem;
   }
   .blog-title {
-    font-size: 3.5rem;
+    font-size: 50px;
   }
   .blog-heading a {
     font-size: 1.2rem;
@@ -7362,7 +7426,7 @@ background-color: #0f0f0f;}
     max-width: 1200px;
   }
   .blog-title {
-    font-size: 4rem;
+    font-size: 52px;
   }
   .blog-heading a {
     font-size: 1.4rem;
@@ -7374,16 +7438,16 @@ background-color: #0f0f0f;}
   .blog-container {
     max-width: 1400px;
   }
-  .blog-title {
-    font-size: 4rem;
-  }
+.blog-title {
+        font-size: 57px;
+    }
   .blog-heading a {
     font-size: 1.4rem;
   }
 }
 
 /* 4K Screens (2560px–3840px) */
-@media (min-width: 2560px) {
+@media (min-width:3840px) {
   .blog-container {
     max-width: 2000px;
   }
@@ -7392,7 +7456,7 @@ background-color: #0f0f0f;}
     gap: 3rem;
   }
   .blog-title {
-    font-size: 4.5rem;
+    font-size: 82px;
   }
   .blog-heading a {
     font-size: 1.6rem;
@@ -7459,7 +7523,7 @@ background-color: #0f0f0f;}
 
 
 
-          <p class="text-lg font-manrope text-gray-600 dark:text-gray-300"style=" 
+          <p class="text-lg font-manrope text-gray-600 dark:text-gray-300 faqtitle"style=" 
     font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
@@ -7482,7 +7546,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" 
+              <p class="faqp" style=" 
     font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
@@ -7507,7 +7571,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px; color: RGBA(255, 255, 255, 0.608);">
                 Yes, SiNGL offers comprehensive API integration and supports
@@ -7529,7 +7593,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px; color: RGBA(255, 255, 255, 0.608);">
                 Implementation time varies based on data complexity and
@@ -7550,7 +7614,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
      color: RGBA(255, 255, 255, 0.608);">
@@ -7565,6 +7629,148 @@ background-color: #0f0f0f;}
       </div>
     </section>
 <style>
+  @media (min-width: 1024px) {
+  #faq h2 {
+    font-size: 40px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 16px;
+  }
+  #faq .faq-trigger {
+    font-size: 18px;
+  }
+  #faq .faq-icon {
+    font-size: 22px;
+  }
+}
+
+/* Desktop (≥1440px) */
+@media (min-width: 1440px) {
+  #faq h2 {
+    font-size: 48px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 18px;
+  }
+  #faq .faq-trigger {
+    font-size: 20px;
+  }
+  #faq .faq-icon {
+    font-size: 24px;
+  }
+}
+
+/* Wide screens (≥1680px) */
+@media (min-width: 1680px) {
+  #faq h2 {
+    font-size: 52px;
+  }
+ .faqtitle{
+    font-size: 16px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 15px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 21px;
+  }
+  #faq .faq-icon {
+    font-size: 26px;
+  }
+}
+
+/* 1920px (Full HD) */
+@media (min-width: 1920px) {
+  #faq h2 {
+    font-size: 56px;
+  }
+  .faqtitle{
+    font-size: 16px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 15px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 22px;
+  }
+  #faq .faq-icon {
+    font-size: 28px;
+  }
+}
+
+/* 2560px (2K / WQHD) */
+@media (min-width: 2560px) {
+  #faq h2 {
+    font-size: 60px;
+  }
+ .faqtitle{
+    font-size: 16px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 15px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 24px;
+    padding: 1.5rem;
+  }
+  #faq .faq-icon {
+    font-size: 23px;
+  }
+}
+
+/* 3840px (4K) */
+@media (min-width: 3840px) {
+     #faq h2 {
+        font-size: 74px !important;
+    }
+ 
+  .faqtitle{
+    font-size: 23px !important;
+  }
+  .faqp{
+   margin-left: 10px;
+        font-size: 16px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 28px;
+    padding: 2rem;
+  }
+  #faq .faq-icon {
+    font-size: 36px;
+  }
+}
+
+/* 4090px (ultra-wide, near 5K) */
+@media (min-width: 4090px) {
+  #faq h2 {
+    font-size: 80px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 28px;
+  }
+  #faq .faq-trigger {
+    font-size: 30px;
+    padding: 2.2rem;
+  }
+  #faq .faq-icon {
+    font-size: 40px;
+  }
+}
   .font-semibold1{
     font-weight: 600;
     color: RGBA(255, 255, 255, 0.8);
@@ -7629,7 +7835,107 @@ background-color: #0f0f0f;}
         ></div>
       </div>
     </section> -->
-<section class="relative py-20 mt-16  text-white overflow-hidden">
+    <style>
+
+
+/* Tablets & small desktops (≥1024px) */
+@media (min-width: 1024px) {
+  #transform-section h2 {
+    font-size: 36px;
+  }
+  #transform-section p {
+    font-size: 16px;
+  }
+  #transform-section button {
+    font-size: 17px;
+    padding: 1rem 2rem;
+  }
+}
+
+/* 1440px */
+@media (min-width: 1440px) {
+  #transform-section h2 {
+    font-size: 44px;
+  }
+  #transform-section p {
+    font-size: 18px;
+  }
+  #transform-section button {
+    font-size: 18px;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+/* 1680px */
+@media (min-width: 1680px) {
+  #transform-section h2 {
+    font-size: 48px !important;
+  }
+  #transform-section p {
+    font-size: 17px !important;
+  }
+  #transform-section button {
+    font-size: 19px;
+   
+  }
+}
+
+/* 1920px (Full HD) */
+@media (min-width: 1920px) {
+  #transform-section h2 {
+    font-size: 52px !important;
+  }
+  #transform-section p {
+    font-size: 20px;
+  }
+  #transform-section button {
+    font-size: 20px;
+  }
+}
+
+/* 2560px (2K) */
+@media (min-width: 2560px) {
+  #transform-section h2 {
+    font-size: 60px !important;
+  }
+  #transform-section p {
+    font-size: 22px;
+  }
+  #transform-section button {
+    font-size: 22px !important;
+  }
+}
+
+/* 3840px (4K) */
+@media (min-width: 3840px) {
+  #transform-section h2 {
+    font-size: 67px !important;
+  }
+  #transform-section p {
+    font-size: 17px !important;
+  }
+  #transform-section button {
+    font-size:27px !important;
+    /* padding: 1.8rem 3.5rem; */
+  }
+}
+
+/* 4090px (ultra-wide) */
+@media (min-width: 4090px) {
+  #transform-section h2 {
+    font-size: 80px;
+  }
+  #transform-section p {
+    font-size: 28px;
+  }
+  #transform-section button {
+    font-size: 26px;
+    padding: 2rem 4rem;
+  }
+}
+
+    </style>
+<section class="relative py-20 mt-16  text-white overflow-hidden" id="transform-section">
   <div class="absolute inset-0 "></div>
   <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
     <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 47px;"
