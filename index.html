@@ -3133,7 +3133,7 @@ html.dark #blobs-bg .blob {
     gap: 4rem;
   }
   .blog-title {
-    font-size: 5rem;
+    font-size: 82px;
   }
   .blog-heading a {
     font-size: 1.8rem;
@@ -4880,7 +4880,7 @@ html.dark .tab-text.active-text {
               class="w-full px-6 py-4 pl-14 text-lg border-2 border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-gray-800  focus:outline-none transition-colors"
             />
             <div
-              class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center search-icon"
             >
               <i class="ri-search-line text-gray-400 text-xl"></i>
             </div>
@@ -4918,52 +4918,9 @@ html.dark .tab-text.active-text {
   /* 🔽 Responsive Media Queries for Search Section */
 
 /* Small Mobile (max 480px) */
-@media (max-width: 480px) {
-  #searchSection h2 {
-    font-size: 26px !important;
-  }
-  #searchSection p {
-    font-size: 13px !important;
-  }
-  #searchInput {
-    font-size: 14px !important;
-    padding: 0.75rem 1rem 0.75rem 3rem !important;
-  }
-  #searchButton {
-    font-size: 13px !important;
-    padding: 0.75rem 1.25rem !important;
-  }
-}
 
-/* Tablets (481px - 768px) */
-@media (max-width: 768px) {
-  #searchSection h2 {
-    font-size: 32px !important;
-  }
-  #searchSection p {
-    font-size: 14px !important;
-  }
-  #searchInput {
-    font-size: 15px !important;
-  }
-  #searchResults {
-    grid-template-columns: 1fr !important;
-  }
-}
 
-/* Small Laptops (769px - 1023px) */
-@media (max-width: 1023px) {
-  #searchSection h2 {
-    font-size: 38px !important;
-  }
-  #searchInput {
-    font-size: 16px !important;
-  }
-  #searchButton {
-    font-size: 14px !important;
-  }
-}
-@media (max-width: 1024px)  {
+@media  (min-width: 1024px) and (max-width: 1100px) {
   #searchSection h2 {
     font-size: 52px !important;
   }
@@ -4979,17 +4936,20 @@ html.dark .tab-text.active-text {
         display: block;
   }
   #searchButton {
-font-size: 22px !important;
+font-size: 20px !important;
         padding: 1rem 3.5rem !important;
-        width: 153px;
-        margin-right: 76px;
-  }
+        width: 141px;
+        margin-right: 179px;
+    }
    .serchbox{
         margin-left: 111px;
   }
   #searchResults {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+ grid-template-columns: repeat(1, 1fr) !important;
+        margin-left: 114px;
+        width: 595px;
+        font-size: 28px !important;
+    }
 }
 /* Large Desktop (1680px - 1919px) */
 @media (min-width: 1680px) and (max-width: 1919px) {
@@ -5017,7 +4977,10 @@ font-size: 24px !important;
         margin-left: -178px;
   }
   #searchResults {
-    grid-template-columns: repeat(2, 1fr) !important;
+   grid-template-columns: repeat(1, 1fr) !important;
+        margin-left: 114px;
+        width: 595px;
+        font-size: 28px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -5059,7 +5022,10 @@ font-size: 26px !important;
         margin-left: -236px;
   }
   #searchResults {
-    grid-template-columns: repeat(3, 1fr) !important;
+           grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -235px;
+        width: 1230px;
+        font-size: 28px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -5100,7 +5066,10 @@ font-size: 26px !important;
         margin-left: -478px;
   }
   #searchResults {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -458px;
+        width: 1542px;
+        font-size: 32px !important;
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -5150,8 +5119,21 @@ font-size: 26px !important;
         margin-left: -842px;
   }
   #searchResults {
-    grid-template-columns: repeat(4, 1fr) !important;
+          grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: -768px;
+        width: 2103px;
+        font-size: 38px !important;
   }
+  .searchreslttext {
+        font-size: 23px;
+        line-height: 2.25rem;
+    }
+    .search-icon i {
+    font-size: 2.5rem; /* text-4xl */
+  }
+    .sorucetext{
+      font-size: 21px !important;
+    }
 .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
         /* -webkit-background-clip: text; */
@@ -5194,8 +5176,18 @@ font-size: 31px !important;
         margin-left: -1347px;
   }
   #searchResults {
-    grid-template-columns: repeat(5, 1fr) !important;
+                  grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: -1322px;
+        width: 2203px;
+        font-size: 41px !important;
   }
+.searchreslttext {
+        font-size: 23px;
+        line-height: 2.25rem;
+    }
+    .sorucetext{
+      font-size: 21px !important;
+    }
 .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
         /* -webkit-background-clip: text; */
@@ -5378,10 +5370,10 @@ observer.observe(section);
             </div>
             <div>
               <h3 class="font-semibold">${item.name}</h3>
-              <p class="text-sm text-gray-500">Source: ${item.identifier}</p>
+              <p class="text-sm text-gray-500 sorucetext">Source: ${item.identifier}</p>
             </div>
           </div>
-          <div class="space-y-2 text-sm">
+          <div class="space-y-2 text-sm searchreslttext">
             ${details}
           </div>
         `;
@@ -5844,68 +5836,82 @@ observer.observe(section);
 
 /* ---------- Responsive Breakpoints (Optional Fine-tuning) ---------- */
 /* ---------- Mobile / Small screens ---------- */
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   #business-benefits .grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
+  #business-benefits .benefit-card {
+    width: 100%;
+  }
 }
 
-/* ---------- Tablets / Medium screens ---------- */
+/* ---------- Tablets ---------- */
 @media (min-width: 769px) and (max-width: 1023px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-   margin-left: 99px;
-    margin-right: 109px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   #business-benefits .benefit-card {
-width: 487px;
+    width: 487px;
+  }
 }
-}
-@media (min-width: 1400px)  {
-    #business-benefits .benefit-card {
-        width: 743px;
-        margin-left: 52px;
-    }
-}
-@media (min-width: 1023px) and (max-width: 1240px) {
+
+/* ---------- Small Desktops ---------- */
+@media (min-width: 1024px) and (max-width: 1240px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-   margin-left: 99px;
-    margin-right: 109px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   #business-benefits .benefit-card {
-width: 478px;
-}
+    width: 478px;
+  }
 }
 
-/* ---------- Desktop / Large screens ---------- */
-@media (min-width: 1024px) and (max-width: 1100px) {
+/* ---------- Medium Desktops ---------- */
+@media (min-width: 1241px) and (max-width: 1399px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1.5rem;
-    margin-left: 99px;
-    /* margin-right: 109px; */
+           grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-left: 87px;
+        margin-right: 60px;
   }
   #business-benefits .benefit-card {
-width: 367px;
+    width: 509px;
+  }
 }
 
-}
-@media (min-width: 1100px) and (max-width: 1680px) {
+/* ---------- Large Desktops ---------- */
+@media (min-width: 1400px) and (max-width: 1500px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1.5rem;
-    margin-left: 99px;
-    /* margin-right: 109px; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-left: 45px;
   }
   #business-benefits .benefit-card {
-width: 485px;
+    width: 554px;
+    margin-left: 52px;
+  }
 }
 
+/* ---------- Extra Large ( >1500px ) ---------- */
+@media (min-width: 1501px) {
+  #business-benefits .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #business-benefits .benefit-card {
+    width: 743px;
+  }
 }
+
 
 /* ---------- Large screens: 1680px ---------- */
 @media (min-width: 1680px) and (max-width: 1919px) {
@@ -5971,10 +5977,10 @@ width: 639px;
     text-align: center;
 }
 #business-benefits .section-title {
-    font-size: 80px  !important;;
+    font-size: 60px  !important;;
 }
 #business-benefits .section-subtitle {
-    font-size: 26px !important;
+    font-size: 23px !important;
 }
     #business-benefits .benefit-card {
         width: 1032px;
@@ -6374,7 +6380,7 @@ width: 1589px;
     height: 98%;
 }
 }
-@media (min-width: 1266px) {
+@media (min-width: 1267px) {
      .feature-left h3 {
         font-size: 19px !important;
     }
@@ -6386,8 +6392,8 @@ width: 1589px;
         width: 454px;
     }
    .featurediv{
-  width: 500px !important;
-        margin-left: 137px;
+         width: 525px !important;
+        margin-left: 76px;
   }
     .button1 {
         font-size: 14px !important;
@@ -6399,26 +6405,27 @@ width: 1589px;
 }
 }
 /* Large Desktop - 1680px */
-@media (max-width: 1268px) and (max-width: 1680px ) {
+@media (min-width: 1300px) and (max-width: 1679px ) {
   .feature-section {
     max-width: 1900px;
   }
   .feature-left h3 {
-    font-size: 32px;
+    font-size: 32px !important;;
   }
   .feature-left li {
-    font-size: 18px;
+    font-size: 18px !important;;
   }
   .card {
-    font-size: 15px !important;
-        width: 491px;
+    font-size: 19px !important;
+        width: 623px;
   }
    .featurediv{
-    width: 519px !important;
-        margin-left: 167px;
+    width: 680px !important;
+        margin-left: 107px;
+
   }
   .button1 {
-    font-size: 14px  !important;; 
+    font-size: 18px  !important;; 
   }
 
   .feature-left {
@@ -6426,11 +6433,38 @@ width: 1589px;
     height: 98%;
 }
 }
+@media (min-width: 1680px) and (max-width: 1919px ) {
+  .feature-section {
+    max-width: 1900px;
+  }
+  .feature-left h3 {
+    font-size: 32px !important;;
+  }
+  .feature-left li {
+    font-size: 18px !important;;
+  }
+  .card {
+    font-size: 19px !important;
+        width: 623px;
+  }
+   .featurediv{
+    width: 680px !important;
+        margin-left: 107px;
 
+  }
+  .button1 {
+    font-size: 18x  !important;; 
+  }
+
+  .feature-left {
+   
+    height: 98%;
+}
+}
 /* Ultra HD - 1920px */
 @media (min-width: 1920px) {
   .feature-section {
-    max-width: 1500px;
+    max-width: 1900px;
   }
   .feature-left h3 {
     font-size: 34px  !important;;
@@ -6439,13 +6473,13 @@ width: 1589px;
     font-size: 20px  !important;;
   }
   .card {
-   font-size: 20px !important;
-        width: 469px;
+  font-size: 23px !important;
+        width: 798px;
 
   }
    .featurediv{
-   width: 693px !important;
-        margin-left: 100px;
+          width: 726px !important;
+        margin-left: 145px;
   }
   .button1 {
     font-size: 22px  !important;; 
@@ -6500,7 +6534,7 @@ width: 1589px;
  
       .featurediv {
       width: 1585px !important;
-        margin-left: 56px;
+        margin-left: 107px;
     }
      .button1 {
         font-size: 48px !important;
@@ -6531,6 +6565,7 @@ width: 1589px;
   line-height: 1.2;       /* avoid cutoff */
   padding: 0.05em 0;      /* gives breathing space */
 }
+
 }
 
 /* 5K+ - 5120px */
@@ -7121,8 +7156,37 @@ font-size: 17px !important;
 }
 
 /* Default (already handled by Tailwind classes) */
-
+/* @media (min-width: 1024px) {
+  #join-community h2 {
+    font-size: 34px !important;
+  }
+  #join-community a svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #join-community a p {
+    font-size: 18px !important;
+  }
+  #join-community > p {
+    font-size: 18px !important;
+  }
+} */
 /* 1680px */
+@media (min-width: 768px) {
+  #join-community h2 {
+    font-size: 28px !important;
+  }
+  #join-community a svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  #join-community a p {
+    font-size: 13px !important;
+  }
+  #join-community > p {
+    font-size: 18px !important;
+  }
+}
 @media (min-width: 1680px) {
   #join-community h2 {
     font-size: 34px !important;
@@ -8054,18 +8118,30 @@ background-color: #0f0f0f;}
   }
 
 }
-
-/* Large Screens */
-@media (min-width: 1024px) {
+@media (min-width: 1168px) {
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
   .blog-title {
-    font-size: 3.5rem;
+    font-size: 50px;
   }
   .blog-heading a {
     font-size: 1.2rem;
+  }
+
+}
+/* Large Screens */
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .blog-title {
+    font-size: 50px;
+  }
+  .blog-heading a {
+    font-size: 16px;
   }
 
 }
@@ -8075,7 +8151,7 @@ background-color: #0f0f0f;}
     max-width: 1200px;
   }
   .blog-title {
-    font-size: 4rem;
+    font-size: 52px;
   }
   .blog-heading a {
     font-size: 1.4rem;
@@ -8087,16 +8163,16 @@ background-color: #0f0f0f;}
   .blog-container {
     max-width: 1400px;
   }
-  .blog-title {
-    font-size: 4rem;
-  }
+.blog-title {
+        font-size: 57px;
+    }
   .blog-heading a {
     font-size: 1.4rem;
   }
 }
 
 /* 4K Screens (2560px–3840px) */
-@media (min-width: 2560px) {
+@media (min-width:3840px) {
   .blog-container {
     max-width: 2000px;
   }
@@ -8105,7 +8181,7 @@ background-color: #0f0f0f;}
     gap: 3rem;
   }
   .blog-title {
-    font-size: 4.5rem;
+    font-size: 82px;
   }
   .blog-heading a {
     font-size: 1.6rem;
@@ -8162,7 +8238,7 @@ background-color: #0f0f0f;}
 
     <!-- FAQ Section -->
     <section id="faq" class="py-16 scroll-reveal" style="border-radius: 60px 60px 0px 0px;background:linear-gradient(144deg, #536C8500  6.53%,#536C85C1  28.64%,#536C8500  51.26%);--e-global-color-c645c21: #03071C;background-color: var(--e-global-color-c645c21);">
-      <div class="max-w-4xl mx-auto px-6">
+      <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mt-5 mb-16 reveal tracking-in-expand-fwd-bottom">
 <h2 style="font-family: UxumGrotesque,sans-serif; font-size: 50px;"
     class="faqgradient font-extrabold font-manrope mb-4 text-gray-800 dark:text-gray-100">
@@ -8172,7 +8248,7 @@ background-color: #0f0f0f;}
 
 
 
-          <p class="text-lg font-manrope text-gray-600 dark:text-gray-300"style=" 
+          <p class="text-lg font-manrope text-gray-600 dark:text-gray-300 faqtitle"style=" 
     font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
@@ -8182,7 +8258,7 @@ background-color: #0f0f0f;}
             management.
           </p>
         </div>
-        <div class="space-y-4" id="faq-container" style="font-family: Golos Text, sans-serif;font-size: 17px;font-weight: 500;">
+        <div class="space-y-4 faqcontentt" id="faq-container" style="font-family: Golos Text, sans-serif;font-size: 17px;font-weight: 500;">
           <div
             class="text-stone-100  overflow-hidden"
           >
@@ -8195,7 +8271,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" 
+              <p class="faqp" style=" 
     font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
@@ -8220,7 +8296,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px; color: RGBA(255, 255, 255, 0.608);">
                 Yes, SiNGL offers comprehensive API integration and supports
@@ -8242,7 +8318,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px; color: RGBA(255, 255, 255, 0.608);">
                 Implementation time varies based on data complexity and
@@ -8263,7 +8339,7 @@ background-color: #0f0f0f;}
               <i class="ri-add-line text-xl transition-transform faq-icon"></i>
             </button>
             <div class="faq-content hidden px-6 pb-4">
-              <p style=" font-weight: 500;
+              <p class="faqp" style=" font-weight: 500;
     font-family: Golos Text, sans-serif;
     font-size: 16px;
      color: RGBA(255, 255, 255, 0.608);">
@@ -8278,10 +8354,182 @@ background-color: #0f0f0f;}
       </div>
     </section>
 <style>
+  @media (min-width: 1024px) {
+  #faq h2 {
+    font-size: 40px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 16px;
+  }
+  #faq .faq-trigger {
+    font-size: 18px;
+  }
+  #faq .faq-icon {
+    font-size: 22px;
+  }
+}
+
+/* Desktop (≥1440px) */
+@media (min-width: 1440px) {
+  #faq h2 {
+    font-size: 48px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 18px;
+  }
+  #faq .faq-trigger {
+    font-size: 20px;
+  }
+  #faq .faq-icon {
+    font-size: 24px;
+  }
+}
+
+/* Wide screens (≥1680px) */
+@media (min-width: 1680px) {
+  #faq h2 {
+    font-size: 52px;
+  }
+ .faqtitle{
+    font-size: 16px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 15px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 21px;
+  }
+  #faq .faq-icon {
+    font-size: 26px;
+  }
+}
+
+/* 1920px (Full HD) */
+@media (min-width: 1920px) {
+  #faq h2 {
+    font-size: 56px;
+  }
+  .faqtitle{
+    font-size: 22px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 19px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 22px;
+  }
+  #faq .faq-icon {
+    font-size: 28px;
+  }
+  .font-semibold1{
+     font-size: 24px !important;
+  }
+  .faqcontentt{
+           width: 1248px;
+        margin-left: -58px;
+  }
+}
+
+/* 2560px (2K / WQHD) */
+@media (min-width: 2560px) {
+  #faq h2 {
+    font-size: 60px;
+  }
+ .faqtitle{
+    font-size: 16px !important;
+  }
+  .faqp{
+  margin-left: 0px;
+        font-size: 22px !important;
+  }
+  .font-semibold1{
+    font-size: 19px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 24px;
+    padding: 1.5rem;
+  }
+  #faq .faq-icon {
+   font-size: 33px !important;
+  }
+   .font-semibold1{
+     font-size: 30px !important;
+  }
+  .faqcontentt{
+              width: 2140px;
+        margin-left: -507px;
+  }
+}
+
+/* 3840px (4K) */
+@media (min-width: 3840px) {
+     #faq h2 {
+        font-size: 82px !important;
+    }
+ 
+  .faqtitle{
+    font-size: 24px !important;
+  }
+  .faqp{
+   margin-left: 10px;
+        font-size: 22px !important;
+  }
+  #faq .faq-trigger {
+    font-size: 28px;
+    padding: 2rem;
+  }
+  #faq .faq-icon {
+  font-size: 36px !important;
+  }
+  .font-semibold1{
+     font-size: 36px !important;
+  }
+  .faqcontentt{
+              width: 2140px;
+        margin-left: -507px;
+  }
+}
+
+/* 4090px (ultra-wide, near 5K) */
+@media (min-width: 4090px) {
+  #faq h2 {
+    font-size: 80px;
+  }
+  #faq p,
+  #faq .faq-content p {
+    font-size: 28px;
+  }
+  #faq .faq-trigger {
+    font-size: 30px;
+    padding: 2.2rem;
+  }
+  #faq .faq-icon {
+    font-size: 40px;
+  }
+   .font-semibold1{
+     font-size: 36px !important;
+  }
+  .faqcontentt{
+              width: 2140px;
+        display: block;
+        margin-left: -507px;
+  }
+}
   .font-semibold1{
     font-weight: 600;
     color: RGBA(255, 255, 255, 0.8);
   }
+ 
   
 .faqgradient {
   background: linear-gradient(0deg, #FFF0CE 0%, #60A3E6 100%);
@@ -8342,9 +8590,109 @@ background-color: #0f0f0f;}
         ></div>
       </div>
     </section> -->
-<section class="relative py-20 mt-16  text-white overflow-hidden">
+    <style>
+
+
+/* Tablets & small desktops (≥1024px) */
+@media (min-width: 1024px) {
+  #transform-section h2 {
+    font-size: 36px;
+  }
+  #transform-section p {
+    font-size: 16px;
+  }
+  #transform-section button {
+    font-size: 17px;
+    padding: 1rem 2rem;
+  }
+}
+
+/* 1440px */
+@media (min-width: 1440px) {
+  #transform-section h2 {
+    font-size: 44px;
+  }
+  #transform-section p {
+    font-size: 18px;
+  }
+  #transform-section button {
+    font-size: 18px;
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+/* 1680px */
+@media (min-width: 1680px) {
+  #transform-section h2 {
+    font-size: 48px !important;
+  }
+  #transform-section p {
+    font-size: 17px !important;
+  }
+  #transform-section button {
+    font-size: 19px;
+   
+  }
+}
+
+/* 1920px (Full HD) */
+@media (min-width: 1920px) {
+  #transform-section h2 {
+    font-size: 52px !important;
+  }
+  #transform-section p {
+    font-size: 20px;
+  }
+  #transform-section button {
+    font-size: 20px;
+  }
+}
+
+/* 2560px (2K) */
+@media (min-width: 2560px) {
+  #transform-section h2 {
+    font-size: 60px !important;
+  }
+  #transform-section p {
+    font-size: 22px;
+  }
+  #transform-section button {
+    font-size: 22px !important;
+  }
+}
+
+/* 3840px (4K) */
+@media (min-width: 3840px) {
+  #transform-section h2 {
+    font-size: 82px !important;
+  }
+  #transform-section p {
+    font-size: 23px !important;
+  }
+  #transform-section button {
+    font-size:32px !important;
+    /* padding: 1.8rem 3.5rem; */
+  }
+}
+
+/* 4090px (ultra-wide) */
+@media (min-width: 4090px) {
+  #transform-section h2 {
+    font-size: 80px;
+  }
+  #transform-section p {
+    font-size: 28px;
+  }
+  #transform-section button {
+    font-size: 26px;
+    padding: 2rem 4rem;
+  }
+}
+
+    </style>
+<section class="relative py-20 mt-16  text-white overflow-hidden" id="transform-section">
   <div class="absolute inset-0 "></div>
-  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+  <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
     <h2 style="font-family: UxumGrotesque,sans-serif;font-size: 47px;"
       class="reveal tracking-in-expand-fwd-bottom text-4xl md:text-5xl text-black1 font-extrabold mb-6">
       Ready to Transform <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Your Data?</span>
