@@ -4205,58 +4205,9 @@ html.dark .tab-text.active-text {
   /* 🔽 Responsive Media Queries for Search Section */
 
 /* Small Mobile (max 480px) */
-@media (max-width: 480px) {
-  #searchSection h2 {
-    font-size: 26px !important;
-  }
-  #searchSection p {
-    font-size: 13px !important;
-  }
-  #searchInput {
-    font-size: 14px !important;
-    padding: 0.75rem 1rem 0.75rem 3rem !important;
-  }
-  #searchButton {
-    font-size: 13px !important;
-    padding: 0.75rem 1.25rem !important;
-  }
-}
 
-/* Tablets (481px - 768px) */
-@media (max-width: 768px) {
-  #searchSection h2 {
-    font-size: 32px !important;
-  }
-  #searchSection p {
-    font-size: 14px !important;
-  }
-  #searchInput {
-    font-size: 15px !important;
-  }
-  #searchResults {
-    grid-template-columns: 1fr !important;
-  }
-}
 
-/* Small Laptops (769px - 1023px) */
-@media (max-width: 1023px) {
-  #searchSection h2 {
-    font-size: 38px !important;
-  }
-  #searchInput {
-    font-size: 16px !important;
-  }
-  #searchButton {
-    font-size: 14px !important;
-  }
-   #searchResults {
-           grid-template-columns: repeat(1, 1fr) !important;
-      margin-left: 156px;
-        width: 1085px !important;
-    }
-  }
-
-@media (max-width: 1024px)  {
+@media  (min-width: 1024px) and (max-width: 1100px) {
   #searchSection h2 {
     font-size: 52px !important;
   }
@@ -4272,17 +4223,20 @@ html.dark .tab-text.active-text {
         display: block;
   }
   #searchButton {
-font-size: 22px !important;
+font-size: 20px !important;
         padding: 1rem 3.5rem !important;
-        width: 153px;
-        margin-right: 76px;
-  }
+        width: 141px;
+        margin-right: 179px;
+    }
    .serchbox{
         margin-left: 111px;
   }
   #searchResults {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
+ grid-template-columns: repeat(1, 1fr) !important;
+        margin-left: 114px;
+        width: 595px;
+        font-size: 28px !important;
+    }
 }
 /* Large Desktop (1680px - 1919px) */
 @media (min-width: 1680px) and (max-width: 1919px) {
@@ -4310,9 +4264,9 @@ font-size: 24px !important;
         margin-left: -178px;
   }
   #searchResults {
-          grid-template-columns: repeat(2, 1fr) !important;
-        margin-left: -153px;
-        width: 1100px;
+   grid-template-columns: repeat(1, 1fr) !important;
+        margin-left: 114px;
+        width: 595px;
         font-size: 28px !important;
   }
   .text-benefits {
@@ -5219,15 +5173,15 @@ width: 367px;
 }
 
 }
-@media (min-width: 1100px) and (max-width: 1680px) {
+@media (min-width: 1100px) and (max-width: 1500px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 1.5rem;
-    margin-left: 99px;
+  grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        margin-left: 45px;
     /* margin-right: 109px; */
   }
   #business-benefits .benefit-card {
-width: 485px;
+       width: 554px;
 }
 
 }
@@ -5825,7 +5779,7 @@ width: 1589px;
  
       .featurediv {
       width: 1585px !important;
-        margin-left: 56px;
+        margin-left: 107px;
     }
      .button1 {
         font-size: 48px !important;
@@ -5856,6 +5810,7 @@ width: 1589px;
   line-height: 1.2;       /* avoid cutoff */
   padding: 0.05em 0;      /* gives breathing space */
 }
+
 }
 
 /* 5K+ - 5120px */
@@ -7410,13 +7365,13 @@ background-color: #0f0f0f;}
 @media (min-width: 1024px) {
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
   .blog-title {
     font-size: 50px;
   }
   .blog-heading a {
-    font-size: 1.2rem;
+    font-size: 16px;
   }
 
 }
