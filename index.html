@@ -1612,7 +1612,11 @@ html.dark #blobs-bg .blob {
     });
   }, { threshold: 0.1 }); // Trigger when 10% of section is visible
 
+  if (noBlobsSection) {
   observer1.observe(noBlobsSection);
+} else {
+  // console.error("Element with ID 'no-blobs-section' not found.");
+}
 </script>
     <!-- <div id="lines-bg">
       <svg class="lines" preserveAspectRatio="none" viewBox="0 0 100 100">
@@ -2641,7 +2645,385 @@ html.dark #blobs-bg .blob {
 /* ===========================
    HEADER RESPONSIVENESS
 =========================== */
+@media (min-width: 1000px) and (max-width: 1199px) {
+  #home {
+    gap: 6rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 5rem !important;
+  }
+  #home{
+    max-width:100% !important;
+    max-height: 100vh;
+  }
+  #home h1 {
+    font-size: 2rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > h1 > span{
+    font-size: 2rem !important; /* Bigger main heading */
+  }
+  #home p,
+  #home div {
+    font-size: 0.8rem !important; /* Larger body text */
+    line-height: 1.9 !important;
+  }
+  #home button {
+    font-size: 0.8rem !important; /* Bigger button text */
+    padding: 7px 28px !important;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+  #home .text2{
+    font-size: 1rem !important;
+  }
+   #header .logo-wrapper img {
+    max-height: 50px !important;
+    margin-left: 10px !important;
+  }
+ #header .nav-link {
+        font-size: 0.8rem !important;
+        padding: 8px 20px !important;
+    }
+      #header > div{
+      margin-top: 0.5rem !important;
+  }
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 1.2rem !important;
 
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 45px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+        padding: 7px 10px !important;
+        font-size: 17px !important;
+        width: 150px;
+        height: 40px;
+        border-radius: 60px;
+    }
+/* } */
+
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:30px !important
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden{
+        height: 40px !important;
+        width: 80px !important;
+        padding: 7px 7px;
+  }
+  body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:1rem !important;
+}
+#newsTicker{
+  font-size: 0.8rem !important;
+}
+ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:1rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 5px 0px !important;
+    }
+    .margin-lr{
+      padding:5px 10px;
+      border-radius: 50px;
+      margin:0px 125px
+    }
+      .btn-margin{
+          margin-left: 75px !important;
+          margin-right: 75px !important;
+        }
+          /* @media(min-width:1000px) and (max-width:1099px){
+      
+      } */
+       .tab-content{
+   margin-left:20px;
+   margin-right: 20px;
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important
+
+}
+.tab-content img {
+    max-width: 100%;
+    height: 350px;
+}
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > p.text-lg.text-gray-600.dark\:text-gray-300.max-w-3xl{
+   max-width:100%
+}
+    #content-0 h2, #content-1 h2, #content-2 h2, #content-3 h2, #content-4 h2, #content-5 h2, #content-0 h2>span, #content-1 h2>span, #content-2 h2>span, #content-3 h2>span, #content-4 h2>span, #content-5 h2>span {
+        font-size: 2.6rem !important;
+    }
+        #content-0 p, #content-1 p, #content-2 p, #content-3 p, #content-4 p, #content-5 p {
+        font-size: 1.2rem !important;
+        line-height: 1.7;
+        }
+
+            #content-0 span, #content-1 span, #content-2 span, #content-3 span, #content-4 span, #content-5 span {
+        font-size: 1.2rem !important;
+    }
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > div{
+   margin-left: 0 !important;
+}
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+  #home {
+    gap: 6rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 5rem !important;
+  }
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2.5rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > h1 > span{
+    font-size: 2.5rem !important; /* Bigger main heading */
+  }
+  #home p,
+  #home div {
+    font-size: 1.1rem !important; /* Larger body text */
+    line-height: 1.9 !important;
+  }
+  #home button {
+    font-size: 1.1rem !important; /* Bigger button text */
+    padding: 10px 28px !important;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+  #home .text2{
+    font-size: 1.5rem !important;
+  }
+   #header .logo-wrapper img {
+    max-height: 50px !important;
+    margin-left: 10px !important;
+  }
+ #header .nav-link {
+        font-size: 0.8rem !important;
+        padding: 8px 20px !important;
+    }
+      #header > div{
+      margin-top: 0.5rem !important;
+  }
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 1.2rem !important;
+
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 45px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+        padding: 7px 10px !important;
+        font-size: 17px !important;
+        width: 150px;
+        height: 40px;
+        border-radius: 60px;
+    }
+/* } */
+
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:30px !important
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden{
+       height: 50px !important;
+        width: 105px !important;
+        padding: 12px 4px;
+  }
+  body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:1rem !important;
+}
+#newsTicker{
+  font-size: 0.8rem !important;
+}
+ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:1rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 5px 0px !important;
+    }
+    .margin-lr{
+      padding:5px 10px;
+      border-radius: 50px;
+      margin:0px 125px
+    }
+      .btn-margin{
+          margin-left: 75px !important;
+          margin-right: 75px !important;
+        }
+          /* @media(min-width:1000px) and (max-width:1099px){
+      
+      } */
+       .tab-content{
+   margin-left:20px;
+   margin-right: 20px;
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important
+
+}
+.tab-content img {
+    max-width: 100%;
+    height: 350px;
+}
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > p.text-lg.text-gray-600.dark\:text-gray-300.max-w-3xl{
+   max-width:100%
+}
+    #content-0 h2, #content-1 h2, #content-2 h2, #content-3 h2, #content-4 h2, #content-5 h2, #content-0 h2>span, #content-1 h2>span, #content-2 h2>span, #content-3 h2>span, #content-4 h2>span, #content-5 h2>span {
+        font-size: 2.6rem !important;
+    }
+        #content-0 p, #content-1 p, #content-2 p, #content-3 p, #content-4 p, #content-5 p {
+        font-size: 1.2rem !important;
+        line-height: 1.7;
+        }
+
+            #content-0 span, #content-1 span, #content-2 span, #content-3 span, #content-4 span, #content-5 span {
+        font-size: 1.2rem !important;
+    }
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > div{
+   margin-left: 0 !important;
+}
+}
+@media (min-width: 1300px) and (max-width: 1399px) {
+  #home {
+    gap: 6rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 5rem !important;
+  }
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2.5rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > h1 > span{
+    font-size: 2.5rem !important; /* Bigger main heading */
+  }
+  #home p,
+  #home div {
+    font-size: 1.1rem !important; /* Larger body text */
+    line-height: 1.9 !important;
+  }
+  #home button {
+    font-size: 1.1rem !important; /* Bigger button text */
+    padding: 10px 28px !important;
+  }
+  #home img {
+    max-height: 500px !important;
+  }
+  #home .text2{
+    font-size: 1.6rem !important;
+  }
+   #header .logo-wrapper img {
+    max-height: 50px !important;
+    margin-left: 10px !important;
+  }
+ #header .nav-link {
+        font-size: 0.8rem !important;
+        padding: 8px 20px !important;
+    }
+      #header > div{
+      margin-top: 0.5rem !important;
+  }
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 1.2rem !important;
+
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 45px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+        padding: 7px 10px !important;
+        font-size: 17px !important;
+        width: 150px;
+        height: 40px;
+        border-radius: 60px;
+    }
+/* } */
+
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:30px !important
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden{
+        height: 50px !important;
+        width: 139px !important;
+        padding: 7px 7px;
+  }
+  body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:1rem !important;
+}
+#newsTicker{
+  font-size: 0.8rem !important;
+}
+ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:1rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 5px 0px !important;
+    }
+    .margin-lr{
+      padding:5px 10px;
+      border-radius: 50px;
+      margin:0px 125px
+    }
+      .btn-margin{
+          margin-left: 75px !important;
+          margin-right: 75px !important;
+        }
+          /* @media(min-width:1000px) and (max-width:1099px){
+      
+      } */
+       .tab-content{
+   margin-left:20px;
+   margin-right: 20px;
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important
+
+}
+.tab-content img {
+    max-width: 100%;
+    height: 350px;
+}
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > p.text-lg.text-gray-600.dark\:text-gray-300.max-w-3xl{
+   max-width:100%
+}
+    #content-0 h2, #content-1 h2, #content-2 h2, #content-3 h2, #content-4 h2, #content-5 h2, #content-0 h2>span, #content-1 h2>span, #content-2 h2>span, #content-3 h2>span, #content-4 h2>span, #content-5 h2>span {
+        font-size: 2.6rem !important;
+    }
+        #content-0 p, #content-1 p, #content-2 p, #content-3 p, #content-4 p, #content-5 p {
+        font-size: 1.2rem !important;
+        line-height: 1.7;
+        }
+
+            #content-0 span, #content-1 span, #content-2 span, #content-3 span, #content-4 span, #content-5 span {
+        font-size: 1.2rem !important;
+    }
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > div{
+   margin-left: 0 !important;
+}
+}
 @media (min-width: 1400px) and (max-width: 1499px) {
   #home {
     gap: 6rem !important;
@@ -3819,12 +4201,7 @@ html.dark .tab-text.active-text {
       .logo-left{
         margin-left: 0px;
       }
-      @media(min-width:1020px) and (max-width:1399px){
-        .btn-margin{
-          margin-left: 50px !important;
-          margin-right: 50px !important;
-        }
-      }
+  
       @media(min-width:1400px){
         .btn-margin{
           margin-left: 50px !important;
@@ -9166,7 +9543,7 @@ RGBA(255, 255, 255, 0.75)
         themeToggle.addEventListener("click", updateHeaderBackground);
       });
     </script>
-    <script id="particles-animation-script">
+    <!-- <script id="particles-animation-script">
       document.addEventListener("DOMContentLoaded", function () {
         const container = document.getElementById("particles-container");
         const particleCount = 50;
@@ -9180,7 +9557,7 @@ RGBA(255, 255, 255, 0.75)
           container.appendChild(particle);
         }
       });
-    </script>
+    </script> -->
     <script id="scroll-reveal-script">
       document.addEventListener("DOMContentLoaded", function () {
         const observerOptions = {
