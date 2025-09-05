@@ -5906,14 +5906,18 @@ observer.observe(section);
 /* ---------- Extra Large ( >1500px ) ---------- */
 @media (min-width: 1501px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+   grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-left: 97px;
+        margin-right: auto;
   }
   #business-benefits .benefit-card {
-    width: 743px;
+    width: 641px;
   }
+  #business-benefits .benefit-text {
+   font-size: 16px !important;
+    line-height: 1.6;
+}
 }
 
 
@@ -6342,8 +6346,8 @@ width: 1589px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-           width: 59px;
-        height: 59px;
+           width: 66px;
+        height: 62px;
     margin-left: 42px;
   }
 
@@ -6360,6 +6364,63 @@ width: 1589px;
   .feature-right .card {
     font-size: 0;
   }
+}
+@media (min-width: 360px) and (max-width: 573px) {
+  .feature-container {
+   flex-direction: row-reverse;
+        gap: 10px !important;        padding: 0 15px;
+  }
+
+  .featurediv {
+   width: 100% !important;
+        margin-left: 0;
+        padding: 9px;
+        font-size: 3px !important;
+        box-sizing: border-box;
+        margin-left: -2px;
+  }
+
+  .feature-right {
+    width: 100%;
+  }
+
+  .feature-right .card {
+ display: flex
+;
+        align-items: center;
+        justify-content: center;
+        padding: -15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        width: 47px;
+        height: 42px;
+        margin: 5px;
+        margin-left: -10px;
+        font-size: -10px;
+    font-size: 0; /* hide text */
+  }
+
+  .feature-right .card span.icon-svg {
+    display: flex;
+  }
+
+  .feature-right .card svg {
+    width: 24px;
+    height: 24px;
+  }
+  .feature-left h3 {
+    font-size: 18px !important;
+   
+}
+.feature-left li {
+   
+    font-size: 12px !important;
+ 
+}
 }
 
 
@@ -6415,7 +6476,7 @@ width: 1589px;
   .featurediv {
     width: 59% !important; /* relative instead of fixed */
     max-width: 900px;
-    margin: 0 auto;
+   margin-left: 27px;
   }
 
   .button1 {
@@ -6971,7 +7032,8 @@ html.dark .feature-section {
    
     color: RGB(54, 165, 247)}
     
-   
+ 
+
       @media (max-width: 990px) {
   #addTestimonialButton {
     position: static !important;
@@ -7004,6 +7066,34 @@ font-size: 17px !important;
   font-size: 25px !important;
 }
 }
+  @media (min-width: 360px) and (max-width: 528px) {
+    #Testimonials .testimonial-card {
+ min-width: 19rem !important;
+        max-width: 11rem !important;
+        padding: 2rem !important;
+        height: 358px;
+    }
+      #Testimonials blockquote {
+font-size: 15px !important;
+        line-height: 1.8;
+    }
+     .starrate{
+  font-size: 22px !important;
+}
+ .testcard {
+        font-size: 14px !important;
+        line-height: 1.5rem;
+    }
+     #Testimonials .avatar-pulse {
+        width: 3rem !important;
+        height: 3rem !important;
+        font-size: 20px !important;
+
+  }
+   }
+
+
+
 /* 1680px and larger */
 @media (min-width: 1680px) {
   #Testimonials h2 {
