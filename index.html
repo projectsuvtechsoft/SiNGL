@@ -4977,10 +4977,11 @@ font-size: 24px !important;
         margin-left: -178px;
   }
   #searchResults {
-   grid-template-columns: repeat(1, 1fr) !important;
-        margin-left: 114px;
-        width: 595px;
+          grid-template-columns: repeat(2, 1fr) !important;
+        margin-left: -166px;
+        width: 1173px;
         font-size: 28px !important;
+
   }
   .text-benefits {
         background: linear-gradient(90deg, #7c6ee3, #b37ee7, #8b9edc, #6ab6e6);
@@ -5102,30 +5103,32 @@ font-size: 26px !important;
     justify-content: center !important; /* keeps them centered */
   }
   #searchInput {
-    font-size: 39px !important;
-        padding: 1rem 2.5rem 1rem 5rem !important;
+   font-size: 39px !important;
+        padding: 2rem 2.5rem 2rem 5rem !important;
         width: 2425px !important;
         /* max-width: 1200px !important; */
         /* margin-left: -98px; */
+        border-radius: 40px;
         display: block;
   }
   #searchButton {
- font-size: 30px !important;
-        padding: 1rem 3.5rem !important;
+font-size: 32px !important;
+        padding: 2rem 4.5rem !important;
         /* width: 179px; */
+        border-radius: 40px;
         margin-left: 570px;
   }
    .serchbox{
         margin-left: -842px;
   }
   #searchResults {
-          grid-template-columns: repeat(3, 1fr) !important;
-        margin-left: -768px;
-        width: 2103px;
+                 grid-template-columns: repeat(3, 1fr) !important;
+        margin-left: -812px;
+        width: 2334px;
         font-size: 38px !important;
   }
   .searchreslttext {
-        font-size: 23px;
+        font-size: 26px !important;
         line-height: 2.25rem;
     }
     .search-icon i {
@@ -5850,13 +5853,14 @@ observer.observe(section);
 /* ---------- Tablets ---------- */
 @media (min-width: 769px) and (max-width: 1023px) {
   #business-benefits .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     margin-left: 20px;
     margin-right: 20px;
   }
   #business-benefits .benefit-card {
-    width: 487px;
+           width: 663px;
+
   }
 }
 
@@ -6309,77 +6313,123 @@ width: 1589px;
       /* ✅ Extra Responsive Media Queries */
 
 /* Tablets */
-@media (max-width: 768px) {
-  .feature-left h3 {
-    font-size: 20px;
+/* ---------- Mobile & Small Tablets (0 - 767px) ---------- */
+@media (max-width: 767px) {
+  .feature-container {
+    flex-direction: column-reverse;
+    gap: 20px;
   }
-  .feature-left li {
-    font-size: 14px;
+
+  .feature-left,
+  .feature-right {
+    width: 100%;
   }
-  .card {
-    font-size: 13px;
+
+  .featurediv {
+    width: 100% !important; /* full width on small screens */
+    margin: 0 auto;
   }
-   .featurediv{
-    width: 1135px !important;
-  }
+
   .button1 {
-    font-size: 35px  !important;; 
+    font-size: 16px !important;
+  }
+
+  .feature-left h3,
+  .feature-left li {
+    font-size: 15px !important;
+  }
+
+  .card {
+    font-size: 12px;
+    width: 100%;
   }
 
   .feature-left {
-   
-    height: 98%;
-}
+    height: auto;
+  }
 }
 
-/* Small Laptops */
-@media (max-width: 1023px) {
+/* ---------- Tablets (768px - 1023px) ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
   .feature-container {
     flex-direction: column-reverse;
     gap: 30px;
   }
-  .feature-left {
+
+  .feature-left,
+  .feature-right {
+           width: 88%;
+        margin-left: 20px;
+  }
+
+  .featurediv {
+    width: 100% !important; /* scale properly */
+    max-width: 700px; /* optional max width */
+    margin: 0 auto;
+  }
+
+  .button1 {
+    font-size: 17px !important;
+  }
+
+  .feature-left h3 {
+    font-size: 18px !important;
+  }
+
+  .feature-left li {
+    font-size: 17px !important;
+  }
+
+  .card {
+    font-size: 13px;
     width: 100%;
   }
+
+  .feature-left {
+    height: auto;
+  }
+}
+
+/* ---------- Small Laptops (1024px - 1100px) ---------- */
+@media (min-width: 1024px) and (max-width: 1100px) {
+  .feature-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .feature-left,
   .feature-right {
     width: 100%;
   }
-   .featurediv{
-    width: 1135px !important;
+
+  .featurediv {
+    width: 55% !important; /* relative instead of fixed */
+    max-width: 900px;
+    margin: 0 auto;
   }
+
   .button1 {
-    font-size: 35px  !important;; 
+    font-size: 18px !important;
   }
 
-  .feature-left {
-   
-    height: 98%;
-}
-}
+  .feature-left h3 {
+    font-size: 19px !important;
+  }
 
-/* Between 1024px and 1100px */
-@media (max-width: 1100px) {
-     .feature-left h3 {
-        font-size: 19px !important;
-    }
   .feature-left li {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
+
   .card {
-    font-size: 13px;
-  }
-   .featurediv{
-    width: 1135px !important;
-  }
-  .button1 {
-    font-size: 35px  !important;; 
+    font-size: 14px;
+    width: 100%;
   }
 
   .feature-left {
-   
-    height: 98%;
+    height: auto;
+  }
 }
-}
+
 @media (min-width: 1267px) {
      .feature-left h3 {
         font-size: 19px !important;
@@ -6416,12 +6466,13 @@ width: 1589px;
     font-size: 18px !important;;
   }
   .card {
-    font-size: 19px !important;
-        width: 623px;
+   font-size: 19px !important;
+        width: 449px;
   }
    .featurediv{
-    width: 680px !important;
-        margin-left: 107px;
+            width: 574px !important;
+        margin-left: 84px;
+
 
   }
   .button1 {
@@ -6473,13 +6524,13 @@ width: 1589px;
     font-size: 20px  !important;;
   }
   .card {
-  font-size: 23px !important;
-        width: 798px;
+         font-size: 23px !important;
+        width: 768px;
 
   }
    .featurediv{
-          width: 726px !important;
-        margin-left: 145px;
+       width: 743px !important;
+        margin-left: 115px;
   }
   .button1 {
     font-size: 22px  !important;; 
@@ -8148,33 +8199,48 @@ background-color: #0f0f0f;}
 
 @media (min-width: 1680px) {
   .blog-container {
-    max-width: 1200px;
+            max-width: 1345px;
+
   }
   .blog-title {
     font-size: 52px;
   }
   .blog-heading a {
-    font-size: 1.4rem;
+    font-size: 19px !important;
   }
 }
 
 /* 2K Screens (1920px–2560px) */
-@media (min-width: 1920px) {
+/* -------- Full HD (1920px) -------- */
+@media (min-width: 1920px) and (max-width: 2559px) {
   .blog-container {
-   max-width: 2100px;
+           max-width: 1553px; 
   }
-.blog-title {
-        font-size: 57px;
-    }
+  .blog-title {
+    font-size: 57px;
+  }
   .blog-heading a {
     font-size: 1.5rem;
+  }
+}
+
+/* -------- 2K / 2560px and above -------- */
+@media (min-width: 2560px) {
+  .blog-container {
+    max-width: 2193px;
+  }
+  .blog-title {
+    font-size: 57px;
+  }
+  .blog-heading a {
+            font-size: 28px !important;
   }
 }
 
 /* 4K Screens (2560px–3840px) */
 @media (min-width:3840px) {
   .blog-container {
-            max-width: 3321px;
+          max-width: 3262px;
   }
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -8184,7 +8250,7 @@ background-color: #0f0f0f;}
     font-size: 82px;
   }
   .blog-heading a {
-    font-size: 2.6rem;
+    font-size: 46px !important;
   }
 }
 
