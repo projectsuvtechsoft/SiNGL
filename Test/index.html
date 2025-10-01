@@ -5278,6 +5278,28 @@ html.dark .tab-text.active-text {
         margin-left: -50px;
       } */
       }
+      /* Default */
+.tab-btn .tab-icon,
+.tab-btn .tab-text {
+  transition: filter 0.3s ease, color 0.3s ease;
+}
+
+/* Hover → icon blue + text blue */
+.tab-btn:hover .tab-icon {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(7476%) hue-rotate(204deg) brightness(97%) contrast(98%);
+}
+.tab-btn:hover .tab-text {
+  color: #3b82f6; /* Tailwind blue-500 */
+}
+
+/* Active → icon white + text white */
+.tab-btn.active .tab-icon {
+  filter: brightness(0) invert(1);
+}
+.tab-btn.active .tab-text {
+  color: #ffffff;
+}
+
     </style>
     <section id="features" class=" scroll-reveal">
       <h2 style="
@@ -5298,8 +5320,8 @@ html.dark .tab-text.active-text {
            <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
 
         </svg> -->
-        <img src="./logofordeduplicate.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+        <img src="./logofordeduplicate.png" width="20" height="20" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
+            dark:invert dark:brightness-0 hover:text-blue-500">
         <!-- <svg class="w-7 h-7 text-gray-800 dark:text-white" stroke="currentColor"  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
 </svg> -->
@@ -5325,8 +5347,8 @@ html.dark .tab-text.active-text {
         <path d="M12 16v6" />
         <path d="M10 20h4" />
       </svg> -->
-      <img src="./Datastewardship.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+      <img src="./Datastewardship.png" width="20" height="20" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
+            dark:invert dark:brightness-0 hover:text-blue-500">
       <p class="tab-text">Advanced Data Stewardship</p>
     </div>
 </button>
@@ -5350,7 +5372,7 @@ html.dark .tab-text.active-text {
     <path d="m16.00125 3.4275 -14.857499999999998 0 0 1.1475 14.857499999999998 0 0 2.2800000000000002 1.1400000000000001 0 0 -5.715 -1.1400000000000001 0 0 2.2874999999999996z" fill="#000000" stroke-width="0.75"></path>
         </svg> -->
       <img src="./bulk.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+            dark:invert dark:brightness-0 hover:text-blue-500">
         <p class="tab-text">Bulk Match</p>
       </div>
     </button>
@@ -5358,7 +5380,7 @@ html.dark .tab-text.active-text {
     <button onclick="showTab(3)" id="tab-3" class="tab-btn tabgrp hover:text-blue-500">
       <div class="flex items-center gap-3">
               <img src="./customer360.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+            dark:invert dark:brightness-0 hover:text-blue-500">
 
 
         <p class="tab-text">Customer 360</p>
@@ -5368,7 +5390,7 @@ html.dark .tab-text.active-text {
    <button onclick="showTab(4)" id="tab-4" class="tab-btn tabgrp hover:text-blue-500">
     <div class="flex items-center gap-3">
       <img src="./Api.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+            dark:invert dark:brightness-0 hover:text-blue-500">
  
       <p class="tab-text">Consume Data Via API</p>
     </div>
@@ -5376,7 +5398,7 @@ html.dark .tab-text.active-text {
    <button onclick="showTab(5)" id="tab-5" class="tab-btn tabgrp hover:text-blue-500">
     <div class="flex items-center gap-3">
       <img src="./AiStewardship.png" width="24" height="24" class="tab-icon w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 object-contain 
-            dark:invert dark:brightness-0">
+            dark:invert dark:brightness-0 hover:text-blue-500">
    
     <p class="tab-text">GenAI Powered Data Stewardship</p>
     </div>
@@ -11065,5 +11087,17 @@ footer.footer {
 
 
 </style>
+<script type="module">
+  import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
+  Chatbot.init({
+    chatbotId: "chatbot_va38ug3dmt6os54k4dkqi",
+  });
+</script>  
+<!-- <iframe
+  width="100%"
+  height="800px"
+  frameborder="0"
+  src="https://denser.ai/u/embed/chatbot_va38ug3dmt6os54k4dkqi">
+</iframe> -->
   </body>
 </html>
