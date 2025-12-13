@@ -5,10 +5,49 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" type="image/x-icon" href="singl_logo (2).png" />
     <title>Contact Us - SiNGL</title>
+<!-- Prevent Flash -->
+<style>
+  /* First paint background (solid) – applies instantly */
+  html, body {
+    background: #0f172a !important; /* dark fallback */
+    color: #f8fafc;
+  }
+ html:not(.dark) { background: #ffffff !important; }
+  /* Actual gradient theme (applied after load) */
+  html.dark.loaded,
+  body.dark-mode.loaded {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  }
+</style>
+
+<script>
+  // Apply saved theme BEFORE page renders (0 ms)
+  (function () {
+    const savedTheme = sessionStorage.getItem("theme");
+    // const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const enableDark = savedTheme === "dark" ;
+
+    if (enableDark) {
+      document.documentElement.classList.add("dark");
+      document.body && document.body.classList.add("dark-mode");
+    } else {
+      document.documentElement.classList.remove("dark");
+      document.body && document.body.classList.remove("dark-mode");
+    }
+  })();
+</script>
+
+
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
     <link
       href="https://fonts.googleapis.com/css2?family=system-ui:wght@400;500;600;700;800&family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -29,6 +68,16 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+ 
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K4RNSLCT');</script>
+<!-- End Google Tag Manager -->
     <script>
       tailwind.config = {
         theme: {
@@ -54,8 +103,7 @@
       /* ===========================
    GLOBAL RESET & CONTAINER FIX
 =========================== */
-      html,
-      body {
+      html,body {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -63,7 +111,11 @@
         overflow-x: hidden;
         box-sizing: border-box;
       }
-
+    html, body {
+  scroll-behavior: smooth;
+  overscroll-behavior: none; /* ✅ Prevents Edge from bouncing at scroll ends */
+  scroll-snap-type: none;
+}
       /* Ensure all sections fit the viewport */
       section,
       header,
@@ -96,7 +148,148 @@
       /* ===========================
    MEDIA QUERIES FOR RESPONSIVENESS
 =========================== */
+@media (min-width: 1280px) and (max-width: 1299px) {
 
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2.5rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+    margin-top: -5px;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > h1 > span{
+    font-size: 2.5rem !important; /* Bigger main heading */
+  }
+  #home p,
+  #home div {
+    font-size: 16px !important; 
+    line-height: 1.5 !important;
+  }
+  .heroheight {
+    min-height: 64vh;
+}
+  #home button {
+  font-size: 15px !important;
+        padding: 7px 18px !important;
+        width: 127px;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
+     #home {
+    gap: 1rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 3rem !important;
+  }
+    #baneerimage img {
+  width: 1132px !important;
+        height: 107vh;
+        max-height: 515px !important;
+        /* object-fit: fill; */
+}
+  #home .text2{
+    font-size: 1.5rem !important;
+  }
+   #header .logo-wrapper img {
+    max-height: 50px !important;
+    margin-left: 10px !important;
+  }
+ #header .nav-link {
+        font-size: 0.6rem !important;
+        padding: 6px 13px !important;
+    }
+      /* #header > div{
+      margin-top: 0.5rem !important;
+  } */
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 1.2rem !important;
+
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 45px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+               padding: 0px 9px !important;
+        /* font-size: 14px !important; */
+        width: 127px;
+        height: 40px !important;
+        font-size: 14px !important;
+        padding: 2px 10px !important;
+        width: 127px;
+        border-radius: 60px;
+        font-weight: inherit;
+    }
+/* } */
+
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:0px !important
+  }
+ /* #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden{
+       height: 50px !important;
+        width: 105px !important;
+        padding: 12px 4px;
+  }*/
+  body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:1rem !important;
+}
+#newsTicker{
+  font-size: 0.8rem !important;
+}
+ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:1rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 5px 0px !important;
+    }
+    .margin-lr{
+      padding:5px 10px;
+      border-radius: 50px;
+      margin:0px 125px
+    }
+      .btn-margin{
+          margin-left: 75px !important;
+          margin-right: 75px !important;
+        }
+          /* @media(min-width:1000px) and (max-width:1099px){
+      
+      } */
+       .tab-content{
+   margin-left:20px;
+   margin-right: 20px;
+        padding-top: 2rem !important;
+        padding-bottom: 5rem !important
+
+}
+.tab-content img {
+    max-width: 100%;
+    height: 270px;
+}
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > p.text-lg.text-gray-600.dark\:text-gray-300.max-w-3xl{
+   max-width:100%
+}
+    #content-0 h2, #content-1 h2, #content-2 h2, #content-3 h2, #content-4 h2, #content-5 h2, #content-0 h2>span, #content-1 h2>span, #content-2 h2>span, #content-3 h2>span, #content-4 h2>span, #content-5 h2>span {
+        font-size: 2.6rem !important;
+    }
+        #content-0 p, #content-1 p, #content-2 p, #content-3 p, #content-4 p, #content-5 p {
+        font-size: 17px !important;
+        line-height: 1.7;
+        }
+
+            #content-0 span, #content-1 span, #content-2 span, #content-3 span, #content-4 span, #content-5 span {
+        font-size: 1.0rem !important;
+    }
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > div{
+   margin-left: 0 !important;
+}
+}
       /* For desktops & large screens */
       @media (min-width: 1280px) {
         html {
@@ -128,29 +321,40 @@
       }
 
       /* For tablets & small laptops */
-      @media (max-width: 768px) {
-        html {
-          font-size: 15px;
-        }
+   @media (min-width: 320px) and  (max-width: 499px)  {
+    #header nav {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: flex;
+  }
+#btn-toggle, #btn-toggle>a {
+                 padding: 3px 1px !important;
+        height: 34px !important;
+        width: 121px !important;
+        font-size: 12px !important;
+        font-weight: inherit;
+        border-radius: 60px;
+    }
+}
 
-        header {
-          padding: 0.5rem 1rem;
-        }
-
-        /* Mobile hamburger menu */
-        #mobile-menu-toggle {
-          display: block !important;
-        }
-
-        nav {
-          display: none !important;
-        }
-
-        /* Adjust hero/title size */
-        h1 {
-          font-size: 1.75rem !important;
-        }
-      }
+/* Small Screens (Mobile) */
+@media (min-width: 500px) and (max-width: 896px) {
+  #header nav {
+    display: none;
+  }
+  #mobile-menu-toggle {
+    display: flex;
+  }
+ #btn-toggle, #btn-toggle>a {
+                padding: 5px 7px !important;
+        height: 39px;
+        width: 125px;
+        font-size: 14px !important;
+        font-weight: inherit;
+        border-radius: 60px;
+    }
+}
 
       /* For mobile screens */
       @media (max-width: 640px) {
@@ -207,6 +411,20 @@
           padding: 0.6rem;
         }
       }
+      @media (min-width: 1200px) and (max-width: 1279px) {
+ 
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+              padding: 6px 9px !important;
+        font-size: 14px !important;
+        width: 127px;
+        height: 40px;
+        border-radius: 60px;
+    }
+/* } */
+
+  
+}
       @font-face {
         font-family: "UxumGrotesque";
         src: url("/fonts/uxumregular.otf") format("opentype");
@@ -329,6 +547,7 @@
       .dark .blog-meta {
         color: #d1d5db;
       }
+
       .back-btn {
         display: inline-flex;
         align-items: center;
@@ -388,6 +607,14 @@
         max-height: 50px;
         transition: max-height 0.3s ease;
       }
+      .dark   .nav-link {
+  color: #fff !important; 
+         /* black text */
+}
+  .dark  .nav-link:hover{
+  color: #000 !important; 
+         /* black text */
+}
 
       /* Nav links */
       #header .nav-link {
@@ -452,6 +679,27 @@
         padding: 4px 8px; /* default desktop */
         transition: padding 0.3s ease;
       }
+      
+          #btn-toggle {
+            /* background: linear-gradient(
+              100deg,
+              #f1e7fa,
+              #f1e7fa,
+              #f7f0f8,
+              #f6e7fa,
+              #f8d0ff,
+              #edc7f5,
+              #f6e7fa,
+              #f6e7fa,
+              #f6e7fa
+            );
+            background-size: 400% 100%;
+            animation: slider 8s infinite linear; */
+          font-weight: 500;
+    font-family: UxumGrotesque, sans-serif;
+    font-size: 16px;
+    padding: 8px 20px;
+          }
 @media (min-width: 1000px) and (max-width: 1199px) {
    #header .nav-link {
             font-size: 0.56rem !important;
@@ -459,9 +707,9 @@
 
     }
      #btn-toggle, #btn-toggle>a {
-       padding: 7px 8px !important;
-        font-size: 15px !important;
-        width: 130px;
+         padding: 4px 3px !important;
+        font-size: 14px !important;
+        width: 111px;
         height: 38px;
         border-radius: 60px;
     }
@@ -683,7 +931,145 @@
         height: auto;
         width: auto;
       }
+  @media (min-width: 1366px) and (max-width: 1399px) {
+  #home {
+    gap: 1rem !important;
+    padding-left: 2.2rem !important;
+    padding-right: 1rem !important;
+  }
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2.5rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+    margin-top: -45px;
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > h1 > span{
+    font-size: 2.5rem !important; /* Bigger main heading */
+  }
+  #home p,
+  #home div {
+   font-size: 16x !important;
+        line-height: 1.5 !important;
+  }
+  #home button {
+   font-size: 16px !important;
+        padding: 9px 23px !important;
+  }
+  /* #home img {
+    max-height: 500px !important;
+  } */
+    #baneerimage img {
+             width: 1215px !important;
+        height: 226vh;
+        max-height: 563px !important;
+        max-width: 586px;
+
+}
+  #home .text2{
+    font-size: 1.6rem !important;
+  }
+   #header .logo-wrapper img {
+    max-height: 50px !important;
+    margin-left: 10px !important;
+  }
+ #header .nav-link {
+                font-size: 0.6rem !important;
+        padding: 6px 17px !important;
+    }
+      /* #header > div{
+      margin-top: 0.5rem !important;
+  } */
+ #theme-toggle.btntoggle i.text-lg{
+    font-size: 1.2rem !important;
+
+  }
+/* @media (min-width: 3840px) { */
+    #theme-toggle.btntoggle {
+        height: 45px !important;
+    }
+/* } */
+
+  /* @media (min-width: 3840px) { */
+    #btn-toggle, #btn-toggle>a {
+    padding: 6px 9px !important;
+        font-size: 15px !important;
+        width: 138px;
+        height: 40px;
+        border-radius: 60px;
+        font-weight: inherit;
+    }
+/* } */
+
+  #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
+     gap:0px !important
+  }
+  #home > div.flex-1.flex.flex-col.gap-4.sm\:gap-6.text-left.w-full.left-margin > div.text-base.sm\:text-lg.md\:text-xl.font-medium.space-y-2.sm\:space-y-4.text-gray-700.dark\:text-gray-300 > div.mt-4.sm\:mt-6.text-lg.sm\:text-xl.md\:text-2xl.text2.font-semibold.opacity-0.animate-fade-in-up.flex.items-center.gap-2 > span.relative.inline-flex.items-center.fade-logo > img.logobanner-img.block.dark\:\!hidden{
+       /* height: 37px !important;
+        width: 129px !important;
+        padding: 7px 7px; */
+        max-height: 476px !important;
+  }
+  body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm > i
+{
+  font-size:1rem !important;
+}
+#newsTicker{
+  font-size: 0.8rem !important;
+}
+ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.flex.items-center.shrink-0.px-3.py-0.rounded-full.font-semibold.text-xs.sm\:text-sm.bg-gray-100.dark\:bg-gray-800.text-gray-900.dark\:text-white.shadow-sm
+    {
+      font-size:1rem !important;
+    }
+    body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div{
+      padding: 5px 0px !important;
+    }
+    .margin-lr{
+      padding:5px 10px;
+      border-radius: 50px;
+      margin:0px 125px
+    }
+      .btn-margin{
+          margin-left: 75px !important;
+          margin-right: 75px !important;
+        }
+          /* @media(min-width:1000px) and (max-width:1099px){
       
+      } */
+       .tab-content{
+   margin-left:20px;
+   margin-right: 20px;
+        padding-top: 0rem !important;
+        padding-bottom: 5rem !important
+
+}
+.tab-content img {
+    max-width: 100%;
+    height: 270px;
+}
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > p.text-lg.text-gray-600.dark\:text-gray-300.max-w-3xl{
+   max-width:100%
+}
+    .heroheight {
+    min-height: 88vh !important;
+}
+    #content-0 h2, #content-1 h2, #content-2 h2, #content-3 h2, #content-4 h2, #content-5 h2, #content-0 h2>span, #content-1 h2>span, #content-2 h2>span, #content-3 h2>span, #content-4 h2>span, #content-5 h2>span {
+        font-size: 2.6rem !important;
+    }
+        #content-0 p, #content-1 p, #content-2 p, #content-3 p, #content-4 p, #content-5 p {
+        font-size: 17px !important;
+        line-height: 1.7;
+        }
+
+            #content-0 span, #content-1 span, #content-2 span, #content-3 span, #content-4 span, #content-5 span {
+        font-size: 17px !important;
+    }
+.tab-content > div > div > div.space-y-4.sm\:space-y-6 > div{
+   margin-left: 0 !important;
+}
+}    
 @media (min-width: 1400px) and (max-width: 1499px) {
   #home {
     gap: 6rem !important;
@@ -726,9 +1112,9 @@
                 font-size: 0.7rem !important;
         padding: 8px 17px !important
     }
-      #header > div{
+      /* #header > div{
       margin-top: 0.5rem !important;
-  }
+  } */
  #theme-toggle.btntoggle i.text-lg{
     font-size: 1.2rem !important;
 
@@ -740,11 +1126,20 @@
 /* } */
 
   /* @media (min-width: 3840px) { */
-    #btn-toggle, #btn-toggle>a {
-    font-size: 16px !important;
+   #btn-toggle, #btn-toggle>a {
+       /* padding: 7px 9px !important; */
+        font-size: 15px !important;
+        /* width: 150px; */
+        height: 44px;
         width: 150px;
-        height: 40px;
+        padding: 7px 12px !important;
+        width: 147px;
         border-radius: 60px;
+        /* padding: 9px 12px !important; 
+        /* border-radius: 60px;
+        
+        height: 45px;
+        font-weight: inherit;*/
     }
 /* } */
 
@@ -816,9 +1211,9 @@
         font-size: 0.7rem !important;
         padding: 7px 15px !important;
     }
-      #header > div{
+      /* #header > div{
       margin-top: 0.5rem !important;
-  }
+  } */
  #theme-toggle.btntoggle i.text-lg{
     font-size: 1.4rem !important;
 
@@ -831,11 +1226,12 @@
 
   /* @media (min-width: 3840px) { */
     #btn-toggle, #btn-toggle>a {
-    padding: 10px 10px !important;
+    padding: 7px 10px !important;
         font-size: 17px !important;
         width: 154px;
         height: 44px;
         border-radius: 60px;
+        font-weight: inherit;
     }
 /* } */
 
@@ -907,9 +1303,9 @@
         font-size: 0.8rem !important;
         padding: 9px 22px !important;
     }
-      #header > div{
+      /* #header > div{
       margin-top: 0.5rem !important;
-  }
+  } */
  #theme-toggle.btntoggle i.text-lg{
     font-size: 1.4rem !important;
 
@@ -927,6 +1323,7 @@
         width: 163px;
         height: 50px;
         border-radius: 60px;
+        font-weight: inherit;
     }
 /* } */
 
@@ -995,9 +1392,9 @@
         font-size: 1rem !important;
         padding: 10px 21px !important;
     }
-      #header > div{
+      /* #header > div{
       margin-top: 0.5rem !important;
-  }
+  } */
  #theme-toggle.btntoggle i.text-lg{
     font-size: 1.5rem !important;
 
@@ -1015,6 +1412,7 @@
         width: 192px;
         height: 50px;
         border-radius: 60px;
+        font-weight: inherit;
     }
 /* } */
 
@@ -1104,6 +1502,7 @@
         width: 239px;
         height: 61px;
         border-radius: 60px;
+        font-weight: inherit;
     }
 /* } */
   #header > div.w-full.flex.items-center.justify-between.relative.z-10.bg-transparent.dark\:bg-transparent.px-6 > div.flex.items-center.space-x-2.sm\:space-x-4{
@@ -1336,13 +1735,17 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
   <body
     class="light-mode font-sans transition-all duration-500 dark:bg-[#181a20] dark:text-gray-100"
     style="
-      background-color: #f6f7fb;
-      color: #23262f;
+    
       font-weight: 500;
       font-family: Golos Text, sans-serif;
       font-size: 16px;
     "
   >
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K4RNSLCT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <!-- <div id="lines-bg">
       <svg class="lines" preserveAspectRatio="none" viewBox="0 0 100 100">
         <defs>
@@ -1410,6 +1813,15 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
       <div class="blob blob2"></div>
       <div class="blob blob3"></div>
     </div>
+    <style>
+  html.dark, body.dark-mode {
+    background: #1e293b !important;
+    
+  }
+  /* Prevent flash */
+  html { background: #1e293b; }
+</style>
+
     <style>
       #blobs-bg {
         position: fixed;
@@ -1714,24 +2126,31 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         class="w-full flex items-center justify-between relative z-10 bg-transparent dark:bg-transparent px-6"
         style="
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          padding: 8px 20px;
+          padding: 0px 20px;
         "
       >
-        <div class="flex items-center py-1 rounded-lg">
-          <div class="logo-wrapper">
-            <img
-              src="./image (3).png"
-              alt="Logo"
-              class="logo-img hidden dark:block"
-            />
+           <div class="flex items-center py-1 rounded-lg">
+  <div class="logo-wrapper">
+    <!-- Logo for dark mode -->
+    <a href="index.html" class="block">
+      <img
+        src="./image (3).png"
+        alt="Logo"
+        class="logo-img hidden dark:block image-heightwidth"
+      />
+    </a>
 
-            <img
-              src="logoo1.png"
-              alt="Logo"
-              class="logo-img1 block dark:hidden"
-            />
-          </div>
-        </div>
+    <!-- Logo for light mode -->
+    <a href="index.html" class="block">
+      <img
+        src="logoo1.png"
+        alt="Logo"
+        class="logo-img1 block dark:hidden image-heightwidth"
+      />
+    </a>
+  </div>
+</div>
+
 
         <nav class="hidden md:flex justify-center relative">
           <div
@@ -1753,8 +2172,8 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
             Home
           </a> -->
 
-            <a
-              href="/"
+            <!-- <a
+              href="index.html"
               class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
               style="
                 cursor: pointer;
@@ -1763,7 +2182,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                 padding: 4px 15px 4px 15px;
               "
               >Home</a
-            >
+            > -->
 
             <a
               href="index.html#features"
@@ -1774,7 +2193,18 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                 font-weight: 600;
                 padding: 4px 15px 4px 15px;
               "
-              >Features</a
+              >Capabilities</a
+            >
+             <a
+              href="index.html#platformSection"
+              class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
+              style="
+                cursor: pointer;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 4px 15px 4px 15px;
+              "
+              >Platform</a
             >
             <a
               href="index.html#use-cases"
@@ -1785,14 +2215,14 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                 font-weight: 600;
                 padding: 4px 15px 4px 15px;
               "
-              >Industry</a
+              >Use Cases</a
             >
             <!-- <a href="#blogs"
             class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
             style="cursor: pointer;font-size: 11px;font-weight: 600; padding: 4px 15px 4px 15px; color:#969696;">Blog</a> -->
 
             <a
-              href="index.html#blogs"
+              href="index.html#business-benefits"
               class="nav-link px-4 rounded-full font-bold uppercase tracking-wide text-sm transition-all duration-200 hover:bg-[#F0F2F8] focus:outline-none"
               style="
                 cursor: pointer;
@@ -1801,7 +2231,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                 padding: 4px 15px 4px 15px;
               "
             >
-              Blog
+              Benefits
             </a>
 
             <a
@@ -1813,7 +2243,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                 font-weight: 600;
                 padding: 4px 15px 4px 15px;
               "
-              >Contact Us</a
+              >Pricing</a
             >
           </div>
         </nav>
@@ -1828,11 +2258,11 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
          /* black text */
 }
     .nav-link {
-  color: #969696 !important; 
+   color: #171616  !important; 
          /* black text */
 }
           body {
-            font-family: "Roboto Mono", monospace;
+            font-family: "Golos Text",sans-serif;;
           }
 
           @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
@@ -1848,7 +2278,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
             /* background: linear-gradient(90deg, #9839dc 0%, #d98fff 100%); */
             background: #f0f2f8;
 
-            /* color: #fff !important; */
+           color: #000 
           }
 
           .nav-link {
@@ -1864,26 +2294,9 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
 
           header a {
             letter-spacing: 0.06rem !important;
-            font-family: "Roboto Mono", Sans-serif !important;
+            font-family: "Golos Text",sans-serif !important;
           }
 
-          #btn-toggle {
-            /* ... other styles ... */
-            background: linear-gradient(
-              100deg,
-              #f1e7fa,
-              #f1e7fa,
-              #f7f0f8,
-              #f6e7fa,
-              #f8d0ff,
-              #edc7f5,
-              #f6e7fa,
-              #f6e7fa,
-              #f6e7fa
-            );
-            background-size: 400% 100%;
-            animation: slider 8s infinite linear;
-          }
 
           @keyframes slider {
             from {
@@ -1894,6 +2307,110 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
               background-position: 100% 50%;
             }
           }
+            /* @media (min-width: 320px) and (max-width: 368px){
+    #btn-toggle{
+      padding: 5px 6px !important;
+    font-size: 12px !important;
+    width: 127px;
+    height: 40px;
+    border-radius: 60px;
+    }
+  } */
+  @media (min-width: 768px) and (max-width: 999px) {
+  #home {
+    gap: 1rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 1rem !important;
+  }
+#header nav > div {
+    padding: 7px 1px;
+    transition: padding 0.3s 
+ease;
+}
+  .bannertag{
+    font-size: 14px !important;
+  }
+      #baneerimage img {
+        width: 1000px;
+        height: 131vh;
+        max-height: 540px !important;
+        object-fit: fill;
+        /* margin-top: 18px; */
+    }
+      .heroheight {
+    min-height: 43vh;
+}
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+  }
+  
+  .bannerheader {
+    font-size: 24px !important; /* Larger body text */
+    line-height: 1.5 !important;
+  }
+ #btn-toggle, #btn-toggle>a {
+       padding: 7px 8px !important;
+        font-size: 15px !important;
+        width: 130px;
+        height: 38px;
+        border-radius: 60px;
+        font-weight: inherit;
+    }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+  #home {
+    gap: 1rem !important;
+    padding-left: 2.6rem !important;
+    padding-right: 1rem !important;
+  }
+#header nav > div {
+    padding: 7px 1px;
+    transition: padding 0.3s 
+ease;
+}
+  .bannertag{
+    font-size: 14px !important;
+  }
+      #baneerimage img {
+        width: 1000px;
+        height: 131vh;
+        max-height: 540px !important;
+        object-fit: fill;
+        /* margin-top: 18px; */
+    }
+      .heroheight {
+    min-height: 43vh;
+}
+  #home{
+    max-width:100% !important;
+  }
+  #home h1 {
+    font-size: 2rem !important; /* Bigger main heading */
+    line-height: 1.2 !important;
+    max-width: 100% !important;
+  }
+  
+  .bannerheader {
+    font-size: 24px !important; /* Larger body text */
+    line-height: 1.5 !important;
+  }
+ #btn-toggle, #btn-toggle>a {
+    
+       
+        font-weight: inherit;
+        padding: 4px 6px !important;
+        width: 129px;
+        width: 118px;
+        height: 38px;
+        border-radius: 60px;
+        font-size: 13px !important;
+    }
+}
         </style>
         <script>
           // Navigation active tab logic
@@ -1925,66 +2442,86 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
 
           <button
             id="btn-toggle"
-            class="w-30 rounded-3xl flex items-center justify-center dark:text-black"
+            class="bg-gradient-to-r from-purple-600 to-purple-400 text-white px-6 sm:px-8 rounded-4xl font-semibold text-base   transition-all duration-300"
           >
-            <a style="padding: 8px 20px; font-size: 13px; font-weight: 500"
+            <a class="mobiledemo"
               >Book Demo
             </a>
           </button>
 
           <button
-            id="mobile-menu-toggle"
-            class="md:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-          >
-            <svg
-              id="hamburger-icon"
-              class="w-6 h-6 text-gray-800 dark:text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+  id="mobile-menu-toggle"
+  class="md:hidden w-10 h-10 flex items-center justify-center bg-transparent"
+>
+  <div id="hamburger-icon">
+    <svg
+      width="32"
+      height="22"
+      viewBox="0 0 32 22"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Top Long Line -->
+      <rect x="2" y="4" width="28" height="3" rx="2" fill="#8B5CF6" />
+
+      <!-- Bottom Short Line -->
+      <rect x="14" y="12" width="16" height="3" rx="2" fill="#8B5CF6" />
+    </svg>
+  </div>
+</button>
         </div>
       </div>
 
-      <div
+       <div
         id="mobile-menu"
-        class="md:hidden fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
+        class="hidden lg:hidden block fixed inset-0 top-[64px] z-[100] bg-white dark:bg-gray-900 bg-opacity-95 dark:bg-opacity-95 shadow-md border-t border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-4 hidden transition-transform duration-300 transform -translate-y-8 opacity-0"
         style="backdrop-filter: blur(4px)"
       >
-        <a
+        <!-- <a
           href="/"
           class="block py-2 text-gray-900 dark:text-white font-semibold hover:text-purple-500 mobile-menu-link"
           >Home</a
-        >
+        > -->
         <a
           href="index.html#features"
           class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
-          >Features</a
+          >Capabilities</a
+        >
+          <a
+          href="index.html#platformSection"
+          class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
+          >Platform</a
         >
         <a
           href="index.html#use-cases"
           class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
-          >Industry</a
+          >Use Cases</a
         >
         <a
-          href="index.html#blogs"
+          href="index.html#business-benefits"
           class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
-          >Blog</a
+          >Benefits</a
         >
         <a
           href="./contact-us.html"
           class="block py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white mobile-menu-link"
-          >Contact Us</a
+          >Pricing</a
         >
+               <hr class="my-4 border-gray-200 dark:border-gray-700" />
+  <div class="mt-4 mb-2">
+  <p class="text-gray-700 dark:text-gray-300 text-md" style="font-family: Golos Text, sans-serif;">
+    Ready to get started? &nbsp;
+ <a 
+  id="demoLink"
+  href="https://calendly.com/prem2023/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="text-blue-500  inline-flex items-center"
+>
+  Get a Demo →
+</a>
+
+  </p>
+</div>
       </div>
       <div
         id="mobile-menu-overlay"
@@ -2017,8 +2554,8 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         padding: 0;
       }
  .logobanner-img {
-  width: 73px;
-  height: 22px;
+     width: 65px;
+    height: 17px;
   margin-top: 0; /* remove extra offset */
   background-color: transparent;
   transition: background-color 0.3s ease;
@@ -2044,7 +2581,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
       }
     </style>
 
-    <script>
+ <script>
       const mobileToggle = document.getElementById("mobile-menu-toggle");
       const mobileMenu = document.getElementById("mobile-menu");
       const mobileOverlay = document.getElementById("mobile-menu-overlay");
@@ -2061,7 +2598,12 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         mobileOverlay.classList.remove("hidden");
         document.body.style.overflow = "hidden";
         // Animate hamburger to X
-        hamburgerIcon.innerHTML = `<svg class='w-6 h-6 text-gray-800 dark:text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 18L18 6M6 6l12 12'/></svg>`;
+hamburgerIcon.innerHTML = `
+  <svg class='w-6 h-6 text-purple-600' xmlns='http://www.w3.org/2000/svg' 
+    fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2'
+      d='M6 18L18 6M6 6l12 12'/>
+  </svg>`;
         menuOpen = true;
       }
       function closeMobileMenu() {
@@ -2073,7 +2615,14 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         mobileOverlay.classList.add("hidden");
         document.body.style.overflow = "";
         // Animate X to hamburger
-        hamburgerIcon.innerHTML = `<svg class='w-6 h-6 text-gray-800 dark:text-white' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'/></svg>`;
+hamburgerIcon.innerHTML = `
+  <svg width="32" height="22" viewBox="0 0 32 22"
+    xmlns="http://www.w3.org/2000/svg">
+    <!-- Top Long Line -->
+    <rect x="2" y="4" width="28" height="3" rx="2" fill="#8B5CF6" />
+    <!-- Bottom Short Line (right aligned) -->
+    <rect x="14" y="12" width="16" height="3" rx="2" fill="#8B5CF6" />
+  </svg>`;
         menuOpen = false;
       }
       mobileToggle.addEventListener("click", () => {
@@ -2084,17 +2633,26 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         }
       });
       mobileOverlay.addEventListener("click", closeMobileMenu);
-      menuLinks.forEach((link) => {
-        link.addEventListener("click", function (e) {
-          // Active state for mobile menu
-          menuLinks.forEach((l) => l.classList.remove("active"));
-          // Only set active for anchor links, not Contact Us (which is a modal)
-          if (!link.hasAttribute("id")) {
-            link.classList.add("active");
-          }
-          closeMobileMenu();
-        });
-      });
+  menuLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+
+    // 🚫 Skip the "Get a Demo" link
+    if (link.id === "demoLink") {
+      e.stopPropagation();
+      return; // do not close menu, allow new tab to open
+    }
+
+    // Normal menu behavior
+    menuLinks.forEach((l) => l.classList.remove("active"));
+    if (!link.hasAttribute("id")) {
+      link.classList.add("active");
+    }
+
+    closeMobileMenu();
+  });
+});
+
+
       // Contact Us modal for mobile menu
       const mobileContact = document.querySelector(
         "#mobile-menu #openContactModal"
@@ -2110,7 +2668,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
       }
       // Close on resize to desktop
       window.addEventListener("resize", () => {
-        if (window.innerWidth >= 768 && menuOpen) {
+        if (window.innerWidth >= 896 && menuOpen) {
           closeMobileMenu();
         }
       });
@@ -2123,7 +2681,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
         ).filter((el) => el.textContent.trim() === "Book Demo");
         bookDemoButtons.forEach((btn) => {
           btn.onclick = function (e) {
-            window.open("https://www.cluedin.com/discovery-call", "_blank");
+            window.open("https://calendly.com/prem2023/30min", "_blank");
           };
         });
       }
@@ -2399,9 +2957,9 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
           max-width: 18rem;
         }
 
-        body {
+        /* body {
           padding: 0 0.5rem;
-        }
+        } */
 
         section,
         .header-content,
@@ -2700,20 +3258,22 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
     </style>
     <main class="pt-12 pb-10 min-h-screen bg-gray-50 dark:bg-gray-900">
       <!-- Hero Section -->
-      <section
+      <section     style="margin-top: -35px;"
         class="relative text-gray-900 dark:text-white py-12 sm:py-16 md:py-20"
       >
         <div
           class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-20 text-center"
         >
-          <h1
+          <h1 style="font-weight: 600;
+    font-family: UxumGrotesque, sans-serif;
+    font-size: 45px;"
             class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-purple-600 to-green-400 bg-clip-text text-transparent animate-fade-in"
           >
             Get in Touch
           </h1>
           <p
             class="text-base sm:text-lg md:text-xl opacity-90 max-w-xl sm:max-w-2xl mx-auto animate-fade-in-up text-gray-700 dark:text-gray-300"
-            style="font-family: Golos Text, sans-serif"
+            style="font-family: Golos Text, sans-serif;font-size: 16px !important;"
           >
             Have questions about our
             <span class="relative inline-flex items-center fade-logo">
@@ -2737,7 +3297,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
       </section>
 
       <!-- Contact Section -->
-      <section
+      <section style="margin-top: -38px;"
         class="py-10 sm:py-14 md:py-20 bg-white dark:bg-gray-800 shadow-lg rounded-2xl sm:rounded-3xl mx-4 sm:mx-6 md:mx-12 lg:mx-28"
       >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
@@ -2745,101 +3305,147 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
             class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start"
           >
             <!-- Contact Form -->
-            <div class="animate-slide-up">
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6 sm:mb-8"
+            <div class="animate-slide-up" >
+              <h2 style="font-family: UxumGrotesque, sans-serif;"
+                class="text-2xl sm:text-2xl font-bold text-gray-700 dark:text-gray-300 "
               >
+              
+            
+               
                 Send us a message
+                <!-- <form  id="contactForm" class="space-y-5 sm:space-y-6"  style="font-size: 16px !important">  -->
               </h2>
-              <form class="space-y-5 sm:space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-                  <div>
-                    <label
-                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                      >First Name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                      >Last Name</label
-                    >
-                    <input
-                      type="text"
-                      class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                    >Email Address</label
-                  >
-                  <input
-                    type="email"
-                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm"
-                    placeholder="john@company.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                    >Subject</label
-                  >
-                  <select
-                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm pr-8"
-                  >
-                    <option>General Inquiry</option>
-                    <option>Technical Support</option>
-                    <option>Sales Question</option>
-                    <option>Partnership</option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-                    >Message</label
-                  >
-                  <textarea
-                    rows="5"
-                    class="form-input w-full px-3 sm:px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-sm resize-none"
-                    placeholder="Tell us how we can help you..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full py-3 sm:py-4 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-purple-600 to-purple-400 text-white font-semibold hover:opacity-90 transition-all duration-300 flex items-center justify-center"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
+               <!-- <form id="contactForm" class="space-y-5 sm:space-y-6" 
+      action="https://script.google.com/macros/s/AKfycbzCItVPQwBl_DfuX7mW1zFz5ijwxtE76dwVdzjKZqHkymEWXvyj9AGFVT-WQA0apc5RLA/exec" 
+      method="POST" style="font-size: 16px !important;margin-top: 19px !important;"> -->
+              <!-- action="https://script.google.com/macros/s/AKfycbzCItVPQwBl_DfuX7mW1zFz5ijwxtE76dwVdzjKZqHkymEWXvyj9AGFVT-WQA0apc5RLA/exec"  -->
+            <form id="contactForm"   class="space-y-5 sm:space-y-6" 
+      style="font-size: 16px !important;margin-top: 19px !important;">
 
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        First Name <span class="text-red-500">*</span>
+      </label>
+      <input type="text" name="Name" id="Name"
+             class="form-input w-full px-3 py-3 border rounded-lg"
+             placeholder="John" />
+      <p id="errName" class="text-red-500 text-xs hidden">First name is required</p>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        Last Name <span class="text-red-500">*</span>
+      </label>
+      <input type="text" name="LastName" id="LastName"
+             class="form-input w-full px-3 py-3 border rounded-lg"
+             placeholder="Doe" />
+      <p id="errLastName" class="text-red-500 text-xs hidden">Last name is required</p>
+    </div>
+
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      Email Address <span class="text-red-500">*</span>
+    </label>
+    <input type="email" name="Email" id="Email"
+           class="form-input w-full px-3 py-3 border rounded-lg"
+           placeholder="john@company.com" />
+    <p id="errEmail" class="text-red-500 text-xs hidden">Valid email is required</p>
+  </div>
+
+  <div>
+  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+    Subject <span class="text-red-500">*</span>
+  </label>
+
+  <select 
+    name="Subject" 
+    id="Subject"
+    class="form-input w-full px-3 py-3 border rounded-lg
+           bg-white text-gray-800
+           dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600"
+  >
+    <option value="">Select Subject</option>
+    <option>General Inquiry</option>
+    <option>Technical Support</option>
+    <option>Sales Question</option>
+    <option>Partnership</option>
+  </select>
+
+  <p id="errSubject" class="text-red-500 text-xs hidden">Subject is required</p>
+</div>
+
+
+  <div>
+    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+      Message (Max 200 words) <span class="text-red-500">*</span>
+    </label>
+    <textarea name="Message" id="Message" rows="5"
+              class="form-input w-full px-3 py-3 border rounded-lg"
+              placeholder="Please describe your enquiry or requirements"></textarea>
+
+    <p id="errMessage" class="text-red-500 text-xs hidden">Message is required</p>
+    <p id="wordCount" class="text-gray-500 text-xs ">0 / 200 words</p>
+  </div>
+<!-- HUMAN VERIFICATION -->
+<!-- <div class="flex items-center space-x-2 mt-2">
+  <input type="checkbox" id="verifyHuman" class="w-4 h-4">
+  <label for="verifyHuman" class="text-gray-700 dark:text-gray-300 text-sm">
+    I am not a robot
+  </label>
+</div> -->
+<!-- 6LeVVg8sAAAAAAH2TMM2EleoaZe8gKgmfYBEgsxR -->
+ <div class="g-recaptcha " data-sitekey="6LcnZQ8sAAAAAHse50bzB-ajl2olt-fKdecMbvd1" data-callback="recaptchaSuccess"
+     data-expired-callback="recaptchaExpired"></div>
+ <p id="errCaptcha" class="text-gray-500   hidden" style="    margin-top: 1px;
+    font-size: 11px;">
+  Please verify that you're not a robot
+</p>
+  <button type="submit" id="submitButton" style="font-family: Golos Text, sans-serif;font-weight: inherit;"
+          class="w-full py-3 rounded-2xl bg-gradient-to-r from-purple-600 to-purple-400 text-white font-semibold">
+    Send Message
+  </button>
+
+</form>
+
+<!-- Toast Message -->
+
+   <div id="toast"
+     class="fixed top-5 right-5 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg hidden z-50">
+</div>
+            </div>
+         
+<!-- <div
+            style="display: none"
+            id="thankyou_message"
+            class="text-center mt-10"
+          >
+            <h2 class="text-2xl font-semibold text-green-600">
+              ✅ Thanks for contacting us! We’ll get back to you soon.
+            </h2>
+          </div> -->
             <!-- Contact Information -->
             <div class="animate-slide-up mt-10 lg:mt-0">
-              <h2
-                class="text-2xl sm:text-3xl font-bold text-gray-700 dark:text-gray-300 mb-6 sm:mb-8"
+              <h2 style="font-family: UxumGrotesque, sans-serif;"
+                class="text-2xl sm:text-2xl font-bold text-gray-700 dark:text-gray-300 "
               >
                 Let's start a conversation
               </h2>
               <p
-                class="text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 text-base sm:text-lg"
-              >
+                class="text-gray-600 dark:text-gray-300  text-base sm:text-lg"
+             style="font-size: 16px !important;margin-top: 10px !important;" >
                 Our team is ready to help you. Reach out to us through any of
                 the channels below.
               </p>
 
               <!-- Contact Cards -->
-              <div class="space-y-5 sm:space-y-6">
+              <div class="space-y-5 sm:space-y-7" style="font-size: 16px !important;margin-top: 20px !important;">
                 <!-- Email -->
                 <div
-                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-4 rounded-xl border border-gray-200 dark:border-gray-600  transition duration-300"
                 >
                   <div class="flex items-start space-x-4">
                     <div
@@ -2869,7 +3475,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
 
                 <!-- Phone -->
                 <div
-                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-4 rounded-xl border border-gray-200 dark:border-gray-600  transition duration-300"
                 >
                   <div class="flex items-start space-x-4">
                     <div
@@ -2889,9 +3495,9 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                         Monday to Friday, 9AM to 6PM PST
                       </p>
                       <a
-                        href="tel:+XX-XXXXXXXXXX"
+                        href="tel:+91-7028522250"
                         class="text-primary font-medium hover:underline text-sm sm:text-base"
-                        >+XX XXXXXXXXXX</a
+                        >+91-7028522250</a
                       >
                     </div>
                   </div>
@@ -2899,7 +3505,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
 
                 <!-- Address -->
                 <div
-                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition duration-300"
+                  class="contact-card bg-white dark:bg-gray-700 p-5 sm:p-4 rounded-xl border border-gray-200 dark:border-gray-600  transition duration-300"
                 >
                   <div class="flex items-start space-x-4">
                     <div
@@ -2918,10 +3524,10 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                       <p class="text-gray-600 dark:text-gray-400 mb-1 sm:mb-2">
                         Come say hello at our office
                       </p>
-                      <p
+                      <p style="font-size: 16px !important;"
                         class="text-gray-700 dark:text-gray-300 text-sm sm:text-base"
                       >
-                        UK | Singapore | USA
+                       India | Singapore | UK | USA
                       </p>
                     </div>
                   </div>
@@ -2931,9 +3537,423 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
           </div>
         </div>
       </section>
-    </main>
 
-    <div id="contactModal" class="modal">
+    </main>
+<!-- <script>
+let isHuman = false;
+
+// Called when reCAPTCHA is completed  
+function recaptchaSuccess() {
+  isHuman = true;
+  document.getElementById("errCaptcha").classList.add("hidden");
+}
+
+function recaptchaExpired() {
+  isHuman = false;
+  document.getElementById("errCaptcha").classList.remove("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contactForm");
+  const toast = document.getElementById("toast");
+
+  const firstNameInput = document.getElementById("Name");
+  const lastNameInput = document.getElementById("LastName");
+  const emailInput = document.getElementById("Email");
+  const subjectInput = document.getElementById("Subject");
+  const messageInput = document.getElementById("Message");
+  const errCaptcha = document.getElementById("errCaptcha");
+
+  const wordCount = document.getElementById("wordCount");
+  const submitButton = document.getElementById("submitButton");
+
+  // 🔥 Remove error on typing
+  ["Name","LastName","Email","Subject","Message"].forEach(id => {
+    document.getElementById(id).addEventListener("input", () => {
+      document.getElementById("err" + id).classList.add("hidden");
+    });
+  });
+
+  // Toast Function
+  function showToast(message, type = "error") {
+    toast.className = "fixed top-5 right-5 text-white px-4 py-2 rounded-lg shadow-lg z-50";
+    toast.classList.add(type === "error" ? "bg-red-600" : "bg-green-600");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    setTimeout(() => toast.classList.add("hidden"), 2500);
+  }
+
+messageInput.addEventListener("beforeinput", function (e) {
+
+  // Always allow deleting
+  if (
+    e.inputType === "deleteContentBackward" ||
+    e.inputType === "deleteContentForward"
+  ) {
+    return;
+  }
+
+  const currentValue = this.value;
+  const selectionStart = this.selectionStart;
+  const selectionEnd = this.selectionEnd;
+
+  // The text that is about to be inserted (typed/pasted)
+  const newInput = e.data || "";
+
+  // Build the value AS IF the input will be inserted
+  const newValue =
+    currentValue.slice(0, selectionStart) +
+    newInput +
+    currentValue.slice(selectionEnd);
+
+  // Count words in the new value
+  const words = newValue.trim().split(/\s+/).filter(w => w.length > 0);
+
+  // If new word count would exceed 200 → block input
+  if (words.length > 200) {
+    e.preventDefault();
+    return;
+  }
+});
+
+messageInput.addEventListener("input", function () {
+  let words = this.value.trim().split(/\s+/).filter(w => w.length > 0);
+  wordCount.textContent = words.length + " / 200 words";
+});
+
+
+
+  // Submit Event
+ form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const firstName = firstNameInput.value.trim();
+  const lastName = lastNameInput.value.trim();
+  const email = emailInput.value.trim();
+  const subject = subjectInput.value.trim();
+  const message = messageInput.value.trim();
+
+  let hasError = false;
+
+  // 1️⃣ VALIDATE ALL INPUT FIELDS FIRST
+  if (!firstName) { errName.classList.remove("hidden"); showToast("First name required!"); hasError = true; }
+  if (!lastName) { errLastName.classList.remove("hidden"); showToast("Last name required!"); hasError = true; }
+ // EMAIL VALIDATION (fixed)
+if (!email) {
+  errEmail.textContent = "Email is required";
+  errEmail.classList.remove("hidden");
+  showToast("Email is required!");
+  hasError = true;
+} 
+else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/.test(email)) {
+  errEmail.textContent = "Please enter a valid email address";
+  errEmail.classList.remove("hidden");
+showToast("Valid email required!");
+  hasError = true;
+  // ⭐ STOP auto-focus from scrolling page
+  e.stopPropagation();
+  e.preventDefault();
+
+  
+}
+
+  if (!subject) { errSubject.classList.remove("hidden"); showToast("Subject required!"); hasError = true; }
+  if (!message) { errMessage.classList.remove("hidden"); showToast("Message required!"); hasError = true; }
+  // if (message.length > 200) { errMessage.classList.remove("hidden"); showToast("Message too long!"); hasError = true; }
+let wordCountVal = message.trim().split(/\s+/).filter(w => w.length > 0).length;
+
+if (wordCountVal > 200) {
+  errMessage.classList.remove("hidden");
+  showToast("Message cannot exceed 200 words!");
+  hasError = true;
+}
+
+  // ⛔ STOP if there are ANY form errors
+  if (hasError) return;
+
+  // 2️⃣ NOW CHECK CAPTCHA — ONLY IF FORM IS VALID
+  if (!isHuman) {
+    errCaptcha.classList.remove("hidden");
+    showToast("Please verify you're not a robot!");
+    return;
+  } 
+  else {
+    errCaptcha.classList.add("hidden");
+  }
+
+  // 3️⃣ SEND EMAIL (all checks passed)
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  const formData = new URLSearchParams(new FormData(form));
+
+  fetch(form.action, {
+    method: "POST",
+    body: formData,
+    headers: { "Content-Type": "application/x-www-form-urlencoded" }
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        showToast("Message sent successfully!", "success");
+        form.reset();
+        wordCount.textContent = "0 / 200 characters";
+        grecaptcha.reset();
+        isHuman = false;
+      } else {
+        showToast("Failed to send message.");
+      }
+    })
+    .catch(() => showToast("Network error. Try again."))
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Message";
+    });
+
+});
+
+
+});
+</script> -->
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("rTpI8dNbybuRZrtDQ");
+  })();
+</script>
+<script>
+let isHuman = false;
+
+// reCAPTCHA Success
+function recaptchaSuccess() {
+  isHuman = true;
+  document.getElementById("errCaptcha").classList.add("hidden");
+}
+
+// reCAPTCHA Expired
+function recaptchaExpired() {
+  isHuman = false;
+  document.getElementById("errCaptcha").classList.remove("hidden");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contactForm");
+  const toast = document.getElementById("toast");
+
+  const firstNameInput = document.getElementById("Name");
+  const lastNameInput = document.getElementById("LastName");
+  const emailInput = document.getElementById("Email");
+  const subjectInput = document.getElementById("Subject");
+  const messageInput = document.getElementById("Message");
+  const errCaptcha = document.getElementById("errCaptcha");
+
+  const wordCount = document.getElementById("wordCount");
+  const submitButton = document.getElementById("submitButton");
+
+  // Remove error on input
+  ["Name","LastName","Email","Subject","Message"].forEach(id => {
+    document.getElementById(id).addEventListener("input", () => {
+      document.getElementById("err" + id).classList.add("hidden");
+    });
+  });
+
+  // Toast
+  function showToast(message, type = "error") {
+    toast.className = "fixed top-5 right-5 text-white px-4 py-2 rounded-lg shadow-lg z-50";
+    toast.classList.add(type === "error" ? "bg-red-600" : "bg-green-600");
+    toast.textContent = message;
+    toast.classList.remove("hidden");
+    setTimeout(() => toast.classList.add("hidden"), 2500);
+  }
+
+  // Word Limit Blocking
+  messageInput.addEventListener("beforeinput", function (e) {
+    if (e.inputType.includes("delete")) return;
+
+    const current = this.value;
+    const newText = e.data || "";
+    const newValue = current.slice(0, this.selectionStart) + newText + current.slice(this.selectionEnd);
+
+    const words = newValue.trim().split(/\s+/).filter(w => w.length > 0);
+    if (words.length > 200) e.preventDefault();
+  });
+
+  // Word counter
+  messageInput.addEventListener("input", function () {
+    const words = this.value.trim().split(/\s+/).filter(w => w.length > 0);
+    wordCount.textContent = words.length + " / 200 words";
+  });
+
+  // Submit Event
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const first = firstNameInput.value.trim();
+    const last = lastNameInput.value.trim();
+    const email = emailInput.value.trim();
+    const subject = subjectInput.value.trim();
+    const message = messageInput.value.trim();
+
+    let hasError = false;
+
+    if (!first) { errName.classList.remove("hidden"); showToast("First name required!"); hasError = true; }
+    if (!last) { errLastName.classList.remove("hidden"); showToast("Last name required!"); hasError = true; }
+
+    if (!email) {
+      errEmail.textContent = "Email is required";
+      errEmail.classList.remove("hidden");
+      showToast("Email is required!");
+      hasError = true;
+    }
+    else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/.test(email)) {
+      errEmail.textContent = "Please enter a valid email";
+      errEmail.classList.remove("hidden");
+      showToast("Valid email required!");
+      hasError = true;
+    }
+
+    if (!subject) { errSubject.classList.remove("hidden"); showToast("Subject required!"); hasError = true; }
+    if (!message) { errMessage.classList.remove("hidden"); showToast("Message required!"); hasError = true; }
+
+    let words = message.trim().split(/\s+/).filter(w => w.length > 0).length;
+    if (words > 200) {
+      errMessage.classList.remove("hidden");
+      showToast("Message cannot exceed 200 words!");
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    // reCAPTCHA check
+    if (!isHuman) {
+      errCaptcha.classList.remove("hidden");
+      showToast("Please verify you're not a robot!");
+      return;
+    }
+
+    errCaptcha.classList.add("hidden");
+
+    // Disable submit button
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    // 📌 Prepare formatted date
+    // const now = new Date();
+    // const formattedDate = now.toLocaleString("en-IN", {  
+    //   weekday: "long",
+    //   year: "numeric",
+    //   month: "long",
+    //   day: "numeric",
+    //   hour: "2-digit",
+    //   minute: "2-digit"
+    // });
+
+    // Customer Auto Reply
+    const paramsCustomer = {
+      from_name: first + " " + last,
+      email: email,
+      subject: subject,
+      message: message
+    };
+
+    // Admin Notification with full details
+    const paramsAdmin = {
+      from_name: first + " " + last,
+      from_email: email,
+      subject: subject,
+      message: message,
+      to_email: "prem@alpharithm.com,srikumar@alpharithm.com"
+      // submitted_date: formattedDate
+    };
+
+    // Send Customer Auto Reply
+    emailjs.send("service_d7pjc2n", "template_zev92w2", paramsCustomer)
+      .then(() => console.log("Customer auto reply sent"))
+      .catch(err => console.error("Customer email error:", err));
+
+    // Send Admin Mail
+    emailjs.send("service_d7pjc2n", "template_29scasb", paramsAdmin)
+      .then(() => {
+        showToast("Message sent successfully!", "success");
+        form.reset();
+        wordCount.textContent = "0 / 200 words";
+        grecaptcha.reset();
+        isHuman = false;
+      })
+      .catch(err => {
+        showToast("Failed to send message!");
+        console.error("Admin email error:", err);
+      })
+      .finally(() => {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Message";
+      });
+  });
+
+});
+</script>
+
+
+
+
+
+<!-- <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>  
+
+     function sendmail(){
+    
+			var name = $('#Name').val();
+			var email = $('#Email').val();
+			var subject = $('#LastName').val();
+      var message = $('#Message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+        SecureToken:"0491d221-c766-45d2-b721-215bd2627891",
+				To: 'vedangibhopale2000@gmail.com',
+				From: "info@singlview.ai",
+				Subject: "New message on contact from "+name,
+				Body: Body
+			}).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Your mail has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+
+    </script> -->
+    <!-- <div id="contactModal" class="modal">
       <div
         class="modal-content relative bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-lg shadow-lg"
       >
@@ -2985,7 +4005,7 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
           Email client opened! If it didn’t open, copy your info manually.
         </p>
       </div>
-    </div>
+    </div> -->
     <!-- <footer class="bg-gray-900 text-white py-16 mt-20 no-animation">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -3048,76 +4068,272 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
     >
       Message sent successfully!
     </div>
-    <footer id="footer" class="bg-gray-900 text-white py-16 no-animation">
+    <style>
+
+
+/* ============================
+   FOOTER BASE STYLES
+============================ */
+footer.footer {
+ width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-family: "Golos Text", sans-serif;
+    font-size: clamp(14px, 1vw + 0.4rem, 16px);
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+/* Container — allow it to stretch on bigger screens */
+.footer .max-w-7xl {
+  width: 100%;
+  max-width: 100%; /* Remove fixed max-width for ultra-wide */
+  margin: 0 auto;
+  padding-left: clamp(1rem, 3vw, 6rem);
+  padding-right: clamp(1rem, 3vw, 6rem);
+}
+
+/* Grid layout */
+.footer .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  font-weight: 500;
+}
+
+/* Headings */
+.footer h3 {
+  font-weight: 600;
+  font-size: clamp(16px, 0.9vw + 0.4rem, 24px);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  font-size: clamp(14px, 0.7vw + 0.35rem, 20px);
+  transition: color 0.2s ease-in-out;
+   font-weight: normal;
+}
+.footer div p {
+  text-decoration: none;
+  font-size: clamp(14px, 0.7vw + 0.35rem, 20px);
+  transition: color 0.2s ease-in-out;
+  font-weight: normal;
+}
+/* Social icons */
+.footer .flex.space-x-4 a {
+  width: clamp(2.5rem, 3vw, 3.5rem);
+  height: clamp(2.5rem, 3vw, 3.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+/* Logo scales dynamically */
+.logo-imgfotter {
+  width: clamp(90px, 6vw, 160px);
+  height: auto;
+}
+
+/* Bottom footer */
+.footer .border-t {
+ border-top: 1px solid #1f2937;
+     /* margin-bottom: -70px; */
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ============================
+   RESPONSIVE BREAKPOINTS
+============================ */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .footer .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .footer {
+    /* padding: 2.5rem 1rem; */
+    font-size: clamp(14px, 1vw + 0.3rem, 16px);
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .footer .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer .flex.space-x-4 {
+    justify-content: center;
+  }
+  .footer .border-t {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  footer.footer {
+    font-size: clamp(13px, 2vw, 15px);
+  }
+}
+
+/* Large desktops ≥1440px */
+@media (min-width: 1440px) {
+  .footer {
+    /* padding: 4rem clamp(2rem, 4vw, 6rem); */
+    font-size: clamp(16px, 0.9vw + 0.3rem, 20px);
+  }
+  .footer .grid {
+    gap: 3rem;
+  }
+}
+
+/* Ultra-wide ≥2560px (2K / 4K) */
+@media (min-width: 2560px) {
+  .footer {
+    padding: 5rem clamp(3rem, 5vw, 8rem);
+    font-size: clamp(18px, 0.8vw + 0.5rem, 22px);
+  }
+  .footer .grid {
+    gap: 4rem;
+  }
+}
+
+/* Extreme-wide ≥3840px (5K) */
+@media (min-width: 3840px) {
+  .footer {
+    padding: 6rem clamp(4rem, 6vw, 10rem);
+    font-size: clamp(20px, 0.7vw + 0.5rem, 24px);
+  }
+  .footer .grid {
+    gap: 5rem;
+  }
+}
+
+/* Super Ultra-wide ≥5120px (8K / 5K) */
+@media (min-width: 5120px) {
+  .footer {
+    padding: 7rem clamp(5rem, 8vw, 12rem);
+    font-size: clamp(22px, 0.6vw + 0.6rem, 26px);
+  }
+  .footer .grid {
+    gap: 6rem;
+  }
+}
+
+
+
+</style>
+<footer id="footer" 
+        class="footer bg-gray-900 text-white pt-10 pb-4 xl:pt-10 xl:pb-4 2xl:pt-20 2xl:pb-4 no-animation">   
       <div class="max-w-7xl mx-auto px-6">
         <div
-          class="grid md:grid-cols-4 gap-8 mb-12"
+          class="grid md:grid-cols-4 gap-8 mb-6"
           style="
             font-weight: 500;
             font-family: Golos Text, sans-serif;
             font-size: 16px;
           "
         >
-          <div class="space-y-4">
+          <div class="space-y-2">
             <div class="flex items-center space-x-2">
               <img src="./image (3).png" alt="Logo" class="logo-imgfotter" />
             </div>
-            <p class="text-gray-400">
-              AI-powered Master Data Management platform that transforms how
-              enterprises manage and utilize their data.
+            <p class="text-white">
+              AI-powered Master Data <br>Management platform that <br>transforms how
+              enterprises <br>manage and utilize their data.
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="javascript:void(0)"
-                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+            <div class="flex space-x-4 overflow-visible relative z-10">
+              <a data-tooltip="Visit Twitter"
+              role="button"
+                 data-href="https://x.com/singlviewAI" 
+   target="_blank" 
+   rel="noopener noreferrer"
+                class="tooltip w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
               >
                 <i class="ri-twitter-line text-lg"></i>
               </a>
-              <a
-                href="javascript:void(0)"
-                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              <a data-tooltip="Visit LinkedIn"
+              role="button"
+                 data-href="https://www.linkedin.com/company/alpharithm-technologies-pvt-ltd" 
+   target="_blank" 
+   rel="noopener noreferrer"
+                class="tooltip h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
               >
                 <i class="ri-linkedin-line text-lg"></i>
               </a>
-              <a
-                href="javascript:void(0)"
-                class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+              <a data-tooltip="Visit YouTube"
+              role="button"
+                 data-href="https://www.youtube.com/user/TheAlpharithm" 
+   target="_blank" 
+   rel="noopener noreferrer"
+                class="tooltip w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
               >
-                <i class="ri-github-line text-lg"></i>
+                <i class="ri-youtube-line text-lg"></i>
               </a>
             </div>
           </div>
           <div>
-            <h3 class="font-semibold mb-4">Product</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="font-semibold mb-4 text-purple-600">Product</h3>
+            <ul class="space-y-2 text-white">
               <li>
                 <a
                   href="index.html#features"
                   class="hover:text-white transition-colors"
-                  >Features</a
+                  >Capabilities</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#platformSection"
+                  class="hover:text-white transition-colors"
+                  >Platform</a
                 >
               </li>
               <li>
                 <a
                   href="index.html#use-cases"
                   class="hover:text-white transition-colors"
-                  >Industry</a
+                  >Use Cases</a
                 >
               </li>
-
-              <li>
+<li>
+                <a
+                  href="index.html#business-benefits"
+                  class="hover:text-white transition-colors"
+                  >Benefits</a
+                >
+              </li>
+              <!-- <li>
                 <a
                   href="index.html#features-tab4"
                   class="hover:text-white transition-colors"
                 >
                   API Integrations
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
+             
           <div>
-            <h3 class="font-semibold mb-4">Company</h3>
-            <ul class="space-y-2 text-gray-400">
+            <h3 class="font-semibold mb-4 text-purple-600">Company</h3>
+            <ul class="space-y-2 text-white">
               <li>
                 <a
                   href="index.html#home"
@@ -3130,6 +4346,13 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
                   >Careers</a
                 >
               </li> -->
+                <li>
+                <a
+                  href="./about-us.html"
+                  class="hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
               <li>
                 <a
                   href="index.html#blogs"
@@ -3174,74 +4397,171 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
             </ul>
           </div> -->
         </div>
-        <div
-          style="
-            font-weight: 500;
-            font-family: Golos Text, sans-serif;
-            font-size: 16px;
-          "
+       <div style=" font-weight: 500; font-family:  Golos Text,sans-serif; font-size: 16px;"
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between"
         >
-          <p class="text-gray-400 text-sm">
-            © 2024 SiNGL. All rights reserved.
+          <p class="text-gray-400 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">
+            © 2025 SiNGL. All rights reserved.
           </p>
 
           <!-- <h6 class="font-semibold mb-4">Address</h6> -->
-          <div class="text-gray-400 text-sm">
-            <p>Address : UK | Singapore | USA</p>
+          <div class="text-gray-400 text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">
+            <p>India | Singapore | UK | USA</p>
             <!-- <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
           <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
           <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a> -->
           </div>
         </div>
+        
       </div>
     </footer>
+      <script>
+  document.querySelectorAll('a[data-href]').forEach(a => {
+    a.addEventListener('click', () => {
+      window.open(a.getAttribute('data-href'), '_blank');
+    });
+  });
+</script>
+<style>
+  .tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;           /* ✅ bring above footer background */
+  overflow: visible;     /* ✅ allow pseudo-elements to escape box */
+}
+
+ /* Tooltip Text (Above the icon) */
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;             /* push a bit higher */
+  left: 90%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Tooltip Arrow */
+.tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.85);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-3px);
+}
+
+</style>
+
     <script>
-      const footer = document.querySelector("footer");
-      const blobs1 = document.querySelector("#blobs-bg");
+  const footer = document.querySelector("footer");
+  const blobs1 = document.querySelector("#blobs-bg");
 
-      window.addEventListener("scroll", () => {
-        const footerTop = footer.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+  window.addEventListener("scroll", () => {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
 
-        if (footerTop < windowHeight) {
-          blobs1.style.opacity = "0";
-        } else {
-          blobs1.style.opacity = "1";
-        }
-      });
+    blobs1.style.opacity = footerTop < windowHeight ? "0" : "1";
+  });
+
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const themeToggle = document.getElementById("theme-toggle");
+  //   const body = document.body;
+  //   const html = document.documentElement;
+  //   const themeIcon = themeToggle.querySelector("i");
+
+  //   function setTheme(isDark) {
+  //     if (isDark) {
+  //       html.classList.add("dark");
+  //       body.classList.add("dark-mode");
+  //       body.classList.remove("light-mode");
+  //       themeIcon.classList.remove("ri-sun-line");
+  //       themeIcon.classList.add("ri-moon-line");
+  //     } else {
+  //       html.classList.remove("dark");
+  //       body.classList.remove("dark-mode");
+  //       body.classList.add("light-mode");
+  //       themeIcon.classList.add("ri-sun-line");
+  //       themeIcon.classList.remove("ri-moon-line");
+  //     }
+  //   }
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     const themeToggle = document.getElementById("theme-toggle");
+//     const html = document.documentElement;
+//     const themeIcon = themeToggle.querySelector("i");
+
+//     function setTheme(isDark) {
+//         if (isDark) {
+//             html.classList.add("dark");
+//             themeIcon.classList.remove("ri-sun-line");
+//             themeIcon.classList.add("ri-moon-line");
+//         } else {
+//             html.classList.remove("dark");
+//             themeIcon.classList.add("ri-sun-line");
+//             themeIcon.classList.remove("ri-moon-line");
+//         }
+//     }
+
+//     // Apply saved theme
+//     const savedTheme = localStorage.getItem("theme");
+//     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+//     setTheme(savedTheme === "dark" || (!savedTheme && prefersDark));
+
+//     themeToggle.addEventListener("click", () => {
+//         const isDark = !html.classList.contains("dark");
+//         setTheme(isDark);
+//         localStorage.setItem("theme", isDark ? "dark" : "light");
+//     });
+// });
+
+    // Remove theme loading from here (CAUSE OF FLASH)
+
+    // Only toggle theme on click
+  //   themeToggle.addEventListener("click", function () {
+  //     const isDark = !html.classList.contains("dark");
+  //     setTheme(isDark);
+  //     localStorage.setItem("theme", isDark ? "dark" : "light");
+  //   });
+  // });
+</script>
+
+        <script id="header-scroll-script">
       document.addEventListener("DOMContentLoaded", function () {
-        const themeToggle = document.getElementById("theme-toggle");
+        const header = document.getElementById("header");
         const body = document.body;
-        const html = document.documentElement;
-        const themeIcon = themeToggle.querySelector("i");
-        function setTheme(isDark) {
-          if (isDark) {
-            html.classList.add("dark");
-            body.classList.add("dark-mode");
-            body.classList.remove("light-mode");
-            themeIcon.classList.remove("ri-sun-line");
-            themeIcon.classList.add("ri-moon-line");
+        function updateHeaderBackground() {
+          const isDark = body.classList.contains("dark");
+          if (window.scrollY > 100) {
+            // header.style.background = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.95)';
           } else {
-            html.classList.remove("dark");
-            body.classList.remove("dark-mode");
-            body.classList.add("light-mode");
-            themeIcon.classList.add("ri-sun-line");
-            themeIcon.classList.remove("ri-moon-line");
+            // header.style.background = isDark ? 'rgba(15, 23, 42, 0.1)' : 'rgba(255, 255, 255, 0.1)';
           }
+          // header.style.backdropFilter = 'blur(10px)';
         }
-        const savedTheme = localStorage.getItem("theme");
-        let prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        if (savedTheme === "dark") prefersDark = true;
-        if (savedTheme === "light") prefersDark = false;
-        setTheme(prefersDark);
-        themeToggle.addEventListener("click", function () {
-          const isDark = !html.classList.contains("dark");
-          setTheme(isDark);
-          localStorage.setItem("theme", isDark ? "dark" : "light");
-        });
+        window.addEventListener("scroll", updateHeaderBackground);
+        const themeToggle = document.getElementById("theme-toggle");
+        themeToggle.addEventListener("click", updateHeaderBackground);
       });
     </script>
     <!-- <script>
@@ -3438,20 +4758,57 @@ body > div.bg-\[url\(\'\/Newss\.jpg\'\)\].py-1.px-4.margin-lr > div > div > div.
       // --- Form Submission Handlers ---
 
       // Contact Form
-      if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
+      // if (contactForm) {
+      //   contactForm.addEventListener("submit", (e) => {
+      //     e.preventDefault();
 
-          // In a real application, you would send this data to a server here using fetch().
-          // For this example, we'll simulate success and show a toast.
+      //     // In a real application, you would send this data to a server here using fetch().
+      //     // For this example, we'll simulate success and show a toast.
 
-          contactModal.classList.remove("active");
-          showToast("Message sent successfully!", true);
-          contactForm.reset();
-        });
-      }
+      //     contactModal.classList.remove("active");
+      //     showToast("Message sent successfully!", true);
+      //     contactForm.reset();
+      //   });
+      // }
 
       // Testimonial Form
     </script>
+  <!-- Prevent Flash -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Add loaded class so gradient is applied AFTER first paint
+    document.documentElement.classList.add("loaded");
+    document.body.classList.add("loaded");
+
+    const themeToggle = document.getElementById("theme-toggle");
+    const html = document.documentElement;
+    const themeIcon = themeToggle.querySelector("i");
+
+    function setTheme(isDark) {
+      if (isDark) {
+        html.classList.add("dark");
+        sessionStorage.setItem("theme", "dark");
+        themeIcon.classList.remove("ri-sun-line");
+        themeIcon.classList.add("ri-moon-line");
+      } else {
+        html.classList.remove("dark");
+        sessionStorage.setItem("theme", "light");
+        themeIcon.classList.add("ri-sun-line");
+        themeIcon.classList.remove("ri-moon-line");
+      }
+    }
+
+    // Event: toggle theme
+    themeToggle.addEventListener("click", () => {
+      const nowDark = !html.classList.contains("dark");
+      setTheme(nowDark);
+    });
+  });
+</script>
+
+
+
   </body>
 </html>
